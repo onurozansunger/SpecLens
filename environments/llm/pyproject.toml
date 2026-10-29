@@ -1,0 +1,16 @@
+[project]
+name = "speclens-metal-worker"
+version = "0.1.0"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "mlx==0.32.4",
+  "mlx-lm[train]==0.32.2",
+  "transformers==5.22.0",
+  "fastapi>=0.115,<1",
+  "uvicorn>=0.30,<1",
+  "pydantic>=2.10,<3",
+  "psutil>=6,<8",
+]
+
+[tool.uv]
+package = false

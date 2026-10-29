@@ -1,0 +1,110 @@
+{
+  "recorded_at": "2026-10-29T19:54:46.220746+00:00",
+  "stage": "local portfolio release candidate; not published",
+  "checks": {
+    "cpu_tests": {
+      "passed": 61
+    },
+    "clean_cpu_environment": {
+      "passed": 61,
+      "pytorch_installed": false
+    },
+    "ruff": "passed",
+    "javascript_syntax": "passed",
+    "source_vector_hashes": "passed",
+    "frozen_implementation_and_test_seal": "passed",
+    "literal_reference_source_checks": "passed",
+    "corpus_archive_verify_and_restore": "passed",
+    "synthetic_v3_probes": {
+      "passed": 6,
+      "total": 6
+    },
+    "browser_vin_demo": "6–24 V / 6–21 V; 24 V in/out; original PDF preview checked"
+  },
+  "source_archive": {
+    "file": "dist/speclens-corpus-2026-10-29.zip",
+    "bytes": 18248062,
+    "sha256": "d62487d13ee4cdf43ecec86b4a6fa3ae006f91f4b8cf5b3b731a09b4aa599d3f"
+  },
+  "reports": {
+    "quality_v2_development_release": {
+      "sha256": "a7265bd8ac59b42d225d34b2c65f353ca20132b07d1962b78a976f8575311299",
+      "summary": {
+        "prompts": 30,
+        "base_tasks": 15,
+        "expected_fields": 32,
+        "unique_fields_present": 26,
+        "value_checks_passed": 26,
+        "reference_evidence_checks_passed": 22,
+        "all_checks_passed": 16,
+        "responses_with_extra_fields": 8,
+        "provenance_passes": 24,
+        "repairs_attempted": 0,
+        "rule_recoveries": 0,
+        "median_seconds": 6.657741312501457,
+        "p95_seconds": 17.863512790998357
+      }
+    },
+    "quality_v3_development_release": {
+      "sha256": "e0179d7838fc72cdaee0feecced498ad7bdb1bc4a40944863f26bf6a00daaf8c",
+      "summary": {
+        "prompts": 30,
+        "base_tasks": 15,
+        "expected_fields": 32,
+        "unique_fields_present": 32,
+        "value_checks_passed": 32,
+        "reference_evidence_checks_passed": 30,
+        "all_checks_passed": 28,
+        "responses_with_extra_fields": 0,
+        "provenance_passes": 30,
+        "repairs_attempted": 2,
+        "rule_recoveries": 2,
+        "median_seconds": 4.717310270998496,
+        "p95_seconds": 7.493495875001827
+      }
+    },
+    "quality_v2_test": {
+      "sha256": "a4b78f62baaf871ec430018941577df8b9174f34bb88d1f257297a7304a0d5a0",
+      "summary": {
+        "prompts": 48,
+        "base_tasks": 24,
+        "expected_fields": 56,
+        "unique_fields_present": 41,
+        "value_checks_passed": 38,
+        "reference_evidence_checks_passed": 33,
+        "all_checks_passed": 25,
+        "responses_with_extra_fields": 3,
+        "provenance_passes": 41,
+        "repairs_attempted": 0,
+        "rule_recoveries": 0,
+        "median_seconds": 5.158836270999018,
+        "p95_seconds": 6.901441582998814
+      }
+    },
+    "quality_v3_test": {
+      "sha256": "1756eafc648fbaec8bad9d3712e646eba26e5360228c94f3f0dd1f27ea970ed9",
+      "summary": {
+        "prompts": 48,
+        "base_tasks": 24,
+        "expected_fields": 56,
+        "unique_fields_present": 55,
+        "value_checks_passed": 51,
+        "reference_evidence_checks_passed": 50,
+        "all_checks_passed": 40,
+        "responses_with_extra_fields": 0,
+        "provenance_passes": 47,
+        "repairs_attempted": 3,
+        "rule_recoveries": 2,
+        "median_seconds": 4.6930747290025465,
+        "p95_seconds": 9.372915792002459
+      }
+    }
+  },
+  "limits": {
+    "human_review": "pending; 0 reviewed",
+    "remote_ci": "not run",
+    "production_readiness": "not claimed",
+    "test_metric": "automated field/value/reference checks, not semantic accuracy",
+    "adapter": "not served"
+  }
+}

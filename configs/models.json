@@ -1,0 +1,23 @@
+{
+  "checked_on": "2026-10-29",
+  "models": {
+    "llm": {
+      "repo_id": "mlx-community/Qwen3-4B-Instruct-2507-4bit",
+      "revision": "50d427756c6b1b2fe0c0a10f67fbda1fc8e82c1b",
+      "license": "apache-2.0",
+      "weight_bytes": 2263022417
+    },
+    "quantization_control": {
+      "repo_id": "mlx-community/Qwen3-4B-Instruct-2507-8bit",
+      "revision": "0e42af58449718de7931ee04f28191fbe6c43a56",
+      "license": "apache-2.0",
+      "weight_bytes": 4274158989
+    },
+    "embedding": {
+      "repo_id": "intfloat/multilingual-e5-small",
+      "revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+      "license": "mit",
+      "weight_bytes": 470641600
+    }
+  }
+}

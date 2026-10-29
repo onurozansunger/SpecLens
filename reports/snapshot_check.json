@@ -1,0 +1,57 @@
+{
+  "sources": [
+    {
+      "document_id": "uno-r4-minima",
+      "pdf_matches": true,
+      "markdown_matches": true
+    },
+    {
+      "document_id": "uno-r4-wifi",
+      "pdf_matches": true,
+      "markdown_matches": true
+    },
+    {
+      "document_id": "nano-esp32",
+      "pdf_matches": true,
+      "markdown_matches": true
+    },
+    {
+      "document_id": "nano-33-ble-rev2",
+      "pdf_matches": true,
+      "markdown_matches": true
+    },
+    {
+      "document_id": "nano-33-ble-sense-rev2",
+      "pdf_matches": true,
+      "markdown_matches": true
+    },
+    {
+      "document_id": "nano-rp2040-connect",
+      "pdf_matches": true,
+      "markdown_matches": true
+    },
+    {
+      "document_id": "mkr-wifi-1010",
+      "pdf_matches": true,
+      "markdown_matches": true
+    },
+    {
+      "document_id": "mega-2560",
+      "pdf_matches": true,
+      "markdown_matches": true
+    },
+    {
+      "document_id": "portenta-c33",
+      "pdf_matches": true,
+      "markdown_matches": true
+    },
+    {
+      "document_id": "opta",
+      "pdf_matches": true,
+      "markdown_matches": true
+    }
+  ],
+  "chunk_snapshot_matches": true,
+  "vector_snapshot_matches": true,
+  "valid": true
+}

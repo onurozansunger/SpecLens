@@ -1,0 +1,33 @@
+{
+  "human_validated": false,
+  "held_out": false,
+  "runs": [
+    {
+      "run": "generation_pilot",
+      "prompts": 30,
+      "pattern_matches": 24,
+      "provenance_passes": 27,
+      "p50_task_seconds": 3.356996166501631,
+      "p95_nearest_rank_task_seconds": 6.143559709002147,
+      "mlx_peak_allocation_GB": 3.417331508
+    },
+    {
+      "run": "generation_expansion",
+      "prompts": 30,
+      "pattern_matches": 24,
+      "provenance_passes": 26,
+      "p50_task_seconds": 3.644461666997813,
+      "p95_nearest_rank_task_seconds": 7.540577083000244,
+      "mlx_peak_allocation_GB": 3.417331508
+    },
+    {
+      "run": "generation_final",
+      "prompts": 30,
+      "pattern_matches": 28,
+      "provenance_passes": 24,
+      "p50_task_seconds": 6.657741312501457,
+      "p95_nearest_rank_task_seconds": 17.863512790998357,
+      "mlx_peak_allocation_GB": 3.69608002
+    }
+  ]
+}

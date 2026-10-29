@@ -1,0 +1,53 @@
+{
+  "sealed_at": "2026-10-29T19:38:06.925256+00:00",
+  "tasks_sha256": "7cfa3f853ec267a8d9c51417297612b0c163a3224d036293c0f4c031d24b499a",
+  "prediction_freeze_sha256": "a5a558f9de4af861b435d49f425d2e616e755d758d064cf58117cbaf579252bb",
+  "corpus_config_sha256": "12f4b4e5788f13dae6fcb243eeb3c0d8cfcb6a3db06ec106e38f6c06a2c3b881",
+  "test_families": [
+    "due-sam3x",
+    "edge-control",
+    "giga-h7",
+    "nicla-sense"
+  ],
+  "prompts": 48,
+  "base_tasks": 24,
+  "human_validated": false,
+  "review_status": "agent-authored; independent human review pending",
+  "source_visual_review": [
+    "due:p6",
+    "due:p7",
+    "giga-r1-wifi:p7",
+    "nicla-sense-me:p4",
+    "nicla-sense-me:p7",
+    "edge-control:p8"
+  ],
+  "absence_scan": [
+    {
+      "document_id": "due",
+      "full_text_keyword_hits": []
+    },
+    {
+      "document_id": "giga-r1-wifi",
+      "full_text_keyword_hits": []
+    },
+    {
+      "document_id": "nicla-sense-me",
+      "full_text_keyword_hits": []
+    },
+    {
+      "document_id": "edge-control",
+      "full_text_keyword_hits": []
+    }
+  ],
+  "combined_split_validation": {
+    "valid": true,
+    "errors": [],
+    "prompts": 78,
+    "base_tasks": 39,
+    "families": 12,
+    "human_reviewed": 0
+  },
+  "protocol": "No test-model responses viewed before sealing; do not tune this release on these results. Any future tuning retires v1 as an independent test.",
+  "chunks_sha256": "9757d37dd2e16aaf50830012ebdd18c0f78ac69780725aa481f9f82b0fd6646a",
+  "integrity_finalized_at": "2026-10-29T19:38:53.701325+00:00"
+}

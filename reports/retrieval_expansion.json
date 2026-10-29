@@ -1,0 +1,2477 @@
+{
+  "created_at": "2026-10-29T18:23:03.775637+00:00",
+  "split": "development",
+  "human_validated": false,
+  "document_filter": "given_by_task",
+  "warning": "Canonical-quote recall may miss valid alternate evidence. Paired prompts are correlated.",
+  "tasks_sha256": "4f857700e9fdb0e29edc3d41ed89458ed6f3b2fdd0026c492257980b48ca3b41",
+  "chunks_sha256": "d037f32db94560c721d90af00cf91ff9d08524866f6b1f46c16d6037459785d2",
+  "summary": [
+    {
+      "method": "bm25",
+      "language": "en",
+      "tasks": 14,
+      "canonical_quote_recall_at_3": 0.8928571428571429,
+      "canonical_quote_recall_at_5": 0.9285714285714286,
+      "canonical_quote_recall_at_10": 0.9285714285714286
+    },
+    {
+      "method": "bm25",
+      "language": "tr",
+      "tasks": 14,
+      "canonical_quote_recall_at_3": 0.6071428571428571,
+      "canonical_quote_recall_at_5": 0.8214285714285714,
+      "canonical_quote_recall_at_10": 1.0
+    },
+    {
+      "method": "dense",
+      "language": "en",
+      "tasks": 14,
+      "canonical_quote_recall_at_3": 0.8928571428571429,
+      "canonical_quote_recall_at_5": 0.8928571428571429,
+      "canonical_quote_recall_at_10": 0.8928571428571429
+    },
+    {
+      "method": "dense",
+      "language": "tr",
+      "tasks": 14,
+      "canonical_quote_recall_at_3": 0.5357142857142857,
+      "canonical_quote_recall_at_5": 0.6071428571428571,
+      "canonical_quote_recall_at_10": 0.75
+    },
+    {
+      "method": "hybrid",
+      "language": "en",
+      "tasks": 14,
+      "canonical_quote_recall_at_3": 0.8214285714285714,
+      "canonical_quote_recall_at_5": 0.8928571428571429,
+      "canonical_quote_recall_at_10": 1.0
+    },
+    {
+      "method": "hybrid",
+      "language": "tr",
+      "tasks": 14,
+      "canonical_quote_recall_at_3": 0.75,
+      "canonical_quote_recall_at_5": 0.8214285714285714,
+      "canonical_quote_recall_at_10": 1.0
+    },
+    {
+      "method": "hybrid_expanded",
+      "language": "en",
+      "tasks": 14,
+      "canonical_quote_recall_at_3": 0.8214285714285714,
+      "canonical_quote_recall_at_5": 0.8928571428571429,
+      "canonical_quote_recall_at_10": 1.0
+    },
+    {
+      "method": "hybrid_expanded",
+      "language": "tr",
+      "tasks": 14,
+      "canonical_quote_recall_at_3": 0.8928571428571429,
+      "canonical_quote_recall_at_5": 0.9285714285714286,
+      "canonical_quote_recall_at_10": 1.0
+    }
+  ],
+  "rows": [
+    {
+      "task_id": "uno-vin-en",
+      "language": "en",
+      "method": "bm25",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "uno-r4-minima:p6:b0",
+        "uno-r4-minima:p2:b0",
+        "uno-r4-minima:p10:b0",
+        "uno-r4-minima:p5:b0",
+        "uno-r4-minima:p13:b0",
+        "uno-r4-minima:p1:b0",
+        "uno-r4-minima:p16:b0",
+        "uno-r4-minima:p9:b0",
+        "uno-r4-minima:p11:b0",
+        "uno-r4-minima:p3:b0"
+      ]
+    },
+    {
+      "task_id": "uno-vin-tr",
+      "language": "tr",
+      "method": "bm25",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "uno-r4-minima:p10:b0",
+        "uno-r4-minima:p2:b0",
+        "uno-r4-minima:p6:b0",
+        "uno-r4-minima:p13:b0",
+        "uno-r4-minima:p1:b0",
+        "uno-r4-minima:p3:b0",
+        "uno-r4-minima:p4:b0",
+        "uno-r4-minima:p5:b0",
+        "uno-r4-minima:p7:b0",
+        "uno-r4-minima:p8:b0"
+      ]
+    },
+    {
+      "task_id": "nano-vin-en",
+      "language": "en",
+      "method": "bm25",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "nano-esp32:p13:b0",
+        "nano-esp32:p2:b0",
+        "nano-esp32:p12:b0",
+        "nano-esp32:p5:b0",
+        "nano-esp32:p3:b0",
+        "nano-esp32:p14:b0",
+        "nano-esp32:p18:b0",
+        "nano-esp32:p8:b0",
+        "nano-esp32:p1:b0",
+        "nano-esp32:p20:b2"
+      ]
+    },
+    {
+      "task_id": "nano-vin-tr",
+      "language": "tr",
+      "method": "bm25",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "nano-esp32:p13:b0",
+        "nano-esp32:p12:b0",
+        "nano-esp32:p14:b0",
+        "nano-esp32:p3:b0",
+        "nano-esp32:p2:b0",
+        "nano-esp32:p5:b0",
+        "nano-esp32:p16:b0",
+        "nano-esp32:p1:b0",
+        "nano-esp32:p4:b0",
+        "nano-esp32:p6:b0"
+      ]
+    },
+    {
+      "task_id": "nano-gpio-en",
+      "language": "en",
+      "method": "bm25",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "nano-esp32:p13:b0",
+        "nano-esp32:p18:b0",
+        "nano-esp32:p2:b0",
+        "nano-esp32:p16:b0",
+        "nano-esp32:p10:b0",
+        "nano-esp32:p19:b0",
+        "nano-esp32:p9:b0",
+        "nano-esp32:p12:b0",
+        "nano-esp32:p1:b0",
+        "nano-esp32:p5:b0"
+      ]
+    },
+    {
+      "task_id": "nano-gpio-tr",
+      "language": "tr",
+      "method": "bm25",
+      "recall_at_3": 0.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "nano-esp32:p16:b0",
+        "nano-esp32:p2:b0",
+        "nano-esp32:p7:b0",
+        "nano-esp32:p4:b0",
+        "nano-esp32:p13:b0",
+        "nano-esp32:p22:b0",
+        "nano-esp32:p1:b0",
+        "nano-esp32:p3:b0",
+        "nano-esp32:p5:b0",
+        "nano-esp32:p6:b0"
+      ]
+    },
+    {
+      "task_id": "uno-wifi-sram-en",
+      "language": "en",
+      "method": "bm25",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "uno-r4-wifi:p9:b0",
+        "uno-r4-wifi:p2:b0",
+        "uno-r4-wifi:p11:b0",
+        "uno-r4-wifi:p9:b1",
+        "uno-r4-wifi:p12:b0",
+        "uno-r4-wifi:p15:b0",
+        "uno-r4-wifi:p1:b0",
+        "uno-r4-wifi:p6:b1",
+        "uno-r4-wifi:p16:b0",
+        "uno-r4-wifi:p20:b1"
+      ]
+    },
+    {
+      "task_id": "uno-wifi-sram-tr",
+      "language": "tr",
+      "method": "bm25",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "uno-r4-wifi:p9:b0",
+        "uno-r4-wifi:p2:b0",
+        "uno-r4-wifi:p1:b0",
+        "uno-r4-wifi:p11:b0",
+        "uno-r4-wifi:p9:b1",
+        "uno-r4-wifi:p12:b0",
+        "uno-r4-wifi:p16:b0",
+        "uno-r4-wifi:p15:b0",
+        "uno-r4-wifi:p6:b0",
+        "uno-r4-wifi:p3:b0"
+      ]
+    },
+    {
+      "task_id": "ble-flash-en",
+      "language": "en",
+      "method": "bm25",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "nano-33-ble-rev2:p3:b0",
+        "nano-33-ble-rev2:p1:b0",
+        "nano-33-ble-rev2:p10:b0",
+        "nano-33-ble-rev2:p5:b0",
+        "nano-33-ble-rev2:p15:b0",
+        "nano-33-ble-rev2:p7:b0",
+        "nano-33-ble-rev2:p14:b0",
+        "nano-33-ble-rev2:p9:b0",
+        "nano-33-ble-rev2:p4:b0",
+        "nano-33-ble-rev2:p13:b0"
+      ]
+    },
+    {
+      "task_id": "ble-flash-tr",
+      "language": "tr",
+      "method": "bm25",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "nano-33-ble-rev2:p3:b0",
+        "nano-33-ble-rev2:p1:b0",
+        "nano-33-ble-rev2:p15:b0",
+        "nano-33-ble-rev2:p2:b0",
+        "nano-33-ble-rev2:p4:b0",
+        "nano-33-ble-rev2:p5:b0",
+        "nano-33-ble-rev2:p6:b0",
+        "nano-33-ble-rev2:p7:b0",
+        "nano-33-ble-rev2:p8:b0",
+        "nano-33-ble-rev2:p9:b0"
+      ]
+    },
+    {
+      "task_id": "sense-humidity-en",
+      "language": "en",
+      "method": "bm25",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "nano-33-ble-sense-rev2:p10:b0",
+        "nano-33-ble-sense-rev2:p4:b0",
+        "nano-33-ble-sense-rev2:p5:b0",
+        "nano-33-ble-sense-rev2:p8:b0",
+        "nano-33-ble-sense-rev2:p16:b0",
+        "nano-33-ble-sense-rev2:p11:b0",
+        "nano-33-ble-sense-rev2:p13:b0",
+        "nano-33-ble-sense-rev2:p3:b0",
+        "nano-33-ble-sense-rev2:p14:b0",
+        "nano-33-ble-sense-rev2:p15:b0"
+      ]
+    },
+    {
+      "task_id": "sense-humidity-tr",
+      "language": "tr",
+      "method": "bm25",
+      "recall_at_3": 0.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "nano-33-ble-sense-rev2:p1:b0",
+        "nano-33-ble-sense-rev2:p2:b0",
+        "nano-33-ble-sense-rev2:p3:b0",
+        "nano-33-ble-sense-rev2:p4:b0",
+        "nano-33-ble-sense-rev2:p5:b0",
+        "nano-33-ble-sense-rev2:p6:b0",
+        "nano-33-ble-sense-rev2:p7:b0",
+        "nano-33-ble-sense-rev2:p8:b0",
+        "nano-33-ble-sense-rev2:p9:b0",
+        "nano-33-ble-sense-rev2:p10:b0"
+      ]
+    },
+    {
+      "task_id": "rp2040-sram-en",
+      "language": "en",
+      "method": "bm25",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "nano-rp2040-connect:p2:b0",
+        "nano-rp2040-connect:p10:b0",
+        "nano-rp2040-connect:p13:b0",
+        "nano-rp2040-connect:p12:b0",
+        "nano-rp2040-connect:p14:b0",
+        "nano-rp2040-connect:p1:b0",
+        "nano-rp2040-connect:p11:b0",
+        "nano-rp2040-connect:p10:b1",
+        "nano-rp2040-connect:p18:b0",
+        "nano-rp2040-connect:p11:b1"
+      ]
+    },
+    {
+      "task_id": "rp2040-sram-tr",
+      "language": "tr",
+      "method": "bm25",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "nano-rp2040-connect:p2:b0",
+        "nano-rp2040-connect:p10:b0",
+        "nano-rp2040-connect:p12:b0",
+        "nano-rp2040-connect:p4:b0",
+        "nano-rp2040-connect:p16:b0",
+        "nano-rp2040-connect:p8:b0",
+        "nano-rp2040-connect:p9:b0",
+        "nano-rp2040-connect:p1:b0",
+        "nano-rp2040-connect:p15:b0",
+        "nano-rp2040-connect:p10:b1"
+      ]
+    },
+    {
+      "task_id": "mkr-clock-en",
+      "language": "en",
+      "method": "bm25",
+      "recall_at_3": 0.0,
+      "recall_at_5": 0.0,
+      "recall_at_10": 0.0,
+      "retrieved_ids": [
+        "mkr-wifi-1010:p7:b0",
+        "mkr-wifi-1010:p15:b0",
+        "mkr-wifi-1010:p8:b0",
+        "mkr-wifi-1010:p9:b1",
+        "mkr-wifi-1010:p1:b0",
+        "mkr-wifi-1010:p9:b0",
+        "mkr-wifi-1010:p11:b0",
+        "mkr-wifi-1010:p6:b0",
+        "mkr-wifi-1010:p13:b0",
+        "mkr-wifi-1010:p14:b0"
+      ]
+    },
+    {
+      "task_id": "mkr-clock-tr",
+      "language": "tr",
+      "method": "bm25",
+      "recall_at_3": 0.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "mkr-wifi-1010:p15:b0",
+        "mkr-wifi-1010:p13:b0",
+        "mkr-wifi-1010:p14:b1",
+        "mkr-wifi-1010:p1:b0",
+        "mkr-wifi-1010:p2:b0",
+        "mkr-wifi-1010:p3:b0",
+        "mkr-wifi-1010:p4:b0",
+        "mkr-wifi-1010:p5:b0",
+        "mkr-wifi-1010:p6:b0",
+        "mkr-wifi-1010:p6:b1"
+      ]
+    },
+    {
+      "task_id": "mega-pins-en",
+      "language": "en",
+      "method": "bm25",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "mega-2560:p4:b0",
+        "mega-2560:p2:b0",
+        "mega-2560:p1:b0",
+        "mega-2560:p7:b0",
+        "mega-2560:p3:b0",
+        "mega-2560:p15:b0",
+        "mega-2560:p15:b1",
+        "mega-2560:p13:b0",
+        "mega-2560:p14:b0",
+        "mega-2560:p8:b0"
+      ]
+    },
+    {
+      "task_id": "mega-pins-tr",
+      "language": "tr",
+      "method": "bm25",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "mega-2560:p2:b0",
+        "mega-2560:p4:b0",
+        "mega-2560:p1:b0",
+        "mega-2560:p3:b0",
+        "mega-2560:p4:b1",
+        "mega-2560:p5:b0",
+        "mega-2560:p6:b0",
+        "mega-2560:p7:b0",
+        "mega-2560:p8:b0",
+        "mega-2560:p9:b0"
+      ]
+    },
+    {
+      "task_id": "portenta-flash-en",
+      "language": "en",
+      "method": "bm25",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "portenta-c33:p5:b0",
+        "portenta-c33:p7:b0",
+        "portenta-c33:p13:b0",
+        "portenta-c33:p15:b0",
+        "portenta-c33:p7:b1",
+        "portenta-c33:p6:b0",
+        "portenta-c33:p5:b1",
+        "portenta-c33:p10:b0",
+        "portenta-c33:p2:b0",
+        "portenta-c33:p1:b0"
+      ]
+    },
+    {
+      "task_id": "portenta-flash-tr",
+      "language": "tr",
+      "method": "bm25",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "portenta-c33:p5:b0",
+        "portenta-c33:p7:b0",
+        "portenta-c33:p6:b0",
+        "portenta-c33:p1:b0",
+        "portenta-c33:p1:b1",
+        "portenta-c33:p2:b0",
+        "portenta-c33:p3:b0",
+        "portenta-c33:p4:b0",
+        "portenta-c33:p4:b1",
+        "portenta-c33:p5:b1"
+      ]
+    },
+    {
+      "task_id": "opta-supply-en",
+      "language": "en",
+      "method": "bm25",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "opta:p8:b0",
+        "opta:p16:b0",
+        "opta:p13:b1",
+        "opta:p13:b0",
+        "opta:p19:b0",
+        "opta:p11:b0",
+        "opta:p12:b0",
+        "opta:p14:b0",
+        "opta:p19:b1",
+        "opta:p10:b0"
+      ]
+    },
+    {
+      "task_id": "opta-supply-tr",
+      "language": "tr",
+      "method": "bm25",
+      "recall_at_3": 0.0,
+      "recall_at_5": 0.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "opta:p1:b0",
+        "opta:p2:b0",
+        "opta:p3:b0",
+        "opta:p4:b0",
+        "opta:p4:b1",
+        "opta:p4:b2",
+        "opta:p5:b0",
+        "opta:p6:b0",
+        "opta:p7:b0",
+        "opta:p8:b0"
+      ]
+    },
+    {
+      "task_id": "opta-variant-en",
+      "language": "en",
+      "method": "bm25",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "opta:p4:b0",
+        "opta:p13:b0",
+        "opta:p6:b0",
+        "opta:p5:b0",
+        "opta:p16:b0",
+        "opta:p4:b1",
+        "opta:p1:b0",
+        "opta:p11:b0",
+        "opta:p15:b0",
+        "opta:p2:b0"
+      ]
+    },
+    {
+      "task_id": "opta-variant-tr",
+      "language": "tr",
+      "method": "bm25",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "opta:p4:b0",
+        "opta:p1:b0",
+        "opta:p13:b0",
+        "opta:p5:b0",
+        "opta:p6:b0",
+        "opta:p2:b0",
+        "opta:p9:b0",
+        "opta:p15:b1",
+        "opta:p12:b0",
+        "opta:p17:b0"
+      ]
+    },
+    {
+      "task_id": "opta-temperature-en",
+      "language": "en",
+      "method": "bm25",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "opta:p8:b0",
+        "opta:p16:b0",
+        "opta:p20:b0",
+        "opta:p10:b0",
+        "opta:p19:b1",
+        "opta:p11:b0",
+        "opta:p2:b0",
+        "opta:p13:b1",
+        "opta:p12:b0",
+        "opta:p14:b0"
+      ]
+    },
+    {
+      "task_id": "opta-temperature-tr",
+      "language": "tr",
+      "method": "bm25",
+      "recall_at_3": 0.0,
+      "recall_at_5": 0.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "opta:p1:b0",
+        "opta:p2:b0",
+        "opta:p3:b0",
+        "opta:p4:b0",
+        "opta:p4:b1",
+        "opta:p4:b2",
+        "opta:p5:b0",
+        "opta:p6:b0",
+        "opta:p7:b0",
+        "opta:p8:b0"
+      ]
+    },
+    {
+      "task_id": "nano-temperature-review-en",
+      "language": "en",
+      "method": "bm25",
+      "recall_at_3": 0.5,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "nano-esp32:p5:b0",
+        "nano-esp32:p20:b1",
+        "nano-esp32:p20:b0",
+        "nano-esp32:p20:b2",
+        "nano-esp32:p21:b0",
+        "nano-esp32:p19:b0",
+        "nano-esp32:p13:b0",
+        "nano-esp32:p1:b0",
+        "nano-esp32:p18:b0",
+        "nano-esp32:p8:b0"
+      ]
+    },
+    {
+      "task_id": "nano-temperature-review-tr",
+      "language": "tr",
+      "method": "bm25",
+      "recall_at_3": 0.5,
+      "recall_at_5": 0.5,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "nano-esp32:p21:b0",
+        "nano-esp32:p1:b0",
+        "nano-esp32:p2:b0",
+        "nano-esp32:p3:b0",
+        "nano-esp32:p4:b0",
+        "nano-esp32:p5:b0",
+        "nano-esp32:p6:b0",
+        "nano-esp32:p7:b0",
+        "nano-esp32:p8:b0",
+        "nano-esp32:p8:b1"
+      ]
+    },
+    {
+      "task_id": "opta-price-en",
+      "language": "en",
+      "method": "bm25",
+      "recall_at_3": null,
+      "recall_at_5": null,
+      "recall_at_10": null,
+      "retrieved_ids": [
+        "opta:p16:b0",
+        "opta:p12:b0",
+        "opta:p19:b0",
+        "opta:p20:b0",
+        "opta:p18:b1",
+        "opta:p11:b0",
+        "opta:p19:b1",
+        "opta:p1:b0",
+        "opta:p14:b0",
+        "opta:p4:b2"
+      ]
+    },
+    {
+      "task_id": "opta-price-tr",
+      "language": "tr",
+      "method": "bm25",
+      "recall_at_3": null,
+      "recall_at_5": null,
+      "recall_at_10": null,
+      "retrieved_ids": [
+        "opta:p9:b0",
+        "opta:p8:b0",
+        "opta:p15:b1",
+        "opta:p3:b0",
+        "opta:p12:b0",
+        "opta:p4:b2",
+        "opta:p20:b1",
+        "opta:p17:b0",
+        "opta:p6:b0",
+        "opta:p2:b0"
+      ]
+    },
+    {
+      "task_id": "uno-vin-en",
+      "language": "en",
+      "method": "dense",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "uno-r4-minima:p6:b0",
+        "uno-r4-minima:p2:b0",
+        "uno-r4-minima:p10:b0",
+        "uno-r4-minima:p13:b0",
+        "uno-r4-minima:p5:b0",
+        "uno-r4-minima:p11:b0",
+        "uno-r4-minima:p9:b0",
+        "uno-r4-minima:p17:b1",
+        "uno-r4-minima:p1:b0",
+        "uno-r4-minima:p17:b0"
+      ]
+    },
+    {
+      "task_id": "uno-vin-tr",
+      "language": "tr",
+      "method": "dense",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "uno-r4-minima:p13:b0",
+        "uno-r4-minima:p2:b0",
+        "uno-r4-minima:p17:b1",
+        "uno-r4-minima:p17:b0",
+        "uno-r4-minima:p6:b0",
+        "uno-r4-minima:p14:b0",
+        "uno-r4-minima:p10:b0",
+        "uno-r4-minima:p18:b1",
+        "uno-r4-minima:p4:b0",
+        "uno-r4-minima:p19:b0"
+      ]
+    },
+    {
+      "task_id": "nano-vin-en",
+      "language": "en",
+      "method": "dense",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "nano-esp32:p13:b0",
+        "nano-esp32:p12:b0",
+        "nano-esp32:p3:b0",
+        "nano-esp32:p2:b0",
+        "nano-esp32:p14:b0",
+        "nano-esp32:p16:b0",
+        "nano-esp32:p20:b1",
+        "nano-esp32:p22:b0",
+        "nano-esp32:p5:b0",
+        "nano-esp32:p8:b0"
+      ]
+    },
+    {
+      "task_id": "nano-vin-tr",
+      "language": "tr",
+      "method": "dense",
+      "recall_at_3": 0.0,
+      "recall_at_5": 0.0,
+      "recall_at_10": 0.0,
+      "retrieved_ids": [
+        "nano-esp32:p16:b0",
+        "nano-esp32:p19:b0",
+        "nano-esp32:p22:b0",
+        "nano-esp32:p3:b0",
+        "nano-esp32:p9:b0",
+        "nano-esp32:p19:b1",
+        "nano-esp32:p20:b1",
+        "nano-esp32:p12:b0",
+        "nano-esp32:p2:b0",
+        "nano-esp32:p20:b0"
+      ]
+    },
+    {
+      "task_id": "nano-gpio-en",
+      "language": "en",
+      "method": "dense",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "nano-esp32:p16:b0",
+        "nano-esp32:p13:b0",
+        "nano-esp32:p11:b0",
+        "nano-esp32:p10:b0",
+        "nano-esp32:p14:b0",
+        "nano-esp32:p2:b0",
+        "nano-esp32:p9:b0",
+        "nano-esp32:p12:b0",
+        "nano-esp32:p8:b0",
+        "nano-esp32:p22:b0"
+      ]
+    },
+    {
+      "task_id": "nano-gpio-tr",
+      "language": "tr",
+      "method": "dense",
+      "recall_at_3": 0.0,
+      "recall_at_5": 0.0,
+      "recall_at_10": 0.0,
+      "retrieved_ids": [
+        "nano-esp32:p16:b0",
+        "nano-esp32:p9:b0",
+        "nano-esp32:p8:b0",
+        "nano-esp32:p19:b0",
+        "nano-esp32:p2:b0",
+        "nano-esp32:p10:b0",
+        "nano-esp32:p22:b0",
+        "nano-esp32:p11:b0",
+        "nano-esp32:p12:b0",
+        "nano-esp32:p4:b0"
+      ]
+    },
+    {
+      "task_id": "uno-wifi-sram-en",
+      "language": "en",
+      "method": "dense",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "uno-r4-wifi:p9:b1",
+        "uno-r4-wifi:p2:b0",
+        "uno-r4-wifi:p11:b0",
+        "uno-r4-wifi:p9:b0",
+        "uno-r4-wifi:p1:b0",
+        "uno-r4-wifi:p15:b0",
+        "uno-r4-wifi:p6:b0",
+        "uno-r4-wifi:p12:b0",
+        "uno-r4-wifi:p16:b0",
+        "uno-r4-wifi:p24:b0"
+      ]
+    },
+    {
+      "task_id": "uno-wifi-sram-tr",
+      "language": "tr",
+      "method": "dense",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "uno-r4-wifi:p2:b0",
+        "uno-r4-wifi:p9:b0",
+        "uno-r4-wifi:p9:b1",
+        "uno-r4-wifi:p1:b0",
+        "uno-r4-wifi:p11:b0",
+        "uno-r4-wifi:p21:b0",
+        "uno-r4-wifi:p15:b0",
+        "uno-r4-wifi:p21:b1",
+        "uno-r4-wifi:p3:b0",
+        "uno-r4-wifi:p6:b0"
+      ]
+    },
+    {
+      "task_id": "ble-flash-en",
+      "language": "en",
+      "method": "dense",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "nano-33-ble-rev2:p3:b0",
+        "nano-33-ble-rev2:p1:b0",
+        "nano-33-ble-rev2:p10:b0",
+        "nano-33-ble-rev2:p6:b0",
+        "nano-33-ble-rev2:p7:b0",
+        "nano-33-ble-rev2:p2:b0",
+        "nano-33-ble-rev2:p15:b0",
+        "nano-33-ble-rev2:p12:b0",
+        "nano-33-ble-rev2:p5:b0",
+        "nano-33-ble-rev2:p16:b0"
+      ]
+    },
+    {
+      "task_id": "ble-flash-tr",
+      "language": "tr",
+      "method": "dense",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "nano-33-ble-rev2:p3:b0",
+        "nano-33-ble-rev2:p1:b0",
+        "nano-33-ble-rev2:p6:b0",
+        "nano-33-ble-rev2:p10:b0",
+        "nano-33-ble-rev2:p15:b0",
+        "nano-33-ble-rev2:p7:b0",
+        "nano-33-ble-rev2:p12:b0",
+        "nano-33-ble-rev2:p8:b0",
+        "nano-33-ble-rev2:p4:b0",
+        "nano-33-ble-rev2:p2:b0"
+      ]
+    },
+    {
+      "task_id": "sense-humidity-en",
+      "language": "en",
+      "method": "dense",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "nano-33-ble-sense-rev2:p10:b0",
+        "nano-33-ble-sense-rev2:p4:b0",
+        "nano-33-ble-sense-rev2:p11:b0",
+        "nano-33-ble-sense-rev2:p11:b1",
+        "nano-33-ble-sense-rev2:p9:b0",
+        "nano-33-ble-sense-rev2:p8:b0",
+        "nano-33-ble-sense-rev2:p5:b0",
+        "nano-33-ble-sense-rev2:p13:b1",
+        "nano-33-ble-sense-rev2:p17:b1",
+        "nano-33-ble-sense-rev2:p19:b1"
+      ]
+    },
+    {
+      "task_id": "sense-humidity-tr",
+      "language": "tr",
+      "method": "dense",
+      "recall_at_3": 0.0,
+      "recall_at_5": 0.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "nano-33-ble-sense-rev2:p11:b1",
+        "nano-33-ble-sense-rev2:p10:b0",
+        "nano-33-ble-sense-rev2:p17:b0",
+        "nano-33-ble-sense-rev2:p1:b0",
+        "nano-33-ble-sense-rev2:p3:b0",
+        "nano-33-ble-sense-rev2:p4:b0",
+        "nano-33-ble-sense-rev2:p19:b1",
+        "nano-33-ble-sense-rev2:p9:b0",
+        "nano-33-ble-sense-rev2:p16:b0",
+        "nano-33-ble-sense-rev2:p11:b0"
+      ]
+    },
+    {
+      "task_id": "rp2040-sram-en",
+      "language": "en",
+      "method": "dense",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "nano-rp2040-connect:p10:b0",
+        "nano-rp2040-connect:p2:b0",
+        "nano-rp2040-connect:p11:b0",
+        "nano-rp2040-connect:p11:b1",
+        "nano-rp2040-connect:p10:b1",
+        "nano-rp2040-connect:p1:b0",
+        "nano-rp2040-connect:p12:b0",
+        "nano-rp2040-connect:p4:b0",
+        "nano-rp2040-connect:p3:b0",
+        "nano-rp2040-connect:p7:b0"
+      ]
+    },
+    {
+      "task_id": "rp2040-sram-tr",
+      "language": "tr",
+      "method": "dense",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "nano-rp2040-connect:p10:b0",
+        "nano-rp2040-connect:p2:b0",
+        "nano-rp2040-connect:p11:b0",
+        "nano-rp2040-connect:p4:b0",
+        "nano-rp2040-connect:p1:b0",
+        "nano-rp2040-connect:p10:b1",
+        "nano-rp2040-connect:p3:b0",
+        "nano-rp2040-connect:p12:b0",
+        "nano-rp2040-connect:p5:b0",
+        "nano-rp2040-connect:p16:b0"
+      ]
+    },
+    {
+      "task_id": "mkr-clock-en",
+      "language": "en",
+      "method": "dense",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "mkr-wifi-1010:p2:b0",
+        "mkr-wifi-1010:p1:b0",
+        "mkr-wifi-1010:p7:b0",
+        "mkr-wifi-1010:p15:b0",
+        "mkr-wifi-1010:p13:b1",
+        "mkr-wifi-1010:p6:b1",
+        "mkr-wifi-1010:p10:b1",
+        "mkr-wifi-1010:p4:b0",
+        "mkr-wifi-1010:p13:b0",
+        "mkr-wifi-1010:p14:b0"
+      ]
+    },
+    {
+      "task_id": "mkr-clock-tr",
+      "language": "tr",
+      "method": "dense",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "mkr-wifi-1010:p2:b0",
+        "mkr-wifi-1010:p13:b1",
+        "mkr-wifi-1010:p1:b0",
+        "mkr-wifi-1010:p7:b0",
+        "mkr-wifi-1010:p15:b0",
+        "mkr-wifi-1010:p14:b2",
+        "mkr-wifi-1010:p13:b0",
+        "mkr-wifi-1010:p10:b1",
+        "mkr-wifi-1010:p5:b0",
+        "mkr-wifi-1010:p3:b0"
+      ]
+    },
+    {
+      "task_id": "mega-pins-en",
+      "language": "en",
+      "method": "dense",
+      "recall_at_3": 0.0,
+      "recall_at_5": 0.0,
+      "recall_at_10": 0.0,
+      "retrieved_ids": [
+        "mega-2560:p4:b0",
+        "mega-2560:p12:b0",
+        "mega-2560:p1:b0",
+        "mega-2560:p10:b1",
+        "mega-2560:p11:b0",
+        "mega-2560:p13:b0",
+        "mega-2560:p10:b0",
+        "mega-2560:p3:b0",
+        "mega-2560:p15:b0",
+        "mega-2560:p7:b0"
+      ]
+    },
+    {
+      "task_id": "mega-pins-tr",
+      "language": "tr",
+      "method": "dense",
+      "recall_at_3": 0.0,
+      "recall_at_5": 0.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "mega-2560:p11:b0",
+        "mega-2560:p12:b0",
+        "mega-2560:p10:b0",
+        "mega-2560:p10:b1",
+        "mega-2560:p13:b0",
+        "mega-2560:p4:b0",
+        "mega-2560:p15:b0",
+        "mega-2560:p9:b0",
+        "mega-2560:p15:b1",
+        "mega-2560:p2:b0"
+      ]
+    },
+    {
+      "task_id": "portenta-flash-en",
+      "language": "en",
+      "method": "dense",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "portenta-c33:p7:b0",
+        "portenta-c33:p5:b0",
+        "portenta-c33:p7:b1",
+        "portenta-c33:p6:b0",
+        "portenta-c33:p5:b1",
+        "portenta-c33:p6:b1",
+        "portenta-c33:p21:b0",
+        "portenta-c33:p9:b0",
+        "portenta-c33:p14:b0",
+        "portenta-c33:p2:b0"
+      ]
+    },
+    {
+      "task_id": "portenta-flash-tr",
+      "language": "tr",
+      "method": "dense",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "portenta-c33:p5:b0",
+        "portenta-c33:p7:b0",
+        "portenta-c33:p6:b0",
+        "portenta-c33:p7:b1",
+        "portenta-c33:p5:b1",
+        "portenta-c33:p14:b0",
+        "portenta-c33:p6:b1",
+        "portenta-c33:p4:b1",
+        "portenta-c33:p21:b0",
+        "portenta-c33:p8:b0"
+      ]
+    },
+    {
+      "task_id": "opta-supply-en",
+      "language": "en",
+      "method": "dense",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "opta:p8:b0",
+        "opta:p13:b1",
+        "opta:p7:b0",
+        "opta:p19:b1",
+        "opta:p10:b0",
+        "opta:p17:b0",
+        "opta:p18:b1",
+        "opta:p13:b2",
+        "opta:p20:b0",
+        "opta:p13:b0"
+      ]
+    },
+    {
+      "task_id": "opta-supply-tr",
+      "language": "tr",
+      "method": "dense",
+      "recall_at_3": 0.0,
+      "recall_at_5": 0.0,
+      "recall_at_10": 0.0,
+      "retrieved_ids": [
+        "opta:p18:b1",
+        "opta:p13:b1",
+        "opta:p18:b0",
+        "opta:p20:b0",
+        "opta:p17:b0",
+        "opta:p19:b2",
+        "opta:p7:b0",
+        "opta:p21:b0",
+        "opta:p13:b0",
+        "opta:p20:b1"
+      ]
+    },
+    {
+      "task_id": "opta-variant-en",
+      "language": "en",
+      "method": "dense",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "opta:p13:b0",
+        "opta:p4:b0",
+        "opta:p1:b0",
+        "opta:p4:b1",
+        "opta:p11:b0",
+        "opta:p10:b0",
+        "opta:p14:b0",
+        "opta:p5:b0",
+        "opta:p17:b0",
+        "opta:p2:b0"
+      ]
+    },
+    {
+      "task_id": "opta-variant-tr",
+      "language": "tr",
+      "method": "dense",
+      "recall_at_3": 0.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "opta:p13:b0",
+        "opta:p17:b0",
+        "opta:p1:b0",
+        "opta:p4:b0",
+        "opta:p21:b0",
+        "opta:p11:b0",
+        "opta:p4:b1",
+        "opta:p5:b0",
+        "opta:p10:b0",
+        "opta:p2:b0"
+      ]
+    },
+    {
+      "task_id": "opta-temperature-en",
+      "language": "en",
+      "method": "dense",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "opta:p8:b0",
+        "opta:p19:b1",
+        "opta:p20:b0",
+        "opta:p13:b0",
+        "opta:p21:b0",
+        "opta:p13:b1",
+        "opta:p3:b0",
+        "opta:p2:b0",
+        "opta:p13:b2",
+        "opta:p10:b0"
+      ]
+    },
+    {
+      "task_id": "opta-temperature-tr",
+      "language": "tr",
+      "method": "dense",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "opta:p17:b0",
+        "opta:p8:b0",
+        "opta:p13:b1",
+        "opta:p20:b0",
+        "opta:p18:b0",
+        "opta:p13:b0",
+        "opta:p18:b1",
+        "opta:p21:b0",
+        "opta:p3:b0",
+        "opta:p19:b2"
+      ]
+    },
+    {
+      "task_id": "nano-temperature-review-en",
+      "language": "en",
+      "method": "dense",
+      "recall_at_3": 0.5,
+      "recall_at_5": 0.5,
+      "recall_at_10": 0.5,
+      "retrieved_ids": [
+        "nano-esp32:p20:b1",
+        "nano-esp32:p21:b0",
+        "nano-esp32:p19:b0",
+        "nano-esp32:p19:b1",
+        "nano-esp32:p20:b0",
+        "nano-esp32:p18:b1",
+        "nano-esp32:p10:b0",
+        "nano-esp32:p20:b2",
+        "nano-esp32:p9:b0",
+        "nano-esp32:p4:b0"
+      ]
+    },
+    {
+      "task_id": "nano-temperature-review-tr",
+      "language": "tr",
+      "method": "dense",
+      "recall_at_3": 0.5,
+      "recall_at_5": 0.5,
+      "recall_at_10": 0.5,
+      "retrieved_ids": [
+        "nano-esp32:p21:b0",
+        "nano-esp32:p20:b1",
+        "nano-esp32:p19:b0",
+        "nano-esp32:p19:b1",
+        "nano-esp32:p20:b0",
+        "nano-esp32:p18:b1",
+        "nano-esp32:p10:b0",
+        "nano-esp32:p22:b0",
+        "nano-esp32:p9:b0",
+        "nano-esp32:p11:b0"
+      ]
+    },
+    {
+      "task_id": "opta-price-en",
+      "language": "en",
+      "method": "dense",
+      "recall_at_3": null,
+      "recall_at_5": null,
+      "recall_at_10": null,
+      "retrieved_ids": [
+        "opta:p18:b1",
+        "opta:p17:b0",
+        "opta:p18:b0",
+        "opta:p21:b0",
+        "opta:p13:b1",
+        "opta:p12:b0",
+        "opta:p9:b0",
+        "opta:p16:b0",
+        "opta:p3:b0",
+        "opta:p13:b0"
+      ]
+    },
+    {
+      "task_id": "opta-price-tr",
+      "language": "tr",
+      "method": "dense",
+      "recall_at_3": null,
+      "recall_at_5": null,
+      "recall_at_10": null,
+      "retrieved_ids": [
+        "opta:p17:b0",
+        "opta:p18:b1",
+        "opta:p21:b0",
+        "opta:p9:b0",
+        "opta:p13:b1",
+        "opta:p18:b0",
+        "opta:p5:b0",
+        "opta:p11:b0",
+        "opta:p2:b0",
+        "opta:p16:b0"
+      ]
+    },
+    {
+      "task_id": "uno-vin-en",
+      "language": "en",
+      "method": "hybrid",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "uno-r4-minima:p6:b0",
+        "uno-r4-minima:p2:b0",
+        "uno-r4-minima:p10:b0",
+        "uno-r4-minima:p5:b0",
+        "uno-r4-minima:p13:b0",
+        "uno-r4-minima:p1:b0",
+        "uno-r4-minima:p11:b0",
+        "uno-r4-minima:p9:b0",
+        "uno-r4-minima:p17:b1",
+        "uno-r4-minima:p3:b0"
+      ]
+    },
+    {
+      "task_id": "uno-vin-tr",
+      "language": "tr",
+      "method": "hybrid",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "uno-r4-minima:p2:b0",
+        "uno-r4-minima:p13:b0",
+        "uno-r4-minima:p10:b0",
+        "uno-r4-minima:p6:b0",
+        "uno-r4-minima:p4:b0",
+        "uno-r4-minima:p3:b0",
+        "uno-r4-minima:p14:b0",
+        "uno-r4-minima:p17:b1",
+        "uno-r4-minima:p17:b0",
+        "uno-r4-minima:p1:b0"
+      ]
+    },
+    {
+      "task_id": "nano-vin-en",
+      "language": "en",
+      "method": "hybrid",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "nano-esp32:p13:b0",
+        "nano-esp32:p12:b0",
+        "nano-esp32:p2:b0",
+        "nano-esp32:p3:b0",
+        "nano-esp32:p14:b0",
+        "nano-esp32:p5:b0",
+        "nano-esp32:p16:b0",
+        "nano-esp32:p20:b1",
+        "nano-esp32:p8:b0",
+        "nano-esp32:p20:b2"
+      ]
+    },
+    {
+      "task_id": "nano-vin-tr",
+      "language": "tr",
+      "method": "hybrid",
+      "recall_at_3": 0.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "nano-esp32:p16:b0",
+        "nano-esp32:p3:b0",
+        "nano-esp32:p12:b0",
+        "nano-esp32:p13:b0",
+        "nano-esp32:p2:b0",
+        "nano-esp32:p14:b0",
+        "nano-esp32:p9:b0",
+        "nano-esp32:p19:b0",
+        "nano-esp32:p8:b0",
+        "nano-esp32:p10:b0"
+      ]
+    },
+    {
+      "task_id": "nano-gpio-en",
+      "language": "en",
+      "method": "hybrid",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "nano-esp32:p13:b0",
+        "nano-esp32:p16:b0",
+        "nano-esp32:p2:b0",
+        "nano-esp32:p10:b0",
+        "nano-esp32:p11:b0",
+        "nano-esp32:p9:b0",
+        "nano-esp32:p12:b0",
+        "nano-esp32:p19:b0",
+        "nano-esp32:p18:b0",
+        "nano-esp32:p5:b0"
+      ]
+    },
+    {
+      "task_id": "nano-gpio-tr",
+      "language": "tr",
+      "method": "hybrid",
+      "recall_at_3": 0.0,
+      "recall_at_5": 0.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "nano-esp32:p16:b0",
+        "nano-esp32:p2:b0",
+        "nano-esp32:p22:b0",
+        "nano-esp32:p8:b0",
+        "nano-esp32:p4:b0",
+        "nano-esp32:p9:b0",
+        "nano-esp32:p13:b0",
+        "nano-esp32:p7:b0",
+        "nano-esp32:p3:b0",
+        "nano-esp32:p10:b0"
+      ]
+    },
+    {
+      "task_id": "uno-wifi-sram-en",
+      "language": "en",
+      "method": "hybrid",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "uno-r4-wifi:p2:b0",
+        "uno-r4-wifi:p9:b0",
+        "uno-r4-wifi:p9:b1",
+        "uno-r4-wifi:p11:b0",
+        "uno-r4-wifi:p1:b0",
+        "uno-r4-wifi:p15:b0",
+        "uno-r4-wifi:p12:b0",
+        "uno-r4-wifi:p16:b0",
+        "uno-r4-wifi:p6:b0",
+        "uno-r4-wifi:p6:b1"
+      ]
+    },
+    {
+      "task_id": "uno-wifi-sram-tr",
+      "language": "tr",
+      "method": "hybrid",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "uno-r4-wifi:p2:b0",
+        "uno-r4-wifi:p9:b0",
+        "uno-r4-wifi:p1:b0",
+        "uno-r4-wifi:p9:b1",
+        "uno-r4-wifi:p11:b0",
+        "uno-r4-wifi:p15:b0",
+        "uno-r4-wifi:p3:b0",
+        "uno-r4-wifi:p6:b0",
+        "uno-r4-wifi:p12:b0",
+        "uno-r4-wifi:p16:b0"
+      ]
+    },
+    {
+      "task_id": "ble-flash-en",
+      "language": "en",
+      "method": "hybrid",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "nano-33-ble-rev2:p3:b0",
+        "nano-33-ble-rev2:p1:b0",
+        "nano-33-ble-rev2:p10:b0",
+        "nano-33-ble-rev2:p7:b0",
+        "nano-33-ble-rev2:p15:b0",
+        "nano-33-ble-rev2:p5:b0",
+        "nano-33-ble-rev2:p2:b0",
+        "nano-33-ble-rev2:p6:b0",
+        "nano-33-ble-rev2:p4:b0",
+        "nano-33-ble-rev2:p9:b0"
+      ]
+    },
+    {
+      "task_id": "ble-flash-tr",
+      "language": "tr",
+      "method": "hybrid",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "nano-33-ble-rev2:p3:b0",
+        "nano-33-ble-rev2:p1:b0",
+        "nano-33-ble-rev2:p15:b0",
+        "nano-33-ble-rev2:p6:b0",
+        "nano-33-ble-rev2:p2:b0",
+        "nano-33-ble-rev2:p4:b0",
+        "nano-33-ble-rev2:p7:b0",
+        "nano-33-ble-rev2:p10:b0",
+        "nano-33-ble-rev2:p8:b0",
+        "nano-33-ble-rev2:p5:b0"
+      ]
+    },
+    {
+      "task_id": "sense-humidity-en",
+      "language": "en",
+      "method": "hybrid",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "nano-33-ble-sense-rev2:p10:b0",
+        "nano-33-ble-sense-rev2:p4:b0",
+        "nano-33-ble-sense-rev2:p11:b0",
+        "nano-33-ble-sense-rev2:p5:b0",
+        "nano-33-ble-sense-rev2:p8:b0",
+        "nano-33-ble-sense-rev2:p3:b0",
+        "nano-33-ble-sense-rev2:p9:b0",
+        "nano-33-ble-sense-rev2:p11:b1",
+        "nano-33-ble-sense-rev2:p16:b0",
+        "nano-33-ble-sense-rev2:p1:b0"
+      ]
+    },
+    {
+      "task_id": "sense-humidity-tr",
+      "language": "tr",
+      "method": "hybrid",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "nano-33-ble-sense-rev2:p1:b0",
+        "nano-33-ble-sense-rev2:p3:b0",
+        "nano-33-ble-sense-rev2:p4:b0",
+        "nano-33-ble-sense-rev2:p10:b0",
+        "nano-33-ble-sense-rev2:p11:b1",
+        "nano-33-ble-sense-rev2:p2:b0",
+        "nano-33-ble-sense-rev2:p9:b0",
+        "nano-33-ble-sense-rev2:p5:b0",
+        "nano-33-ble-sense-rev2:p8:b0",
+        "nano-33-ble-sense-rev2:p17:b0"
+      ]
+    },
+    {
+      "task_id": "rp2040-sram-en",
+      "language": "en",
+      "method": "hybrid",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "nano-rp2040-connect:p2:b0",
+        "nano-rp2040-connect:p10:b0",
+        "nano-rp2040-connect:p11:b0",
+        "nano-rp2040-connect:p12:b0",
+        "nano-rp2040-connect:p1:b0",
+        "nano-rp2040-connect:p10:b1",
+        "nano-rp2040-connect:p11:b1",
+        "nano-rp2040-connect:p13:b0",
+        "nano-rp2040-connect:p7:b0",
+        "nano-rp2040-connect:p4:b0"
+      ]
+    },
+    {
+      "task_id": "rp2040-sram-tr",
+      "language": "tr",
+      "method": "hybrid",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "nano-rp2040-connect:p2:b0",
+        "nano-rp2040-connect:p10:b0",
+        "nano-rp2040-connect:p4:b0",
+        "nano-rp2040-connect:p12:b0",
+        "nano-rp2040-connect:p1:b0",
+        "nano-rp2040-connect:p16:b0",
+        "nano-rp2040-connect:p11:b0",
+        "nano-rp2040-connect:p10:b1",
+        "nano-rp2040-connect:p9:b0",
+        "nano-rp2040-connect:p5:b0"
+      ]
+    },
+    {
+      "task_id": "mkr-clock-en",
+      "language": "en",
+      "method": "hybrid",
+      "recall_at_3": 0.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "mkr-wifi-1010:p7:b0",
+        "mkr-wifi-1010:p15:b0",
+        "mkr-wifi-1010:p1:b0",
+        "mkr-wifi-1010:p8:b0",
+        "mkr-wifi-1010:p2:b0",
+        "mkr-wifi-1010:p13:b1",
+        "mkr-wifi-1010:p11:b0",
+        "mkr-wifi-1010:p13:b0",
+        "mkr-wifi-1010:p4:b0",
+        "mkr-wifi-1010:p14:b0"
+      ]
+    },
+    {
+      "task_id": "mkr-clock-tr",
+      "language": "tr",
+      "method": "hybrid",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "mkr-wifi-1010:p2:b0",
+        "mkr-wifi-1010:p15:b0",
+        "mkr-wifi-1010:p1:b0",
+        "mkr-wifi-1010:p13:b0",
+        "mkr-wifi-1010:p14:b1",
+        "mkr-wifi-1010:p7:b0",
+        "mkr-wifi-1010:p3:b0",
+        "mkr-wifi-1010:p5:b0",
+        "mkr-wifi-1010:p4:b0",
+        "mkr-wifi-1010:p13:b1"
+      ]
+    },
+    {
+      "task_id": "mega-pins-en",
+      "language": "en",
+      "method": "hybrid",
+      "recall_at_3": 0.0,
+      "recall_at_5": 0.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "mega-2560:p4:b0",
+        "mega-2560:p1:b0",
+        "mega-2560:p12:b0",
+        "mega-2560:p3:b0",
+        "mega-2560:p7:b0",
+        "mega-2560:p13:b0",
+        "mega-2560:p15:b0",
+        "mega-2560:p2:b0",
+        "mega-2560:p10:b1",
+        "mega-2560:p11:b0"
+      ]
+    },
+    {
+      "task_id": "mega-pins-tr",
+      "language": "tr",
+      "method": "hybrid",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "mega-2560:p4:b0",
+        "mega-2560:p2:b0",
+        "mega-2560:p11:b0",
+        "mega-2560:p10:b0",
+        "mega-2560:p3:b0",
+        "mega-2560:p12:b0",
+        "mega-2560:p10:b1",
+        "mega-2560:p1:b0",
+        "mega-2560:p9:b0",
+        "mega-2560:p4:b1"
+      ]
+    },
+    {
+      "task_id": "portenta-flash-en",
+      "language": "en",
+      "method": "hybrid",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "portenta-c33:p5:b0",
+        "portenta-c33:p7:b0",
+        "portenta-c33:p7:b1",
+        "portenta-c33:p6:b0",
+        "portenta-c33:p5:b1",
+        "portenta-c33:p13:b0",
+        "portenta-c33:p2:b0",
+        "portenta-c33:p15:b0",
+        "portenta-c33:p6:b1",
+        "portenta-c33:p14:b0"
+      ]
+    },
+    {
+      "task_id": "portenta-flash-tr",
+      "language": "tr",
+      "method": "hybrid",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "portenta-c33:p5:b0",
+        "portenta-c33:p7:b0",
+        "portenta-c33:p6:b0",
+        "portenta-c33:p1:b0",
+        "portenta-c33:p5:b1",
+        "portenta-c33:p7:b1",
+        "portenta-c33:p4:b1",
+        "portenta-c33:p2:b0",
+        "portenta-c33:p6:b1",
+        "portenta-c33:p8:b0"
+      ]
+    },
+    {
+      "task_id": "opta-supply-en",
+      "language": "en",
+      "method": "hybrid",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "opta:p8:b0",
+        "opta:p13:b1",
+        "opta:p19:b1",
+        "opta:p13:b0",
+        "opta:p10:b0",
+        "opta:p19:b0",
+        "opta:p13:b2",
+        "opta:p16:b0",
+        "opta:p18:b1",
+        "opta:p7:b0"
+      ]
+    },
+    {
+      "task_id": "opta-supply-tr",
+      "language": "tr",
+      "method": "hybrid",
+      "recall_at_3": 0.0,
+      "recall_at_5": 0.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "opta:p7:b0",
+        "opta:p13:b1",
+        "opta:p3:b0",
+        "opta:p2:b0",
+        "opta:p4:b1",
+        "opta:p18:b1",
+        "opta:p18:b0",
+        "opta:p13:b0",
+        "opta:p8:b0",
+        "opta:p1:b0"
+      ]
+    },
+    {
+      "task_id": "opta-variant-en",
+      "language": "en",
+      "method": "hybrid",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "opta:p4:b0",
+        "opta:p13:b0",
+        "opta:p1:b0",
+        "opta:p4:b1",
+        "opta:p5:b0",
+        "opta:p11:b0",
+        "opta:p6:b0",
+        "opta:p2:b0",
+        "opta:p14:b0",
+        "opta:p15:b0"
+      ]
+    },
+    {
+      "task_id": "opta-variant-tr",
+      "language": "tr",
+      "method": "hybrid",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "opta:p13:b0",
+        "opta:p4:b0",
+        "opta:p1:b0",
+        "opta:p17:b0",
+        "opta:p5:b0",
+        "opta:p6:b0",
+        "opta:p2:b0",
+        "opta:p21:b0",
+        "opta:p9:b0",
+        "opta:p12:b0"
+      ]
+    },
+    {
+      "task_id": "opta-temperature-en",
+      "language": "en",
+      "method": "hybrid",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "opta:p8:b0",
+        "opta:p20:b0",
+        "opta:p19:b1",
+        "opta:p10:b0",
+        "opta:p13:b1",
+        "opta:p13:b0",
+        "opta:p2:b0",
+        "opta:p16:b0",
+        "opta:p11:b0",
+        "opta:p18:b1"
+      ]
+    },
+    {
+      "task_id": "opta-temperature-tr",
+      "language": "tr",
+      "method": "hybrid",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "opta:p8:b0",
+        "opta:p3:b0",
+        "opta:p13:b1",
+        "opta:p17:b0",
+        "opta:p7:b0",
+        "opta:p13:b0",
+        "opta:p2:b0",
+        "opta:p1:b0",
+        "opta:p5:b0",
+        "opta:p4:b1"
+      ]
+    },
+    {
+      "task_id": "nano-temperature-review-en",
+      "language": "en",
+      "method": "hybrid",
+      "recall_at_3": 0.5,
+      "recall_at_5": 0.5,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "nano-esp32:p20:b1",
+        "nano-esp32:p21:b0",
+        "nano-esp32:p20:b0",
+        "nano-esp32:p19:b0",
+        "nano-esp32:p20:b2",
+        "nano-esp32:p5:b0",
+        "nano-esp32:p18:b1",
+        "nano-esp32:p19:b1",
+        "nano-esp32:p10:b0",
+        "nano-esp32:p8:b0"
+      ]
+    },
+    {
+      "task_id": "nano-temperature-review-tr",
+      "language": "tr",
+      "method": "hybrid",
+      "recall_at_3": 0.5,
+      "recall_at_5": 0.5,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "nano-esp32:p21:b0",
+        "nano-esp32:p4:b0",
+        "nano-esp32:p3:b0",
+        "nano-esp32:p10:b0",
+        "nano-esp32:p2:b0",
+        "nano-esp32:p9:b0",
+        "nano-esp32:p5:b0",
+        "nano-esp32:p19:b0",
+        "nano-esp32:p1:b0",
+        "nano-esp32:p8:b0"
+      ]
+    },
+    {
+      "task_id": "opta-price-en",
+      "language": "en",
+      "method": "hybrid",
+      "recall_at_3": null,
+      "recall_at_5": null,
+      "recall_at_10": null,
+      "retrieved_ids": [
+        "opta:p18:b1",
+        "opta:p12:b0",
+        "opta:p16:b0",
+        "opta:p18:b0",
+        "opta:p13:b1",
+        "opta:p19:b0",
+        "opta:p11:b0",
+        "opta:p20:b0",
+        "opta:p17:b0",
+        "opta:p1:b0"
+      ]
+    },
+    {
+      "task_id": "opta-price-tr",
+      "language": "tr",
+      "method": "hybrid",
+      "recall_at_3": null,
+      "recall_at_5": null,
+      "recall_at_10": null,
+      "retrieved_ids": [
+        "opta:p9:b0",
+        "opta:p17:b0",
+        "opta:p21:b0",
+        "opta:p3:b0",
+        "opta:p2:b0",
+        "opta:p20:b1",
+        "opta:p8:b0",
+        "opta:p18:b1",
+        "opta:p11:b0",
+        "opta:p5:b0"
+      ]
+    },
+    {
+      "task_id": "uno-vin-en",
+      "language": "en",
+      "method": "hybrid_expanded",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "uno-r4-minima:p6:b0",
+        "uno-r4-minima:p2:b0",
+        "uno-r4-minima:p10:b0",
+        "uno-r4-minima:p5:b0",
+        "uno-r4-minima:p13:b0",
+        "uno-r4-minima:p1:b0",
+        "uno-r4-minima:p11:b0",
+        "uno-r4-minima:p9:b0",
+        "uno-r4-minima:p17:b1",
+        "uno-r4-minima:p3:b0"
+      ]
+    },
+    {
+      "task_id": "uno-vin-tr",
+      "language": "tr",
+      "method": "hybrid_expanded",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "uno-r4-minima:p6:b0",
+        "uno-r4-minima:p13:b0",
+        "uno-r4-minima:p2:b0",
+        "uno-r4-minima:p10:b0",
+        "uno-r4-minima:p14:b0",
+        "uno-r4-minima:p3:b0",
+        "uno-r4-minima:p5:b0",
+        "uno-r4-minima:p9:b0",
+        "uno-r4-minima:p17:b0",
+        "uno-r4-minima:p11:b0"
+      ]
+    },
+    {
+      "task_id": "nano-vin-en",
+      "language": "en",
+      "method": "hybrid_expanded",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "nano-esp32:p13:b0",
+        "nano-esp32:p12:b0",
+        "nano-esp32:p2:b0",
+        "nano-esp32:p3:b0",
+        "nano-esp32:p14:b0",
+        "nano-esp32:p5:b0",
+        "nano-esp32:p16:b0",
+        "nano-esp32:p20:b1",
+        "nano-esp32:p8:b0",
+        "nano-esp32:p20:b2"
+      ]
+    },
+    {
+      "task_id": "nano-vin-tr",
+      "language": "tr",
+      "method": "hybrid_expanded",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "nano-esp32:p13:b0",
+        "nano-esp32:p16:b0",
+        "nano-esp32:p2:b0",
+        "nano-esp32:p3:b0",
+        "nano-esp32:p12:b0",
+        "nano-esp32:p14:b0",
+        "nano-esp32:p8:b0",
+        "nano-esp32:p5:b0",
+        "nano-esp32:p9:b0",
+        "nano-esp32:p22:b0"
+      ]
+    },
+    {
+      "task_id": "nano-gpio-en",
+      "language": "en",
+      "method": "hybrid_expanded",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "nano-esp32:p13:b0",
+        "nano-esp32:p16:b0",
+        "nano-esp32:p2:b0",
+        "nano-esp32:p10:b0",
+        "nano-esp32:p11:b0",
+        "nano-esp32:p12:b0",
+        "nano-esp32:p9:b0",
+        "nano-esp32:p22:b0",
+        "nano-esp32:p19:b0",
+        "nano-esp32:p14:b0"
+      ]
+    },
+    {
+      "task_id": "nano-gpio-tr",
+      "language": "tr",
+      "method": "hybrid_expanded",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "nano-esp32:p13:b0",
+        "nano-esp32:p16:b0",
+        "nano-esp32:p10:b0",
+        "nano-esp32:p2:b0",
+        "nano-esp32:p11:b0",
+        "nano-esp32:p9:b0",
+        "nano-esp32:p12:b0",
+        "nano-esp32:p22:b0",
+        "nano-esp32:p7:b0",
+        "nano-esp32:p4:b0"
+      ]
+    },
+    {
+      "task_id": "uno-wifi-sram-en",
+      "language": "en",
+      "method": "hybrid_expanded",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "uno-r4-wifi:p2:b0",
+        "uno-r4-wifi:p9:b0",
+        "uno-r4-wifi:p9:b1",
+        "uno-r4-wifi:p11:b0",
+        "uno-r4-wifi:p1:b0",
+        "uno-r4-wifi:p15:b0",
+        "uno-r4-wifi:p12:b0",
+        "uno-r4-wifi:p16:b0",
+        "uno-r4-wifi:p6:b0",
+        "uno-r4-wifi:p6:b1"
+      ]
+    },
+    {
+      "task_id": "uno-wifi-sram-tr",
+      "language": "tr",
+      "method": "hybrid_expanded",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "uno-r4-wifi:p9:b0",
+        "uno-r4-wifi:p1:b0",
+        "uno-r4-wifi:p2:b0",
+        "uno-r4-wifi:p9:b1",
+        "uno-r4-wifi:p11:b0",
+        "uno-r4-wifi:p8:b0",
+        "uno-r4-wifi:p15:b0",
+        "uno-r4-wifi:p6:b0",
+        "uno-r4-wifi:p12:b0",
+        "uno-r4-wifi:p16:b0"
+      ]
+    },
+    {
+      "task_id": "ble-flash-en",
+      "language": "en",
+      "method": "hybrid_expanded",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "nano-33-ble-rev2:p3:b0",
+        "nano-33-ble-rev2:p1:b0",
+        "nano-33-ble-rev2:p10:b0",
+        "nano-33-ble-rev2:p7:b0",
+        "nano-33-ble-rev2:p15:b0",
+        "nano-33-ble-rev2:p5:b0",
+        "nano-33-ble-rev2:p2:b0",
+        "nano-33-ble-rev2:p6:b0",
+        "nano-33-ble-rev2:p4:b0",
+        "nano-33-ble-rev2:p9:b0"
+      ]
+    },
+    {
+      "task_id": "ble-flash-tr",
+      "language": "tr",
+      "method": "hybrid_expanded",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "nano-33-ble-rev2:p3:b0",
+        "nano-33-ble-rev2:p1:b0",
+        "nano-33-ble-rev2:p7:b0",
+        "nano-33-ble-rev2:p15:b0",
+        "nano-33-ble-rev2:p10:b0",
+        "nano-33-ble-rev2:p6:b0",
+        "nano-33-ble-rev2:p2:b0",
+        "nano-33-ble-rev2:p8:b0",
+        "nano-33-ble-rev2:p4:b0",
+        "nano-33-ble-rev2:p5:b0"
+      ]
+    },
+    {
+      "task_id": "sense-humidity-en",
+      "language": "en",
+      "method": "hybrid_expanded",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "nano-33-ble-sense-rev2:p10:b0",
+        "nano-33-ble-sense-rev2:p4:b0",
+        "nano-33-ble-sense-rev2:p8:b0",
+        "nano-33-ble-sense-rev2:p11:b0",
+        "nano-33-ble-sense-rev2:p5:b0",
+        "nano-33-ble-sense-rev2:p3:b0",
+        "nano-33-ble-sense-rev2:p9:b0",
+        "nano-33-ble-sense-rev2:p11:b1",
+        "nano-33-ble-sense-rev2:p16:b0",
+        "nano-33-ble-sense-rev2:p1:b0"
+      ]
+    },
+    {
+      "task_id": "sense-humidity-tr",
+      "language": "tr",
+      "method": "hybrid_expanded",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "nano-33-ble-sense-rev2:p10:b0",
+        "nano-33-ble-sense-rev2:p4:b0",
+        "nano-33-ble-sense-rev2:p11:b0",
+        "nano-33-ble-sense-rev2:p3:b0",
+        "nano-33-ble-sense-rev2:p8:b0",
+        "nano-33-ble-sense-rev2:p5:b0",
+        "nano-33-ble-sense-rev2:p11:b1",
+        "nano-33-ble-sense-rev2:p9:b0",
+        "nano-33-ble-sense-rev2:p1:b0",
+        "nano-33-ble-sense-rev2:p17:b0"
+      ]
+    },
+    {
+      "task_id": "rp2040-sram-en",
+      "language": "en",
+      "method": "hybrid_expanded",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "nano-rp2040-connect:p2:b0",
+        "nano-rp2040-connect:p10:b0",
+        "nano-rp2040-connect:p11:b0",
+        "nano-rp2040-connect:p12:b0",
+        "nano-rp2040-connect:p1:b0",
+        "nano-rp2040-connect:p10:b1",
+        "nano-rp2040-connect:p11:b1",
+        "nano-rp2040-connect:p13:b0",
+        "nano-rp2040-connect:p7:b0",
+        "nano-rp2040-connect:p4:b0"
+      ]
+    },
+    {
+      "task_id": "rp2040-sram-tr",
+      "language": "tr",
+      "method": "hybrid_expanded",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "nano-rp2040-connect:p2:b0",
+        "nano-rp2040-connect:p10:b0",
+        "nano-rp2040-connect:p11:b0",
+        "nano-rp2040-connect:p1:b0",
+        "nano-rp2040-connect:p3:b0",
+        "nano-rp2040-connect:p12:b0",
+        "nano-rp2040-connect:p5:b0",
+        "nano-rp2040-connect:p4:b0",
+        "nano-rp2040-connect:p9:b0",
+        "nano-rp2040-connect:p10:b1"
+      ]
+    },
+    {
+      "task_id": "mkr-clock-en",
+      "language": "en",
+      "method": "hybrid_expanded",
+      "recall_at_3": 0.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "mkr-wifi-1010:p7:b0",
+        "mkr-wifi-1010:p15:b0",
+        "mkr-wifi-1010:p1:b0",
+        "mkr-wifi-1010:p8:b0",
+        "mkr-wifi-1010:p2:b0",
+        "mkr-wifi-1010:p13:b1",
+        "mkr-wifi-1010:p11:b0",
+        "mkr-wifi-1010:p13:b0",
+        "mkr-wifi-1010:p4:b0",
+        "mkr-wifi-1010:p14:b0"
+      ]
+    },
+    {
+      "task_id": "mkr-clock-tr",
+      "language": "tr",
+      "method": "hybrid_expanded",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "mkr-wifi-1010:p7:b0",
+        "mkr-wifi-1010:p15:b0",
+        "mkr-wifi-1010:p2:b0",
+        "mkr-wifi-1010:p1:b0",
+        "mkr-wifi-1010:p13:b0",
+        "mkr-wifi-1010:p11:b0",
+        "mkr-wifi-1010:p5:b0",
+        "mkr-wifi-1010:p14:b1",
+        "mkr-wifi-1010:p13:b1",
+        "mkr-wifi-1010:p4:b0"
+      ]
+    },
+    {
+      "task_id": "mega-pins-en",
+      "language": "en",
+      "method": "hybrid_expanded",
+      "recall_at_3": 0.0,
+      "recall_at_5": 0.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "mega-2560:p4:b0",
+        "mega-2560:p1:b0",
+        "mega-2560:p12:b0",
+        "mega-2560:p3:b0",
+        "mega-2560:p7:b0",
+        "mega-2560:p13:b0",
+        "mega-2560:p15:b0",
+        "mega-2560:p2:b0",
+        "mega-2560:p10:b1",
+        "mega-2560:p11:b0"
+      ]
+    },
+    {
+      "task_id": "mega-pins-tr",
+      "language": "tr",
+      "method": "hybrid_expanded",
+      "recall_at_3": 0.0,
+      "recall_at_5": 0.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "mega-2560:p4:b0",
+        "mega-2560:p13:b0",
+        "mega-2560:p10:b1",
+        "mega-2560:p11:b0",
+        "mega-2560:p12:b0",
+        "mega-2560:p10:b0",
+        "mega-2560:p2:b0",
+        "mega-2560:p3:b0",
+        "mega-2560:p1:b0",
+        "mega-2560:p9:b0"
+      ]
+    },
+    {
+      "task_id": "portenta-flash-en",
+      "language": "en",
+      "method": "hybrid_expanded",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "portenta-c33:p5:b0",
+        "portenta-c33:p7:b0",
+        "portenta-c33:p7:b1",
+        "portenta-c33:p6:b0",
+        "portenta-c33:p5:b1",
+        "portenta-c33:p13:b0",
+        "portenta-c33:p2:b0",
+        "portenta-c33:p15:b0",
+        "portenta-c33:p6:b1",
+        "portenta-c33:p14:b0"
+      ]
+    },
+    {
+      "task_id": "portenta-flash-tr",
+      "language": "tr",
+      "method": "hybrid_expanded",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "portenta-c33:p5:b0",
+        "portenta-c33:p7:b0",
+        "portenta-c33:p6:b0",
+        "portenta-c33:p7:b1",
+        "portenta-c33:p5:b1",
+        "portenta-c33:p6:b1",
+        "portenta-c33:p2:b0",
+        "portenta-c33:p13:b0",
+        "portenta-c33:p4:b1",
+        "portenta-c33:p8:b0"
+      ]
+    },
+    {
+      "task_id": "opta-supply-en",
+      "language": "en",
+      "method": "hybrid_expanded",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "opta:p8:b0",
+        "opta:p13:b1",
+        "opta:p19:b1",
+        "opta:p13:b0",
+        "opta:p10:b0",
+        "opta:p19:b0",
+        "opta:p13:b2",
+        "opta:p16:b0",
+        "opta:p18:b1",
+        "opta:p7:b0"
+      ]
+    },
+    {
+      "task_id": "opta-supply-tr",
+      "language": "tr",
+      "method": "hybrid_expanded",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "opta:p8:b0",
+        "opta:p7:b0",
+        "opta:p13:b1",
+        "opta:p13:b2",
+        "opta:p13:b0",
+        "opta:p20:b0",
+        "opta:p5:b0",
+        "opta:p6:b0",
+        "opta:p10:b0",
+        "opta:p2:b0"
+      ]
+    },
+    {
+      "task_id": "opta-variant-en",
+      "language": "en",
+      "method": "hybrid_expanded",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "opta:p4:b0",
+        "opta:p13:b0",
+        "opta:p1:b0",
+        "opta:p4:b1",
+        "opta:p5:b0",
+        "opta:p11:b0",
+        "opta:p6:b0",
+        "opta:p2:b0",
+        "opta:p14:b0",
+        "opta:p15:b0"
+      ]
+    },
+    {
+      "task_id": "opta-variant-tr",
+      "language": "tr",
+      "method": "hybrid_expanded",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "opta:p4:b0",
+        "opta:p13:b0",
+        "opta:p1:b0",
+        "opta:p6:b0",
+        "opta:p5:b0",
+        "opta:p4:b1",
+        "opta:p17:b0",
+        "opta:p2:b0",
+        "opta:p21:b0",
+        "opta:p9:b0"
+      ]
+    },
+    {
+      "task_id": "opta-temperature-en",
+      "language": "en",
+      "method": "hybrid_expanded",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "opta:p8:b0",
+        "opta:p20:b0",
+        "opta:p19:b1",
+        "opta:p10:b0",
+        "opta:p13:b1",
+        "opta:p13:b0",
+        "opta:p2:b0",
+        "opta:p16:b0",
+        "opta:p11:b0",
+        "opta:p18:b1"
+      ]
+    },
+    {
+      "task_id": "opta-temperature-tr",
+      "language": "tr",
+      "method": "hybrid_expanded",
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "opta:p8:b0",
+        "opta:p20:b0",
+        "opta:p3:b0",
+        "opta:p19:b1",
+        "opta:p2:b0",
+        "opta:p5:b0",
+        "opta:p13:b1",
+        "opta:p13:b0",
+        "opta:p17:b0",
+        "opta:p10:b0"
+      ]
+    },
+    {
+      "task_id": "nano-temperature-review-en",
+      "language": "en",
+      "method": "hybrid_expanded",
+      "recall_at_3": 0.5,
+      "recall_at_5": 0.5,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "nano-esp32:p20:b1",
+        "nano-esp32:p21:b0",
+        "nano-esp32:p20:b0",
+        "nano-esp32:p19:b0",
+        "nano-esp32:p20:b2",
+        "nano-esp32:p5:b0",
+        "nano-esp32:p18:b1",
+        "nano-esp32:p19:b1",
+        "nano-esp32:p10:b0",
+        "nano-esp32:p8:b0"
+      ]
+    },
+    {
+      "task_id": "nano-temperature-review-tr",
+      "language": "tr",
+      "method": "hybrid_expanded",
+      "recall_at_3": 0.5,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "retrieved_ids": [
+        "nano-esp32:p21:b0",
+        "nano-esp32:p19:b0",
+        "nano-esp32:p22:b0",
+        "nano-esp32:p5:b0",
+        "nano-esp32:p3:b0",
+        "nano-esp32:p10:b0",
+        "nano-esp32:p20:b1",
+        "nano-esp32:p4:b0",
+        "nano-esp32:p9:b0",
+        "nano-esp32:p8:b0"
+      ]
+    },
+    {
+      "task_id": "opta-price-en",
+      "language": "en",
+      "method": "hybrid_expanded",
+      "recall_at_3": null,
+      "recall_at_5": null,
+      "recall_at_10": null,
+      "retrieved_ids": [
+        "opta:p18:b1",
+        "opta:p12:b0",
+        "opta:p16:b0",
+        "opta:p18:b0",
+        "opta:p13:b1",
+        "opta:p19:b0",
+        "opta:p11:b0",
+        "opta:p20:b0",
+        "opta:p17:b0",
+        "opta:p1:b0"
+      ]
+    },
+    {
+      "task_id": "opta-price-tr",
+      "language": "tr",
+      "method": "hybrid_expanded",
+      "recall_at_3": null,
+      "recall_at_5": null,
+      "recall_at_10": null,
+      "retrieved_ids": [
+        "opta:p9:b0",
+        "opta:p17:b0",
+        "opta:p21:b0",
+        "opta:p3:b0",
+        "opta:p20:b1",
+        "opta:p8:b0",
+        "opta:p18:b1",
+        "opta:p2:b0",
+        "opta:p16:b0",
+        "opta:p11:b0"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "text": "{\"min\":6,\"max\":24,\"unit\":\"V\"}",
+  "model": {
+    "repo_id": "mlx-community/Qwen3-4B-Instruct-2507-4bit",
+    "revision": "50d427756c6b1b2fe0c0a10f67fbda1fc8e82c1b",
+    "license": "apache-2.0",
+    "weight_bytes": 2263022417
+  },
+  "backend": "mlx-metal",
+  "metrics": {
+    "input_tokens": 56,
+    "output_tokens": 15,
+    "generation_tokens_per_second": 95.06238072716233,
+    "prompt_tokens_per_second": 46.18271670825757,
+    "first_token_seconds": 1.2418200409993005,
+    "generation_seconds": 1.4081907499967201,
+    "model_load_seconds": 0.40491170799941756,
+    "mlx_peak_allocation_bytes": 2581003780,
+    "process_rss_bytes": 2606579712,
+    "finish_reason": "stop",
+    "request_number": 1
+  },
+  "check": true,
+  "python": "3.12.12",
+  "architecture": "arm64"
+}

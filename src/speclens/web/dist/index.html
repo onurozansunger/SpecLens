@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>SpecLens</title>
+    <link rel="stylesheet" href="/static/style.css?v=3" />
+  </head>
+  <body>
+    <header>
+      <div class="brand">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <rect
+            x="3"
+            y="3"
+            width="20"
+            height="25"
+            rx="3"
+            stroke="#3c4ce7"
+            stroke-width="2"
+          />
+          <path d="M8 9h10M8 14h6M8 19h5" stroke="#3c4ce7" stroke-width="2" />
+          <circle
+            cx="22"
+            cy="21"
+            r="6"
+            fill="white"
+            stroke="#3c4ce7"
+            stroke-width="2"
+          />
+          <path d="m26.5 25.5 4 4" stroke="#3c4ce7" stroke-width="2" /></svg
+        >SpecLens
+      </div>
+    </header>
+    <div class="layout">
+      <aside>
+        <div class="source-head">
+          <span class="eyebrow">Documents</span
+          ><span id="source-count" class="count">…</span>
+        </div>
+        <div id="sources"></div>
+        <div class="sidebar-note">Select up to 3 documents.</div>
+      </aside>
+      <main class="workspace">
+        <div class="intro">
+          <h1>Datasheet comparison</h1>
+        </div>
+        <form id="ask" class="question-box">
+          <div class="tabs">
+            <button type="button" class="tab active" data-mode="inspect">
+              Question</button
+            ><button type="button" class="tab" data-mode="compare">
+              VIN comparison
+            </button>
+          </div>
+          <label class="eyebrow" for="question">Question</label
+          ><textarea id="question" maxlength="1500" required>
+UNO R4 Minima ve Nano ESP32 için önerilen VIN aralığını ayrı ayrı ver.</textarea
+          >
+          <div id="target-row" hidden>
+            <label for="target">Target supply</label
+            ><input
+              type="number"
+              id="target"
+              value="24"
+              step="any"
+              required
+            /><select id="unit" aria-label="Voltage unit">
+              <option>V</option>
+              <option>mV</option>
+              <option>kV</option>
+            </select>
+          </div>
+          <div class="actions">
+            <span id="selection-count" class="hint">2 documents selected</span>
+            <button id="submit" class="primary" type="submit">
+              Run analysis
+            </button>
+          </div>
+        </form>
+        <div class="presets">
+          <button class="preset" data-preset="vin">VIN comparison</button
+          ><button class="preset" data-preset="opta">Opta Wi-Fi variants</button
+          ><button class="preset" data-preset="temperature">
+            Temperature limits</button
+          ><button class="preset" data-preset="missing">Retail price</button>
+        </div>
+        <div id="message" role="status" aria-live="polite"></div>
+        <div id="empty" class="empty">No results yet.</div>
+        <section id="results" hidden aria-label="Analysis results">
+          <div class="result-top">
+            <h2 id="results-title">Findings</h2>
+            <button class="quiet" id="export" type="button">Export JSON</button>
+          </div>
+          <div class="results-grid">
+            <div id="findings" class="findings"></div>
+            <div class="viewer">
+              <div id="viewer-head" class="viewer-head">
+                <span>Source preview</span><span>PDF page</span>
+              </div>
+              <div id="viewer-body" class="viewer-empty">
+                <svg viewBox="0 0 40 40" fill="none">
+                  <rect
+                    x="9"
+                    y="4"
+                    width="23"
+                    height="32"
+                    rx="2"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M15 13h11M15 20h11M15 27h7"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  /></svg
+                ><br />Select a source page.
+              </div>
+            </div>
+          </div>
+          <details>
+            <summary>Result JSON</summary>
+            <pre id="json"></pre>
+          </details>
+        </section>
+        <details>
+          <summary>Search settings</summary>
+          <label for="method">Retrieval method </label
+          ><select id="method">
+            <option value="hybrid_expanded">
+              Hybrid + Turkish technical terms
+            </option>
+            <option value="hybrid">Hybrid baseline</option>
+            <option value="bm25">BM25</option>
+            <option value="dense">Multilingual E5</option>
+          </select>
+        </details>
+        <div class="footer">
+          <a href="/docs" target="_blank" rel="noopener">API documentation</a>
+        </div>
+      </main>
+    </div>
+    <script src="/static/app.js?v=3" defer></script>
+  </body>
+</html>

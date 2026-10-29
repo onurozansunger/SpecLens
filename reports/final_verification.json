@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-29",
+  "tests_passed": 35,
+  "lint": "passed",
+  "dataset_lineage": "passed",
+  "source_and_vector_hashes": "passed",
+  "javascript_syntax": "passed",
+  "ui": {
+    "verified_in_browser": true,
+    "theme": "navy / cobalt",
+    "copy": "Removed hero slogan, redundant local-processing claims and descriptive filler. Kept task controls, source citations and review messages.",
+    "screenshot": "docs/assets/demo.jpg"
+  },
+  "vin_browser_check": {
+    "target": "24 V",
+    "uno-r4-minima": {
+      "range": "6–24 V",
+      "within_range": true,
+      "source_page": 6
+    },
+    "nano-esp32": {
+      "range": "6–21 V",
+      "within_range": false,
+      "source_page": 5
+    },
+    "displayed_task_seconds": 13.5
+  },
+  "numeric_table_parser": "Requires recommended-operating-conditions scope, literal Min/Typ/Max/Unit header, matching VIN row and claimed values; ambiguous layouts remain review_required.",
+  "copy_review": {
+    "pass": 1,
+    "validation": "preservation checks passed",
+    "large_shrink_warning": "Intentional removal requested by the user."
+  },
+  "environment_repair": "Editable application import failed during final check; uv sync --locked --reinstall-package speclens repaired the local environment. Checks then passed.",
+  "limitations": [
+    "Development labels still await human review.",
+    "Prepared CI has not run remotely.",
+    "Synthetic adapter failed output-format check and is not served."
+  ]
+}

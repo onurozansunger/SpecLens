@@ -1,0 +1,9 @@
+{
+  "purpose": "synthetic_adapter_reload_only",
+  "quality_claim": false,
+  "reloaded": true,
+  "matches_synthetic_fixture": false,
+  "output": "lesbische\n\n{\"findings\":[{\"document_id\":\"fixture-100\",\"field\":\"VIN\",\"status\":\"stated\",\"value\":\"4-28 V\",\"citations\":[{\"chunk_id\":\"fixture-100:p1:b0\",\"quote\":\"Synthetic fixture only. VIN range is 4-28 V.\"}]}]}",
+  "seconds": 1.8821519170014653,
+  "mlx_peak_allocation_bytes": 2672478522
+}

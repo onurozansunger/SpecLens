@@ -1,0 +1,1335 @@
+{
+  "split": "development",
+  "rows": [
+    {
+      "task_id": "nano-gpio-en",
+      "result": {
+        "question": "What voltage do the digital and analog pins use?",
+        "documents": [
+          "nano-esp32"
+        ],
+        "method": "hybrid_expanded",
+        "evidence": [
+          {
+            "chunk_id": "nano-esp32:p13:b0",
+            "document_id": "nano-esp32",
+            "physical_page": 13,
+            "text": "Arduino® Nano ESP32\n11.1 Power Tree\nArduino Nano ESP32 power tree.\n11.2 Pin Voltage\nAll digital & analog pins on the Nano ESP32 are 3.3 V. Do not connect any higher voltage devices to any of the pins\nas it will risk damaging the board.\n11.3 VIN Rating\nThe recommended input voltage range is 6-21 V.\nYou should not attempt to power the board with a voltage outside the recommended range, particularly not higher\nthan 21 V.\nThe efficiency of the converter depends on the input voltage via the VIN pin. See the average below for a board\noperation with normal current consumption:\n4.5 V - >90%.\n12 V - 85-90%\n18 V - <85%\nThis information is extracted from the MP2322GQH's datasheet.\n13 / 22 Arduino® Nano ESP32 Modified: 21/10/2026"
+          },
+          {
+            "chunk_id": "nano-esp32:p16:b0",
+            "document_id": "nano-esp32",
+            "physical_page": 16,
+            "text": "Arduino® Nano ESP32\n12.1 Analog (JP1)\nPin Function Type Description\n1 D13 / SCK NC Serial Clock\n2 +3V3 Power +3V3 Power Rail\n3 BOOT0 Mode Board Reset 0\n4 A0 Analog Analog input 0\n5 A1 Analog Analog input 1\n6 A2 Analog Analog input 2\n7 A3 Analog Analog input 3\n8 A4 Analog Analog input 4 / I2C Serial Datal (SDA)\n9 A5 Analog Analog input 5 / I2C Serial Clock (SCL)\n10 A6 Analog Analog input 6\n11 A7 Analog Analog input 7\n12 VBUS Power USB power (5V)\n13 BOOT1 Mode Board Reset 1\n14 GND Power Ground\n15 VIN Power Voltage Input\n12.2 Digital (JP2)\nPin Function Type Description\n1 D12 / CIPO* Digital Controller In Peripheral Out\n2 D11 / COPI* Digital Controller Out Peripheral In\n3 D10 / CS* Digital Chip Select\n4 D9 Digital Digital pin 9\n5 D8 Digital Digital pin 8\n6 D7 Digital Digital pin 7\n7 D6 Digital Digital pin 6\n8 D5 Digital Digital pin 5\n9 D4 Digital Digital pin 4\n10 D3 Digital Digital pin 3\n11 D2 Digital Digital pin 2\n12 GND Power Ground\n13 RST Internal Reset\n14 D0/RX Digital Digital pin 1 / Serial Receiver (RX)\n15 D1/TX Digital Digital pin 0 / Serial Transmitter (TX)\n*CIPO/COPI/CS replaces the MISO/MOSI/SS terminology.\n16 / 22 Arduino® Nano ESP32 Modified: 21/10/2026"
+          },
+          {
+            "chunk_id": "nano-esp32:p2:b0",
+            "document_id": "nano-esp32",
+            "physical_page": 2,
+            "text": "Arduino® Nano ESP32\nFeatures\nXtensa® Dual-core 32-bit LX7 Microprocessor\nUp to 240 MHz\n384 kB ROM\n512 kB SRAM\n16 kB SRAM in RTC (low power mode)\nDMA Controller\nPower\nOperating voltage 3.3 V\nVBUS supplies 5 V via USB-C® connector\nVIN range is 6-21 V\nConnectivity\nWi-Fi®\nBluetooth® LE\nBuilt-in antenna\n2.4 GHz transmitter/receiver\nUp to 150 Mbps\nPins\n14x digital (21x including analog)\n8x analog (available in RTC mode)\nSPI(D11,D12,D13), I2C (A4/A5), UART(D0/D1)\nCommunication Ports\nSPI\nI2C\nI2S\nUART\nCAN (TWAI®)\nLow Power\n7 μA consumption in deep sleep mode*\n240 μA consumption in light sleep mode*\nRTC Memory\nUltra Low Power (ULP) Coprocessor\nPower Management Unit (PMU)\nADC in RTC mode\n*The power consumption ratings listed in low power modes are only for the ESP32-S3 SoC. Other components on\nthe board (such as LEDs), consumes power as well, which increases the overall power consumption of the board.\n2 / 22 Arduino® Nano ESP32 Modified: 21/10/2026"
+          },
+          {
+            "chunk_id": "nano-esp32:p10:b0",
+            "document_id": "nano-esp32",
+            "physical_page": 10,
+            "text": "Arduino® Nano ESP32\n7.2 Timers\nThe Nano ESP32 has the following timers:\n52-bit system timer with 2x 52-bit counters (16 MHz) and 3x comparators.\n4x general-purpose 54-bit timers\n3x watchdog timers, two in main system (MWDT0/1), one in the RTC module (RWDT).\n7.3 Interrupts\nAll GPIOs on the Nano ESP32 can be configured to be used as interrupts, and is provided by an interrupt matrix.\nInterrupt pins are configured on an application level, using the following configurations:\nLOW\nHIGH\nCHANGE\nFALLING\nRISING\n8 Serial Communication Protocols\nThe ESP32-S3 chip provides flexibility for the various serial protocols it supports. For example, the I2C bus can be\nassigned to almost any available GPIO.\n8.1 Inter-Integrated Circuit (I2C)\nDefault pins:\nA4 - SDA\nA5 - SCL\nThe I2C bus is by default assigned to the A4/A5 (SDA/SCL) pins for retro compatibility. This pin assignment can\nhowever be changed, due to the flexibility of the ESP32-S3 chip.\nThe SDA and SCL pins can be assigned to most GPIOs, however some of these pins may have other essential\nfunctions that prevents I2C operations to run successfully.\nPlease note: many software libraries uses the standard pin assignment (A4/A5).\n10 / 22 Arduino® Nano ESP32 Modified: 21/10/2026"
+          },
+          {
+            "chunk_id": "nano-esp32:p11:b0",
+            "document_id": "nano-esp32",
+            "physical_page": 11,
+            "text": "Arduino® Nano ESP32\n8.2 Inter-IC Sound (I2S)\nThere two I2S controllers that are typically used for communication with audio devices. There are no specific pins\nassigned for I2S, this can be used by any free GPIO.\nUsing standard or TDM mode, the following lines are used:\nMCLK - master clock\nBCLK - bit clock\nWS - word select\nDIN/DOUT - serial data\nUsing PDM mode:\nCLK - PDM clock\nDIN/DOUT serial data\nRead more about the I2S protocol in Espressif's Peripheral API - InterIC Sounds (I2S)\n8.3 Serial Peripheral Interface (SPI)\nSCK - D13\nCIPO - D12\nCOPI - D11\nCS - D10\nThe SPI controller is by default assigned to the pins above.\n8.4 Universal Asynchronous Receiver/Transmitter (UART)\nD1 / TX\nD0 / RX\nThe UART controller is by default assigned to the the pins above.\n11 / 22 Arduino® Nano ESP32 Modified: 21/10/2026"
+          },
+          {
+            "chunk_id": "nano-esp32:p12:b0",
+            "document_id": "nano-esp32",
+            "physical_page": 12,
+            "text": "Arduino® Nano ESP32\n8.5 Two Wire Automotive Interface (TWAI®)\nThe CAN/TWAI® controller is used to communicate with systems using the CAN/TWAI® protocol, particularly\ncommon in the automotive industry. There are no specific pins assigned for the CAN/TWAI® controller, any free\nGPIO can be used.\nPlease note: TWAI® is also known as the CAN2.0B, or \"CAN classic\". The CAN controller is NOT compatible with\nCAN FD frames.\n9 External Flash Memory\nNano ESP32 features a 128 Mbit (16 MB) external flash, the GD25B128EWIGR (U3). This memory is connected to the\nESP32 via Quad Serial Peripheral Interface (QSPI).\nThe operating frequency for this IC is 133 MHz, and has a data transfer rate at up to 664 Mbit/s.\n10 USB Connector\nThe Nano ESP32 has one USB-C® port, used to power and program your board as well as sending & receiving serial\ncommunication.\nNote that you should not power the board with more than 5 V via the USB-C® port.\n11 Power Options\nPower can either be supplied via the VIN pin, or via USB-C® connector. Any voltage input either via USB or VIN is\nstepped down to 3.3 V using the MP2322GQH (U2) converter.\nThe operating voltage for this board is 3.3 V. Please note that there's no 5V pin available on this board, only the\nVBUS can provide 5 V when the board is powered via USB.\n12 / 22 Arduino® Nano ESP32 Modified: 21/10/2026"
+          },
+          {
+            "chunk_id": "nano-esp32:p9:b0",
+            "document_id": "nano-esp32",
+            "physical_page": 9,
+            "text": "Arduino® Nano ESP32\n6.4 PSRAM\nThe NORA-W106-10B module includes 8 MB of embedded PSRAM. (Octal SPI)\n6.5 Antenna Gain\nThe built-in antenna on the NORA-W106-10B module uses GFSK modulation technique, with the performance\nratings listed below:\nWi-Fi®:\nTypical conducted output power: 17 dBm.\nTypical radiated output power: 20 dBm EIRP.\nConducted sensitivity: -97 dBm.\nBluetooth® Low Energy:\nTypical conducted output power: 7 dBm.\nTypical radiated output power: 10 dBm EIRP.\nConducted sensitivity: -98 dBm.\nThis data is retrieved from the uBlox NORA-W10 data sheet (page 7, section 1.5) available here.\n7 System\n7.1 Resets\nThe ESP32-S3 has support for four levels of reset:\nCPU: resets CPU0/CPU1 core\nCore: resets the digital system, except for the RTC peripherals (ULP coprocessor, RTC memory).\nSystem: resets the entire digital system, including the RTC peripherals.\nChip: resets the entire chip.\nIt is possible to conduct a software reset of this board, as well as obtaining the reset reason.\nTo do a hardware reset of the board, use the onboard reset button (PB1).\n9 / 22 Arduino® Nano ESP32 Modified: 21/10/2026"
+          },
+          {
+            "chunk_id": "nano-esp32:p22:b0",
+            "document_id": "nano-esp32",
+            "physical_page": 22,
+            "text": "Arduino® Nano ESP32\n21 Reference Documentation\nReference Link\nArduino IDE (Desktop) https://www.arduino.cc/en/Main/Software\nArduino Cloud Editor https://create.arduino.cc/editor\nArduino Cloud Editor - Getting\nhttps://docs.arduino.cc/arduino-cloud/guides/editor/\nStarted\nhttps://create.arduino.cc/projecthub?\nArduino Project Hub\nby=part&part_id=11332&sort=trending\nLibrary Reference https://github.com/arduino-libraries/\nOnline Store https://store.arduino.cc/\n22 Change Log\nDate Revision Changes\n08/06/2023 1 Release\n09/01/2023 2 Update power tree flowchart.\n09/11/2023 3 Update SPI section, update analog/digital pin section.\n11/06/2023 4 Correct company name, correct VBUS/VUSB\n11/09/2023 5 Block Diagram Update, Antenna Specifications\n11/15/2023 6 Ambient temperature update\n11/23/2023 7 Added label to LP modes\n23/02/2024 8 Added antenna frequency to block diagram\n25/04/2024 9 Updated link to new Cloud Editor\n23/08/2024 10 Added SRRC certification\n23/08/2024 11 Cloud Editor updated from Web Editor\n20/10/2026 12 Added note for Intended Use, and divided language\n22 / 22 Arduino® Nano ESP32 Modified: 21/10/2026"
+          }
+        ],
+        "model": {
+          "repo_id": "mlx-community/Qwen3-4B-Instruct-2507-4bit",
+          "revision": "50d427756c6b1b2fe0c0a10f67fbda1fc8e82c1b",
+          "license": "apache-2.0",
+          "weight_bytes": 2263022417
+        },
+        "metrics": {
+          "input_tokens": 3413,
+          "output_tokens": 42,
+          "generation_tokens_per_second": 77.43126098327896,
+          "prompt_tokens_per_second": 790.489291985194,
+          "first_token_seconds": 4.318143666998367,
+          "generation_seconds": 4.868517167000391,
+          "model_load_seconds": 0.4075717080013419,
+          "mlx_peak_allocation_bytes": 3579408812,
+          "process_rss_bytes": 2605613056,
+          "finish_reason": "json_complete",
+          "request_number": 66,
+          "retrieval_seconds": 2.930302708999079,
+          "total_seconds": 7.816747666998708,
+          "attempts": 1,
+          "total_generation_seconds": 4.868517167000391
+        },
+        "chunks_sha256": "d037f32db94560c721d90af00cf91ff9d08524866f6b1f46c16d6037459785d2",
+        "prompt_sha256": "8d8b0ddf3e9056d32e75500efffd5185e530cceb607b54f4cbae554e68e26906",
+        "prompt_version": "v3",
+        "intent_version": "technical-fields-v1",
+        "requested_fields": [
+          "gpio_voltage"
+        ],
+        "planned_input_tokens": 3413,
+        "initial_input_tokens": 3413,
+        "omitted_chunk_ids": [],
+        "per_document_requested": 8,
+        "attempts": [
+          {
+            "number": 1,
+            "raw_output": "{\"findings\":[{\"document_id\":\"nano-esp32\",\"field\":\"gpio_voltage\",\"status\":\"stated\",\"value\":\"3.3 V\",\"evidence_ids\":[\"e0000\"]}]}",
+            "planned_input_tokens": 3413,
+            "supplied_evidence_ids": [
+              "e0000",
+              "e0001",
+              "e0002",
+              "e0003",
+              "e0004",
+              "e0005",
+              "e0006",
+              "e0007",
+              "e0008",
+              "e0009",
+              "e0010",
+              "e0011",
+              "e0012",
+              "e0013",
+              "e0014",
+              "e0015",
+              "e0016",
+              "e0017",
+              "e0018",
+              "e0019",
+              "e0020",
+              "e0021",
+              "e0022",
+              "e0023"
+            ],
+            "metrics": {
+              "input_tokens": 3413,
+              "output_tokens": 42,
+              "generation_tokens_per_second": 77.43126098327896,
+              "prompt_tokens_per_second": 790.489291985194,
+              "first_token_seconds": 4.318143666998367,
+              "generation_seconds": 4.868517167000391,
+              "model_load_seconds": 0.4075717080013419,
+              "mlx_peak_allocation_bytes": 3579408812,
+              "process_rss_bytes": 2605613056,
+              "finish_reason": "json_complete",
+              "request_number": 66
+            },
+            "findings": [
+              {
+                "document_id": "nano-esp32",
+                "field": "gpio_voltage",
+                "status": "stated",
+                "value": "3.3 V",
+                "citations": [
+                  {
+                    "chunk_id": "nano-esp32:p13:b0",
+                    "quote": "Arduino® Nano ESP32 11.1 Power Tree Arduino Nano ESP32 power tree. 11.2 Pin Voltage All digital & analog pins on the Nano ESP32 are 3.3 V. Do not connect any higher voltage devices to any of the pins as it will risk damaging the board. 11.3 VIN Rating The recommended input voltage range is 6-21 V. You should not attempt to power the board with a voltage outside the recommended range, particularly not higher than 21 V.",
+                    "document_id": "nano-esp32",
+                    "page": 13,
+                    "pdf_sha256": "ef9c75c0c97387f5429dee5a416bee4f9fad0f79b95da9e0dae18a5716b624ac"
+                  }
+                ],
+                "provenance_verified": true,
+                "semantic_support": "not_automatically_verified",
+                "absence_scope": null
+              }
+            ],
+            "rejected_findings": [],
+            "missing_documents": [],
+            "missing_fields": [],
+            "status": "provenance_checked",
+            "review_hints": []
+          }
+        ],
+        "selected_attempt": 1,
+        "evidence_spans": {
+          "e0000": {
+            "chunk_id": "nano-esp32:p13:b0",
+            "quote": "Arduino® Nano ESP32 11.1 Power Tree Arduino Nano ESP32 power tree. 11.2 Pin Voltage All digital & analog pins on the Nano ESP32 are 3.3 V. Do not connect any higher voltage devices to any of the pins as it will risk damaging the board. 11.3 VIN Rating The recommended input voltage range is 6-21 V. You should not attempt to power the board with a voltage outside the recommended range, particularly not higher than 21 V."
+          },
+          "e0001": {
+            "chunk_id": "nano-esp32:p13:b0",
+            "quote": "The efficiency of the converter depends on the input voltage via the VIN pin. See the average below for a board operation with normal current consumption: 4.5 V - >90%. 12 V - 85-90% 18 V - <85% This information is extracted from the MP2322GQH's datasheet. 13 / 22 Arduino® Nano ESP32 Modified: 21/10/2026"
+          },
+          "e0002": {
+            "chunk_id": "nano-esp32:p16:b0",
+            "quote": "Arduino® Nano ESP32 12.1 Analog (JP1) Pin Function Type Description 1 D13 / SCK NC Serial Clock 2 +3V3 Power +3V3 Power Rail 3 BOOT0 Mode Board Reset 0 4 A0 Analog Analog input 0 5 A1 Analog Analog input 1 6 A2 Analog Analog input 2 7 A3 Analog Analog input 3 8 A4 Analog Analog input 4 / I2C Serial Datal (SDA) 9 A5 Analog Analog input 5 / I2C Serial Clock (SCL) 10 A6 Analog Analog input 6 11 A7 Analog Analog input 7 12 VBUS Power USB power (5V)"
+          },
+          "e0003": {
+            "chunk_id": "nano-esp32:p16:b0",
+            "quote": "13 BOOT1 Mode Board Reset 1 14 GND Power Ground 15 VIN Power Voltage Input 12.2 Digital (JP2) Pin Function Type Description 1 D12 / CIPO* Digital Controller In Peripheral Out 2 D11 / COPI* Digital Controller Out Peripheral In 3 D10 / CS* Digital Chip Select 4 D9 Digital Digital pin 9 5 D8 Digital Digital pin 8 6 D7 Digital Digital pin 7 7 D6 Digital Digital pin 6 8 D5 Digital Digital pin 5 9 D4 Digital Digital pin 4 10 D3 Digital Digital pin 3"
+          },
+          "e0004": {
+            "chunk_id": "nano-esp32:p16:b0",
+            "quote": "11 D2 Digital Digital pin 2 12 GND Power Ground 13 RST Internal Reset 14 D0/RX Digital Digital pin 1 / Serial Receiver (RX) 15 D1/TX Digital Digital pin 0 / Serial Transmitter (TX) *CIPO/COPI/CS replaces the MISO/MOSI/SS terminology. 16 / 22 Arduino® Nano ESP32 Modified: 21/10/2026"
+          },
+          "e0005": {
+            "chunk_id": "nano-esp32:p2:b0",
+            "quote": "Arduino® Nano ESP32 Features Xtensa® Dual-core 32-bit LX7 Microprocessor Up to 240 MHz 384 kB ROM 512 kB SRAM 16 kB SRAM in RTC (low power mode) DMA Controller Power Operating voltage 3.3 V VBUS supplies 5 V via USB-C® connector VIN range is 6-21 V Connectivity Wi-Fi® Bluetooth® LE Built-in antenna 2.4 GHz transmitter/receiver Up to 150 Mbps Pins 14x digital (21x including analog) 8x analog (available in RTC mode)"
+          },
+          "e0006": {
+            "chunk_id": "nano-esp32:p2:b0",
+            "quote": "SPI(D11,D12,D13), I2C (A4/A5), UART(D0/D1) Communication Ports SPI I2C I2S UART CAN (TWAI®) Low Power 7 μA consumption in deep sleep mode* 240 μA consumption in light sleep mode* RTC Memory Ultra Low Power (ULP) Coprocessor Power Management Unit (PMU) ADC in RTC mode *The power consumption ratings listed in low power modes are only for the ESP32-S3 SoC. Other components on"
+          },
+          "e0007": {
+            "chunk_id": "nano-esp32:p2:b0",
+            "quote": "the board (such as LEDs), consumes power as well, which increases the overall power consumption of the board. 2 / 22 Arduino® Nano ESP32 Modified: 21/10/2026"
+          },
+          "e0008": {
+            "chunk_id": "nano-esp32:p10:b0",
+            "quote": "Arduino® Nano ESP32 7.2 Timers The Nano ESP32 has the following timers: 52-bit system timer with 2x 52-bit counters (16 MHz) and 3x comparators. 4x general-purpose 54-bit timers 3x watchdog timers, two in main system (MWDT0/1), one in the RTC module (RWDT). 7.3 Interrupts All GPIOs on the Nano ESP32 can be configured to be used as interrupts, and is provided by an interrupt matrix."
+          },
+          "e0009": {
+            "chunk_id": "nano-esp32:p10:b0",
+            "quote": "Interrupt pins are configured on an application level, using the following configurations: LOW HIGH CHANGE FALLING RISING 8 Serial Communication Protocols The ESP32-S3 chip provides flexibility for the various serial protocols it supports. For example, the I2C bus can be assigned to almost any available GPIO. 8.1 Inter-Integrated Circuit (I2C) Default pins: A4 - SDA A5 - SCL"
+          },
+          "e0010": {
+            "chunk_id": "nano-esp32:p10:b0",
+            "quote": "The I2C bus is by default assigned to the A4/A5 (SDA/SCL) pins for retro compatibility. This pin assignment can however be changed, due to the flexibility of the ESP32-S3 chip. The SDA and SCL pins can be assigned to most GPIOs, however some of these pins may have other essential functions that prevents I2C operations to run successfully. Please note: many software libraries uses the standard pin assignment (A4/A5)."
+          },
+          "e0011": {
+            "chunk_id": "nano-esp32:p10:b0",
+            "quote": "10 / 22 Arduino® Nano ESP32 Modified: 21/10/2026"
+          },
+          "e0012": {
+            "chunk_id": "nano-esp32:p11:b0",
+            "quote": "Arduino® Nano ESP32 8.2 Inter-IC Sound (I2S) There two I2S controllers that are typically used for communication with audio devices. There are no specific pins assigned for I2S, this can be used by any free GPIO. Using standard or TDM mode, the following lines are used: MCLK - master clock BCLK - bit clock WS - word select DIN/DOUT - serial data Using PDM mode: CLK - PDM clock DIN/DOUT serial data"
+          },
+          "e0013": {
+            "chunk_id": "nano-esp32:p11:b0",
+            "quote": "Read more about the I2S protocol in Espressif's Peripheral API - InterIC Sounds (I2S) 8.3 Serial Peripheral Interface (SPI) SCK - D13 CIPO - D12 COPI - D11 CS - D10 The SPI controller is by default assigned to the pins above. 8.4 Universal Asynchronous Receiver/Transmitter (UART) D1 / TX D0 / RX The UART controller is by default assigned to the the pins above. 11 / 22 Arduino® Nano ESP32 Modified: 21/10/2026"
+          },
+          "e0014": {
+            "chunk_id": "nano-esp32:p12:b0",
+            "quote": "Arduino® Nano ESP32 8.5 Two Wire Automotive Interface (TWAI®) The CAN/TWAI® controller is used to communicate with systems using the CAN/TWAI® protocol, particularly common in the automotive industry. There are no specific pins assigned for the CAN/TWAI® controller, any free GPIO can be used. Please note: TWAI® is also known as the CAN2.0B, or \"CAN classic\". The CAN controller is NOT compatible with CAN FD frames. 9 External Flash Memory"
+          },
+          "e0015": {
+            "chunk_id": "nano-esp32:p12:b0",
+            "quote": "Nano ESP32 features a 128 Mbit (16 MB) external flash, the GD25B128EWIGR (U3). This memory is connected to the ESP32 via Quad Serial Peripheral Interface (QSPI). The operating frequency for this IC is 133 MHz, and has a data transfer rate at up to 664 Mbit/s. 10 USB Connector The Nano ESP32 has one USB-C® port, used to power and program your board as well as sending & receiving serial communication."
+          },
+          "e0016": {
+            "chunk_id": "nano-esp32:p12:b0",
+            "quote": "Note that you should not power the board with more than 5 V via the USB-C® port. 11 Power Options Power can either be supplied via the VIN pin, or via USB-C® connector. Any voltage input either via USB or VIN is stepped down to 3.3 V using the MP2322GQH (U2) converter. The operating voltage for this board is 3.3 V. Please note that there's no 5V pin available on this board, only the VBUS can provide 5 V when the board is powered via USB."
+          },
+          "e0017": {
+            "chunk_id": "nano-esp32:p12:b0",
+            "quote": "12 / 22 Arduino® Nano ESP32 Modified: 21/10/2026"
+          },
+          "e0018": {
+            "chunk_id": "nano-esp32:p9:b0",
+            "quote": "Arduino® Nano ESP32 6.4 PSRAM The NORA-W106-10B module includes 8 MB of embedded PSRAM. (Octal SPI) 6.5 Antenna Gain The built-in antenna on the NORA-W106-10B module uses GFSK modulation technique, with the performance ratings listed below: Wi-Fi®: Typical conducted output power: 17 dBm. Typical radiated output power: 20 dBm EIRP. Conducted sensitivity: -97 dBm. Bluetooth® Low Energy: Typical conducted output power: 7 dBm."
+          },
+          "e0019": {
+            "chunk_id": "nano-esp32:p9:b0",
+            "quote": "Typical radiated output power: 10 dBm EIRP. Conducted sensitivity: -98 dBm. This data is retrieved from the uBlox NORA-W10 data sheet (page 7, section 1.5) available here. 7 System 7.1 Resets The ESP32-S3 has support for four levels of reset: CPU: resets CPU0/CPU1 core Core: resets the digital system, except for the RTC peripherals (ULP coprocessor, RTC memory). System: resets the entire digital system, including the RTC peripherals."
+          },
+          "e0020": {
+            "chunk_id": "nano-esp32:p9:b0",
+            "quote": "Chip: resets the entire chip. It is possible to conduct a software reset of this board, as well as obtaining the reset reason. To do a hardware reset of the board, use the onboard reset button (PB1). 9 / 22 Arduino® Nano ESP32 Modified: 21/10/2026"
+          },
+          "e0021": {
+            "chunk_id": "nano-esp32:p22:b0",
+            "quote": "Arduino® Nano ESP32 21 Reference Documentation Reference Link Arduino IDE (Desktop) https://www.arduino.cc/en/Main/Software Arduino Cloud Editor https://create.arduino.cc/editor Arduino Cloud Editor - Getting https://docs.arduino.cc/arduino-cloud/guides/editor/ Started https://create.arduino.cc/projecthub? Arduino Project Hub by=part&part_id=11332&sort=trending Library Reference https://github.com/arduino-libraries/"
+          },
+          "e0022": {
+            "chunk_id": "nano-esp32:p22:b0",
+            "quote": "Online Store https://store.arduino.cc/ 22 Change Log Date Revision Changes 08/06/2023 1 Release 09/01/2023 2 Update power tree flowchart. 09/11/2023 3 Update SPI section, update analog/digital pin section. 11/06/2023 4 Correct company name, correct VBUS/VUSB 11/09/2023 5 Block Diagram Update, Antenna Specifications 11/15/2023 6 Ambient temperature update 11/23/2023 7 Added label to LP modes 23/02/2024 8 Added antenna frequency to block diagram"
+          },
+          "e0023": {
+            "chunk_id": "nano-esp32:p22:b0",
+            "quote": "25/04/2024 9 Updated link to new Cloud Editor 23/08/2024 10 Added SRRC certification 23/08/2024 11 Cloud Editor updated from Web Editor 20/10/2026 12 Added note for Intended Use, and divided language 22 / 22 Arduino® Nano ESP32 Modified: 21/10/2026"
+          }
+        },
+        "raw_output": "{\"findings\":[{\"document_id\":\"nano-esp32\",\"field\":\"gpio_voltage\",\"status\":\"stated\",\"value\":\"3.3 V\",\"evidence_ids\":[\"e0000\"]}]}",
+        "supplied_evidence_ids": [
+          "e0000",
+          "e0001",
+          "e0002",
+          "e0003",
+          "e0004",
+          "e0005",
+          "e0006",
+          "e0007",
+          "e0008",
+          "e0009",
+          "e0010",
+          "e0011",
+          "e0012",
+          "e0013",
+          "e0014",
+          "e0015",
+          "e0016",
+          "e0017",
+          "e0018",
+          "e0019",
+          "e0020",
+          "e0021",
+          "e0022",
+          "e0023"
+        ],
+        "findings": [
+          {
+            "document_id": "nano-esp32",
+            "field": "gpio_voltage",
+            "status": "stated",
+            "value": "3.3 V",
+            "citations": [
+              {
+                "chunk_id": "nano-esp32:p13:b0",
+                "quote": "Arduino® Nano ESP32 11.1 Power Tree Arduino Nano ESP32 power tree. 11.2 Pin Voltage All digital & analog pins on the Nano ESP32 are 3.3 V. Do not connect any higher voltage devices to any of the pins as it will risk damaging the board. 11.3 VIN Rating The recommended input voltage range is 6-21 V. You should not attempt to power the board with a voltage outside the recommended range, particularly not higher than 21 V.",
+                "document_id": "nano-esp32",
+                "page": 13,
+                "pdf_sha256": "ef9c75c0c97387f5429dee5a416bee4f9fad0f79b95da9e0dae18a5716b624ac"
+              }
+            ],
+            "provenance_verified": true,
+            "semantic_support": "not_automatically_verified",
+            "absence_scope": null
+          }
+        ],
+        "rejected_findings": [],
+        "missing_documents": [],
+        "missing_fields": [],
+        "status": "provenance_checked",
+        "review_hints": []
+      }
+    },
+    {
+      "task_id": "nano-gpio-tr",
+      "result": {
+        "question": "Dijital ve analog pinlerin gerilimi kaç volt?",
+        "documents": [
+          "nano-esp32"
+        ],
+        "method": "hybrid_expanded",
+        "evidence": [
+          {
+            "chunk_id": "nano-esp32:p13:b0",
+            "document_id": "nano-esp32",
+            "physical_page": 13,
+            "text": "Arduino® Nano ESP32\n11.1 Power Tree\nArduino Nano ESP32 power tree.\n11.2 Pin Voltage\nAll digital & analog pins on the Nano ESP32 are 3.3 V. Do not connect any higher voltage devices to any of the pins\nas it will risk damaging the board.\n11.3 VIN Rating\nThe recommended input voltage range is 6-21 V.\nYou should not attempt to power the board with a voltage outside the recommended range, particularly not higher\nthan 21 V.\nThe efficiency of the converter depends on the input voltage via the VIN pin. See the average below for a board\noperation with normal current consumption:\n4.5 V - >90%.\n12 V - 85-90%\n18 V - <85%\nThis information is extracted from the MP2322GQH's datasheet.\n13 / 22 Arduino® Nano ESP32 Modified: 21/10/2026"
+          },
+          {
+            "chunk_id": "nano-esp32:p16:b0",
+            "document_id": "nano-esp32",
+            "physical_page": 16,
+            "text": "Arduino® Nano ESP32\n12.1 Analog (JP1)\nPin Function Type Description\n1 D13 / SCK NC Serial Clock\n2 +3V3 Power +3V3 Power Rail\n3 BOOT0 Mode Board Reset 0\n4 A0 Analog Analog input 0\n5 A1 Analog Analog input 1\n6 A2 Analog Analog input 2\n7 A3 Analog Analog input 3\n8 A4 Analog Analog input 4 / I2C Serial Datal (SDA)\n9 A5 Analog Analog input 5 / I2C Serial Clock (SCL)\n10 A6 Analog Analog input 6\n11 A7 Analog Analog input 7\n12 VBUS Power USB power (5V)\n13 BOOT1 Mode Board Reset 1\n14 GND Power Ground\n15 VIN Power Voltage Input\n12.2 Digital (JP2)\nPin Function Type Description\n1 D12 / CIPO* Digital Controller In Peripheral Out\n2 D11 / COPI* Digital Controller Out Peripheral In\n3 D10 / CS* Digital Chip Select\n4 D9 Digital Digital pin 9\n5 D8 Digital Digital pin 8\n6 D7 Digital Digital pin 7\n7 D6 Digital Digital pin 6\n8 D5 Digital Digital pin 5\n9 D4 Digital Digital pin 4\n10 D3 Digital Digital pin 3\n11 D2 Digital Digital pin 2\n12 GND Power Ground\n13 RST Internal Reset\n14 D0/RX Digital Digital pin 1 / Serial Receiver (RX)\n15 D1/TX Digital Digital pin 0 / Serial Transmitter (TX)\n*CIPO/COPI/CS replaces the MISO/MOSI/SS terminology.\n16 / 22 Arduino® Nano ESP32 Modified: 21/10/2026"
+          },
+          {
+            "chunk_id": "nano-esp32:p10:b0",
+            "document_id": "nano-esp32",
+            "physical_page": 10,
+            "text": "Arduino® Nano ESP32\n7.2 Timers\nThe Nano ESP32 has the following timers:\n52-bit system timer with 2x 52-bit counters (16 MHz) and 3x comparators.\n4x general-purpose 54-bit timers\n3x watchdog timers, two in main system (MWDT0/1), one in the RTC module (RWDT).\n7.3 Interrupts\nAll GPIOs on the Nano ESP32 can be configured to be used as interrupts, and is provided by an interrupt matrix.\nInterrupt pins are configured on an application level, using the following configurations:\nLOW\nHIGH\nCHANGE\nFALLING\nRISING\n8 Serial Communication Protocols\nThe ESP32-S3 chip provides flexibility for the various serial protocols it supports. For example, the I2C bus can be\nassigned to almost any available GPIO.\n8.1 Inter-Integrated Circuit (I2C)\nDefault pins:\nA4 - SDA\nA5 - SCL\nThe I2C bus is by default assigned to the A4/A5 (SDA/SCL) pins for retro compatibility. This pin assignment can\nhowever be changed, due to the flexibility of the ESP32-S3 chip.\nThe SDA and SCL pins can be assigned to most GPIOs, however some of these pins may have other essential\nfunctions that prevents I2C operations to run successfully.\nPlease note: many software libraries uses the standard pin assignment (A4/A5).\n10 / 22 Arduino® Nano ESP32 Modified: 21/10/2026"
+          },
+          {
+            "chunk_id": "nano-esp32:p2:b0",
+            "document_id": "nano-esp32",
+            "physical_page": 2,
+            "text": "Arduino® Nano ESP32\nFeatures\nXtensa® Dual-core 32-bit LX7 Microprocessor\nUp to 240 MHz\n384 kB ROM\n512 kB SRAM\n16 kB SRAM in RTC (low power mode)\nDMA Controller\nPower\nOperating voltage 3.3 V\nVBUS supplies 5 V via USB-C® connector\nVIN range is 6-21 V\nConnectivity\nWi-Fi®\nBluetooth® LE\nBuilt-in antenna\n2.4 GHz transmitter/receiver\nUp to 150 Mbps\nPins\n14x digital (21x including analog)\n8x analog (available in RTC mode)\nSPI(D11,D12,D13), I2C (A4/A5), UART(D0/D1)\nCommunication Ports\nSPI\nI2C\nI2S\nUART\nCAN (TWAI®)\nLow Power\n7 μA consumption in deep sleep mode*\n240 μA consumption in light sleep mode*\nRTC Memory\nUltra Low Power (ULP) Coprocessor\nPower Management Unit (PMU)\nADC in RTC mode\n*The power consumption ratings listed in low power modes are only for the ESP32-S3 SoC. Other components on\nthe board (such as LEDs), consumes power as well, which increases the overall power consumption of the board.\n2 / 22 Arduino® Nano ESP32 Modified: 21/10/2026"
+          },
+          {
+            "chunk_id": "nano-esp32:p11:b0",
+            "document_id": "nano-esp32",
+            "physical_page": 11,
+            "text": "Arduino® Nano ESP32\n8.2 Inter-IC Sound (I2S)\nThere two I2S controllers that are typically used for communication with audio devices. There are no specific pins\nassigned for I2S, this can be used by any free GPIO.\nUsing standard or TDM mode, the following lines are used:\nMCLK - master clock\nBCLK - bit clock\nWS - word select\nDIN/DOUT - serial data\nUsing PDM mode:\nCLK - PDM clock\nDIN/DOUT serial data\nRead more about the I2S protocol in Espressif's Peripheral API - InterIC Sounds (I2S)\n8.3 Serial Peripheral Interface (SPI)\nSCK - D13\nCIPO - D12\nCOPI - D11\nCS - D10\nThe SPI controller is by default assigned to the pins above.\n8.4 Universal Asynchronous Receiver/Transmitter (UART)\nD1 / TX\nD0 / RX\nThe UART controller is by default assigned to the the pins above.\n11 / 22 Arduino® Nano ESP32 Modified: 21/10/2026"
+          },
+          {
+            "chunk_id": "nano-esp32:p9:b0",
+            "document_id": "nano-esp32",
+            "physical_page": 9,
+            "text": "Arduino® Nano ESP32\n6.4 PSRAM\nThe NORA-W106-10B module includes 8 MB of embedded PSRAM. (Octal SPI)\n6.5 Antenna Gain\nThe built-in antenna on the NORA-W106-10B module uses GFSK modulation technique, with the performance\nratings listed below:\nWi-Fi®:\nTypical conducted output power: 17 dBm.\nTypical radiated output power: 20 dBm EIRP.\nConducted sensitivity: -97 dBm.\nBluetooth® Low Energy:\nTypical conducted output power: 7 dBm.\nTypical radiated output power: 10 dBm EIRP.\nConducted sensitivity: -98 dBm.\nThis data is retrieved from the uBlox NORA-W10 data sheet (page 7, section 1.5) available here.\n7 System\n7.1 Resets\nThe ESP32-S3 has support for four levels of reset:\nCPU: resets CPU0/CPU1 core\nCore: resets the digital system, except for the RTC peripherals (ULP coprocessor, RTC memory).\nSystem: resets the entire digital system, including the RTC peripherals.\nChip: resets the entire chip.\nIt is possible to conduct a software reset of this board, as well as obtaining the reset reason.\nTo do a hardware reset of the board, use the onboard reset button (PB1).\n9 / 22 Arduino® Nano ESP32 Modified: 21/10/2026"
+          },
+          {
+            "chunk_id": "nano-esp32:p12:b0",
+            "document_id": "nano-esp32",
+            "physical_page": 12,
+            "text": "Arduino® Nano ESP32\n8.5 Two Wire Automotive Interface (TWAI®)\nThe CAN/TWAI® controller is used to communicate with systems using the CAN/TWAI® protocol, particularly\ncommon in the automotive industry. There are no specific pins assigned for the CAN/TWAI® controller, any free\nGPIO can be used.\nPlease note: TWAI® is also known as the CAN2.0B, or \"CAN classic\". The CAN controller is NOT compatible with\nCAN FD frames.\n9 External Flash Memory\nNano ESP32 features a 128 Mbit (16 MB) external flash, the GD25B128EWIGR (U3). This memory is connected to the\nESP32 via Quad Serial Peripheral Interface (QSPI).\nThe operating frequency for this IC is 133 MHz, and has a data transfer rate at up to 664 Mbit/s.\n10 USB Connector\nThe Nano ESP32 has one USB-C® port, used to power and program your board as well as sending & receiving serial\ncommunication.\nNote that you should not power the board with more than 5 V via the USB-C® port.\n11 Power Options\nPower can either be supplied via the VIN pin, or via USB-C® connector. Any voltage input either via USB or VIN is\nstepped down to 3.3 V using the MP2322GQH (U2) converter.\nThe operating voltage for this board is 3.3 V. Please note that there's no 5V pin available on this board, only the\nVBUS can provide 5 V when the board is powered via USB.\n12 / 22 Arduino® Nano ESP32 Modified: 21/10/2026"
+          },
+          {
+            "chunk_id": "nano-esp32:p22:b0",
+            "document_id": "nano-esp32",
+            "physical_page": 22,
+            "text": "Arduino® Nano ESP32\n21 Reference Documentation\nReference Link\nArduino IDE (Desktop) https://www.arduino.cc/en/Main/Software\nArduino Cloud Editor https://create.arduino.cc/editor\nArduino Cloud Editor - Getting\nhttps://docs.arduino.cc/arduino-cloud/guides/editor/\nStarted\nhttps://create.arduino.cc/projecthub?\nArduino Project Hub\nby=part&part_id=11332&sort=trending\nLibrary Reference https://github.com/arduino-libraries/\nOnline Store https://store.arduino.cc/\n22 Change Log\nDate Revision Changes\n08/06/2023 1 Release\n09/01/2023 2 Update power tree flowchart.\n09/11/2023 3 Update SPI section, update analog/digital pin section.\n11/06/2023 4 Correct company name, correct VBUS/VUSB\n11/09/2023 5 Block Diagram Update, Antenna Specifications\n11/15/2023 6 Ambient temperature update\n11/23/2023 7 Added label to LP modes\n23/02/2024 8 Added antenna frequency to block diagram\n25/04/2024 9 Updated link to new Cloud Editor\n23/08/2024 10 Added SRRC certification\n23/08/2024 11 Cloud Editor updated from Web Editor\n20/10/2026 12 Added note for Intended Use, and divided language\n22 / 22 Arduino® Nano ESP32 Modified: 21/10/2026"
+          }
+        ],
+        "model": {
+          "repo_id": "mlx-community/Qwen3-4B-Instruct-2507-4bit",
+          "revision": "50d427756c6b1b2fe0c0a10f67fbda1fc8e82c1b",
+          "license": "apache-2.0",
+          "weight_bytes": 2263022417
+        },
+        "metrics": {
+          "input_tokens": 3417,
+          "output_tokens": 42,
+          "generation_tokens_per_second": 77.2376861062403,
+          "prompt_tokens_per_second": 804.2261058042349,
+          "first_token_seconds": 4.25015083299877,
+          "generation_seconds": 4.801739374997851,
+          "model_load_seconds": 0.4075717080013419,
+          "mlx_peak_allocation_bytes": 3581276604,
+          "process_rss_bytes": 2605629440,
+          "finish_reason": "json_complete",
+          "request_number": 67,
+          "retrieval_seconds": 0.02797883300081594,
+          "total_seconds": 4.841351874998509,
+          "attempts": 1,
+          "total_generation_seconds": 4.801739374997851
+        },
+        "chunks_sha256": "d037f32db94560c721d90af00cf91ff9d08524866f6b1f46c16d6037459785d2",
+        "prompt_sha256": "8d8b0ddf3e9056d32e75500efffd5185e530cceb607b54f4cbae554e68e26906",
+        "prompt_version": "v3",
+        "intent_version": "technical-fields-v1",
+        "requested_fields": [
+          "gpio_voltage"
+        ],
+        "planned_input_tokens": 3417,
+        "initial_input_tokens": 3417,
+        "omitted_chunk_ids": [],
+        "per_document_requested": 8,
+        "attempts": [
+          {
+            "number": 1,
+            "raw_output": "{\"findings\":[{\"document_id\":\"nano-esp32\",\"field\":\"gpio_voltage\",\"status\":\"stated\",\"value\":\"3.3 V\",\"evidence_ids\":[\"e0000\"]}]}",
+            "planned_input_tokens": 3417,
+            "supplied_evidence_ids": [
+              "e0000",
+              "e0001",
+              "e0002",
+              "e0003",
+              "e0004",
+              "e0005",
+              "e0006",
+              "e0007",
+              "e0008",
+              "e0009",
+              "e0010",
+              "e0011",
+              "e0012",
+              "e0013",
+              "e0014",
+              "e0015",
+              "e0016",
+              "e0017",
+              "e0018",
+              "e0019",
+              "e0020",
+              "e0021",
+              "e0022",
+              "e0023"
+            ],
+            "metrics": {
+              "input_tokens": 3417,
+              "output_tokens": 42,
+              "generation_tokens_per_second": 77.2376861062403,
+              "prompt_tokens_per_second": 804.2261058042349,
+              "first_token_seconds": 4.25015083299877,
+              "generation_seconds": 4.801739374997851,
+              "model_load_seconds": 0.4075717080013419,
+              "mlx_peak_allocation_bytes": 3581276604,
+              "process_rss_bytes": 2605629440,
+              "finish_reason": "json_complete",
+              "request_number": 67
+            },
+            "findings": [
+              {
+                "document_id": "nano-esp32",
+                "field": "gpio_voltage",
+                "status": "stated",
+                "value": "3.3 V",
+                "citations": [
+                  {
+                    "chunk_id": "nano-esp32:p13:b0",
+                    "quote": "Arduino® Nano ESP32 11.1 Power Tree Arduino Nano ESP32 power tree. 11.2 Pin Voltage All digital & analog pins on the Nano ESP32 are 3.3 V. Do not connect any higher voltage devices to any of the pins as it will risk damaging the board. 11.3 VIN Rating The recommended input voltage range is 6-21 V. You should not attempt to power the board with a voltage outside the recommended range, particularly not higher than 21 V.",
+                    "document_id": "nano-esp32",
+                    "page": 13,
+                    "pdf_sha256": "ef9c75c0c97387f5429dee5a416bee4f9fad0f79b95da9e0dae18a5716b624ac"
+                  }
+                ],
+                "provenance_verified": true,
+                "semantic_support": "not_automatically_verified",
+                "absence_scope": null
+              }
+            ],
+            "rejected_findings": [],
+            "missing_documents": [],
+            "missing_fields": [],
+            "status": "provenance_checked",
+            "review_hints": []
+          }
+        ],
+        "selected_attempt": 1,
+        "evidence_spans": {
+          "e0000": {
+            "chunk_id": "nano-esp32:p13:b0",
+            "quote": "Arduino® Nano ESP32 11.1 Power Tree Arduino Nano ESP32 power tree. 11.2 Pin Voltage All digital & analog pins on the Nano ESP32 are 3.3 V. Do not connect any higher voltage devices to any of the pins as it will risk damaging the board. 11.3 VIN Rating The recommended input voltage range is 6-21 V. You should not attempt to power the board with a voltage outside the recommended range, particularly not higher than 21 V."
+          },
+          "e0001": {
+            "chunk_id": "nano-esp32:p13:b0",
+            "quote": "The efficiency of the converter depends on the input voltage via the VIN pin. See the average below for a board operation with normal current consumption: 4.5 V - >90%. 12 V - 85-90% 18 V - <85% This information is extracted from the MP2322GQH's datasheet. 13 / 22 Arduino® Nano ESP32 Modified: 21/10/2026"
+          },
+          "e0002": {
+            "chunk_id": "nano-esp32:p16:b0",
+            "quote": "Arduino® Nano ESP32 12.1 Analog (JP1) Pin Function Type Description 1 D13 / SCK NC Serial Clock 2 +3V3 Power +3V3 Power Rail 3 BOOT0 Mode Board Reset 0 4 A0 Analog Analog input 0 5 A1 Analog Analog input 1 6 A2 Analog Analog input 2 7 A3 Analog Analog input 3 8 A4 Analog Analog input 4 / I2C Serial Datal (SDA) 9 A5 Analog Analog input 5 / I2C Serial Clock (SCL) 10 A6 Analog Analog input 6 11 A7 Analog Analog input 7 12 VBUS Power USB power (5V)"
+          },
+          "e0003": {
+            "chunk_id": "nano-esp32:p16:b0",
+            "quote": "13 BOOT1 Mode Board Reset 1 14 GND Power Ground 15 VIN Power Voltage Input 12.2 Digital (JP2) Pin Function Type Description 1 D12 / CIPO* Digital Controller In Peripheral Out 2 D11 / COPI* Digital Controller Out Peripheral In 3 D10 / CS* Digital Chip Select 4 D9 Digital Digital pin 9 5 D8 Digital Digital pin 8 6 D7 Digital Digital pin 7 7 D6 Digital Digital pin 6 8 D5 Digital Digital pin 5 9 D4 Digital Digital pin 4 10 D3 Digital Digital pin 3"
+          },
+          "e0004": {
+            "chunk_id": "nano-esp32:p16:b0",
+            "quote": "11 D2 Digital Digital pin 2 12 GND Power Ground 13 RST Internal Reset 14 D0/RX Digital Digital pin 1 / Serial Receiver (RX) 15 D1/TX Digital Digital pin 0 / Serial Transmitter (TX) *CIPO/COPI/CS replaces the MISO/MOSI/SS terminology. 16 / 22 Arduino® Nano ESP32 Modified: 21/10/2026"
+          },
+          "e0005": {
+            "chunk_id": "nano-esp32:p10:b0",
+            "quote": "Arduino® Nano ESP32 7.2 Timers The Nano ESP32 has the following timers: 52-bit system timer with 2x 52-bit counters (16 MHz) and 3x comparators. 4x general-purpose 54-bit timers 3x watchdog timers, two in main system (MWDT0/1), one in the RTC module (RWDT). 7.3 Interrupts All GPIOs on the Nano ESP32 can be configured to be used as interrupts, and is provided by an interrupt matrix."
+          },
+          "e0006": {
+            "chunk_id": "nano-esp32:p10:b0",
+            "quote": "Interrupt pins are configured on an application level, using the following configurations: LOW HIGH CHANGE FALLING RISING 8 Serial Communication Protocols The ESP32-S3 chip provides flexibility for the various serial protocols it supports. For example, the I2C bus can be assigned to almost any available GPIO. 8.1 Inter-Integrated Circuit (I2C) Default pins: A4 - SDA A5 - SCL"
+          },
+          "e0007": {
+            "chunk_id": "nano-esp32:p10:b0",
+            "quote": "The I2C bus is by default assigned to the A4/A5 (SDA/SCL) pins for retro compatibility. This pin assignment can however be changed, due to the flexibility of the ESP32-S3 chip. The SDA and SCL pins can be assigned to most GPIOs, however some of these pins may have other essential functions that prevents I2C operations to run successfully. Please note: many software libraries uses the standard pin assignment (A4/A5)."
+          },
+          "e0008": {
+            "chunk_id": "nano-esp32:p10:b0",
+            "quote": "10 / 22 Arduino® Nano ESP32 Modified: 21/10/2026"
+          },
+          "e0009": {
+            "chunk_id": "nano-esp32:p2:b0",
+            "quote": "Arduino® Nano ESP32 Features Xtensa® Dual-core 32-bit LX7 Microprocessor Up to 240 MHz 384 kB ROM 512 kB SRAM 16 kB SRAM in RTC (low power mode) DMA Controller Power Operating voltage 3.3 V VBUS supplies 5 V via USB-C® connector VIN range is 6-21 V Connectivity Wi-Fi® Bluetooth® LE Built-in antenna 2.4 GHz transmitter/receiver Up to 150 Mbps Pins 14x digital (21x including analog) 8x analog (available in RTC mode)"
+          },
+          "e0010": {
+            "chunk_id": "nano-esp32:p2:b0",
+            "quote": "SPI(D11,D12,D13), I2C (A4/A5), UART(D0/D1) Communication Ports SPI I2C I2S UART CAN (TWAI®) Low Power 7 μA consumption in deep sleep mode* 240 μA consumption in light sleep mode* RTC Memory Ultra Low Power (ULP) Coprocessor Power Management Unit (PMU) ADC in RTC mode *The power consumption ratings listed in low power modes are only for the ESP32-S3 SoC. Other components on"
+          },
+          "e0011": {
+            "chunk_id": "nano-esp32:p2:b0",
+            "quote": "the board (such as LEDs), consumes power as well, which increases the overall power consumption of the board. 2 / 22 Arduino® Nano ESP32 Modified: 21/10/2026"
+          },
+          "e0012": {
+            "chunk_id": "nano-esp32:p11:b0",
+            "quote": "Arduino® Nano ESP32 8.2 Inter-IC Sound (I2S) There two I2S controllers that are typically used for communication with audio devices. There are no specific pins assigned for I2S, this can be used by any free GPIO. Using standard or TDM mode, the following lines are used: MCLK - master clock BCLK - bit clock WS - word select DIN/DOUT - serial data Using PDM mode: CLK - PDM clock DIN/DOUT serial data"
+          },
+          "e0013": {
+            "chunk_id": "nano-esp32:p11:b0",
+            "quote": "Read more about the I2S protocol in Espressif's Peripheral API - InterIC Sounds (I2S) 8.3 Serial Peripheral Interface (SPI) SCK - D13 CIPO - D12 COPI - D11 CS - D10 The SPI controller is by default assigned to the pins above. 8.4 Universal Asynchronous Receiver/Transmitter (UART) D1 / TX D0 / RX The UART controller is by default assigned to the the pins above. 11 / 22 Arduino® Nano ESP32 Modified: 21/10/2026"
+          },
+          "e0014": {
+            "chunk_id": "nano-esp32:p9:b0",
+            "quote": "Arduino® Nano ESP32 6.4 PSRAM The NORA-W106-10B module includes 8 MB of embedded PSRAM. (Octal SPI) 6.5 Antenna Gain The built-in antenna on the NORA-W106-10B module uses GFSK modulation technique, with the performance ratings listed below: Wi-Fi®: Typical conducted output power: 17 dBm. Typical radiated output power: 20 dBm EIRP. Conducted sensitivity: -97 dBm. Bluetooth® Low Energy: Typical conducted output power: 7 dBm."
+          },
+          "e0015": {
+            "chunk_id": "nano-esp32:p9:b0",
+            "quote": "Typical radiated output power: 10 dBm EIRP. Conducted sensitivity: -98 dBm. This data is retrieved from the uBlox NORA-W10 data sheet (page 7, section 1.5) available here. 7 System 7.1 Resets The ESP32-S3 has support for four levels of reset: CPU: resets CPU0/CPU1 core Core: resets the digital system, except for the RTC peripherals (ULP coprocessor, RTC memory). System: resets the entire digital system, including the RTC peripherals."
+          },
+          "e0016": {
+            "chunk_id": "nano-esp32:p9:b0",
+            "quote": "Chip: resets the entire chip. It is possible to conduct a software reset of this board, as well as obtaining the reset reason. To do a hardware reset of the board, use the onboard reset button (PB1). 9 / 22 Arduino® Nano ESP32 Modified: 21/10/2026"
+          },
+          "e0017": {
+            "chunk_id": "nano-esp32:p12:b0",
+            "quote": "Arduino® Nano ESP32 8.5 Two Wire Automotive Interface (TWAI®) The CAN/TWAI® controller is used to communicate with systems using the CAN/TWAI® protocol, particularly common in the automotive industry. There are no specific pins assigned for the CAN/TWAI® controller, any free GPIO can be used. Please note: TWAI® is also known as the CAN2.0B, or \"CAN classic\". The CAN controller is NOT compatible with CAN FD frames. 9 External Flash Memory"
+          },
+          "e0018": {
+            "chunk_id": "nano-esp32:p12:b0",
+            "quote": "Nano ESP32 features a 128 Mbit (16 MB) external flash, the GD25B128EWIGR (U3). This memory is connected to the ESP32 via Quad Serial Peripheral Interface (QSPI). The operating frequency for this IC is 133 MHz, and has a data transfer rate at up to 664 Mbit/s. 10 USB Connector The Nano ESP32 has one USB-C® port, used to power and program your board as well as sending & receiving serial communication."
+          },
+          "e0019": {
+            "chunk_id": "nano-esp32:p12:b0",
+            "quote": "Note that you should not power the board with more than 5 V via the USB-C® port. 11 Power Options Power can either be supplied via the VIN pin, or via USB-C® connector. Any voltage input either via USB or VIN is stepped down to 3.3 V using the MP2322GQH (U2) converter. The operating voltage for this board is 3.3 V. Please note that there's no 5V pin available on this board, only the VBUS can provide 5 V when the board is powered via USB."
+          },
+          "e0020": {
+            "chunk_id": "nano-esp32:p12:b0",
+            "quote": "12 / 22 Arduino® Nano ESP32 Modified: 21/10/2026"
+          },
+          "e0021": {
+            "chunk_id": "nano-esp32:p22:b0",
+            "quote": "Arduino® Nano ESP32 21 Reference Documentation Reference Link Arduino IDE (Desktop) https://www.arduino.cc/en/Main/Software Arduino Cloud Editor https://create.arduino.cc/editor Arduino Cloud Editor - Getting https://docs.arduino.cc/arduino-cloud/guides/editor/ Started https://create.arduino.cc/projecthub? Arduino Project Hub by=part&part_id=11332&sort=trending Library Reference https://github.com/arduino-libraries/"
+          },
+          "e0022": {
+            "chunk_id": "nano-esp32:p22:b0",
+            "quote": "Online Store https://store.arduino.cc/ 22 Change Log Date Revision Changes 08/06/2023 1 Release 09/01/2023 2 Update power tree flowchart. 09/11/2023 3 Update SPI section, update analog/digital pin section. 11/06/2023 4 Correct company name, correct VBUS/VUSB 11/09/2023 5 Block Diagram Update, Antenna Specifications 11/15/2023 6 Ambient temperature update 11/23/2023 7 Added label to LP modes 23/02/2024 8 Added antenna frequency to block diagram"
+          },
+          "e0023": {
+            "chunk_id": "nano-esp32:p22:b0",
+            "quote": "25/04/2024 9 Updated link to new Cloud Editor 23/08/2024 10 Added SRRC certification 23/08/2024 11 Cloud Editor updated from Web Editor 20/10/2026 12 Added note for Intended Use, and divided language 22 / 22 Arduino® Nano ESP32 Modified: 21/10/2026"
+          }
+        },
+        "raw_output": "{\"findings\":[{\"document_id\":\"nano-esp32\",\"field\":\"gpio_voltage\",\"status\":\"stated\",\"value\":\"3.3 V\",\"evidence_ids\":[\"e0000\"]}]}",
+        "supplied_evidence_ids": [
+          "e0000",
+          "e0001",
+          "e0002",
+          "e0003",
+          "e0004",
+          "e0005",
+          "e0006",
+          "e0007",
+          "e0008",
+          "e0009",
+          "e0010",
+          "e0011",
+          "e0012",
+          "e0013",
+          "e0014",
+          "e0015",
+          "e0016",
+          "e0017",
+          "e0018",
+          "e0019",
+          "e0020",
+          "e0021",
+          "e0022",
+          "e0023"
+        ],
+        "findings": [
+          {
+            "document_id": "nano-esp32",
+            "field": "gpio_voltage",
+            "status": "stated",
+            "value": "3.3 V",
+            "citations": [
+              {
+                "chunk_id": "nano-esp32:p13:b0",
+                "quote": "Arduino® Nano ESP32 11.1 Power Tree Arduino Nano ESP32 power tree. 11.2 Pin Voltage All digital & analog pins on the Nano ESP32 are 3.3 V. Do not connect any higher voltage devices to any of the pins as it will risk damaging the board. 11.3 VIN Rating The recommended input voltage range is 6-21 V. You should not attempt to power the board with a voltage outside the recommended range, particularly not higher than 21 V.",
+                "document_id": "nano-esp32",
+                "page": 13,
+                "pdf_sha256": "ef9c75c0c97387f5429dee5a416bee4f9fad0f79b95da9e0dae18a5716b624ac"
+              }
+            ],
+            "provenance_verified": true,
+            "semantic_support": "not_automatically_verified",
+            "absence_scope": null
+          }
+        ],
+        "rejected_findings": [],
+        "missing_documents": [],
+        "missing_fields": [],
+        "status": "provenance_checked",
+        "review_hints": []
+      }
+    },
+    {
+      "task_id": "ble-flash-en",
+      "result": {
+        "question": "How much flash memory does the NINA B306 processor have?",
+        "documents": [
+          "nano-33-ble-rev2"
+        ],
+        "method": "hybrid_expanded",
+        "evidence": [
+          {
+            "chunk_id": "nano-33-ble-rev2:p3:b0",
+            "document_id": "nano-33-ble-rev2",
+            "physical_page": 3,
+            "text": "Arduino® Nano 33 BLE Rev2\nFeatures\nNINA B306 Module\nProcessor\n64 MHz Arm® Cortex®-M4F (with FPU)\n1 MB Flash + 256 kB RAM\nBluetooth® 5 multiprotocol radio\n2 Mbps\nCSA #2\nAdvertising Extensions\nLong Range\n+8 dBm TX power\n-95 dBm sensitivity\n4.8 mA in TX (0 dBm)\n4.6 mA in RX (1 Mbps)\nIntegrated balun with 50 Ω single-ended output\nIEEE 802.15.4 radio support\nThread\nZigbee®\nPeripherals\nFull-speed 12 Mbps USB\nNFC-A tag\nArm® CryptoCell CC310 security subsystem\nQSPI/SPI/TWI/I2S/PDM/QDEC\nHigh speed 32 MHz SPI\nQuad SPI interface 32 MHz\nEasyDMA for all digital interfaces\n12-bit 200 ksps ADC\n128 bit AES/ECB/CCM/AAR co-processor\nBMI270 6-axis IMU (Accelerometer and Gyroscope)\n16-bit\n3-axis accelerometer with ±2g/±4g/±8g/±16g range\n3-axis gyroscope with ±125dps/±250dps/±500dps/±1000dps/±2000dps range\nBMM150 3-axis IMU (Magnetometer)\n3-axis digital geomagnetic sensor\n0.3μT resolution\n±1300μT (x,y-axis), ±2500μT (z-axis)\nMP2322 DC-DC\nRegulates input voltage from up to 21V with a minimum of 65% efficiency @minimum load\nMore than 85% efficiency @12V\n3 / 16 Arduino® Nano 33 BLE Rev2 Modified: 21/10/2026"
+          },
+          {
+            "chunk_id": "nano-33-ble-rev2:p1:b0",
+            "document_id": "nano-33-ble-rev2",
+            "physical_page": 1,
+            "text": "Arduino® Nano 33 BLE Rev2\nUser Manual\nSKU: ABX00071\nEnglish\nDescription\nThe Arduino® Nano 33 BLE Rev2* is a miniature-sized module containing a NINA B306 module, based on Nordic\nnRF52480 and containing an Arm® Cortex®-M4F. The BMI270 and BMM150 jointly provide a 9-axis IMU. The\nmodule can either be mounted as a DIP component (when mounting pin headers) or as a SMT component, directly\nsoldering it via the castellated pads.\n*Nano 33 BLE Rev2 product has two SKUs:\nWithout headers (ABX00071)\nWith headers (ABX00072)\n1 / 16 Arduino® Nano 33 BLE Rev2 Modified: 21/10/2026"
+          },
+          {
+            "chunk_id": "nano-33-ble-rev2:p10:b0",
+            "document_id": "nano-33-ble-rev2",
+            "physical_page": 10,
+            "text": "Arduino® Nano 33 BLE Rev2\n3.6 Board Recovery\nAll Arduino boards have a built-in bootloader which allows flashing the board via USB. In case a sketch locks up the\nprocessor and the board is not reachable anymore via USB it is possible to enter bootloader mode by double-\ntapping the reset button right after powering up the board.\n4 Connector Pinouts\nPinout\n10 / 16 Arduino® Nano 33 BLE Rev2 Modified: 21/10/2026"
+          },
+          {
+            "chunk_id": "nano-33-ble-rev2:p7:b0",
+            "document_id": "nano-33-ble-rev2",
+            "physical_page": 7,
+            "text": "Arduino® Nano 33 BLE Rev2\nRef. Description Ref. Description\nSJ1 VUSB Jumper SJ2 D7 Jumper\nSJ3 3v3 Jumper SJ4 D8 Jumper\n2.2 Processor\nThe Main Processor is an Arm® Cortex®-M4F running at up to 64 MHz. Most of its pins are connected to the\nexternal headers however some are reserved for internal communication with the wireless module and the on-\nboard internal I2C peripherals (IMU and Crypto).\nNOTE: As opposed to other Arduino Nano boards, pins A4 and A5 have an internal pull-up and default to be used as\nan I2C Bus so usage as analog inputs is not recommended.\n2.3 IMU\nNano 33 BLE Rev2 provides IMU capabilities with 9-axis, through a combination of the BMI270 and BMM150 ICs.\nThe BMI270 includes both a three-axis gyroscope as well as a three-axis accelerometer, while the BMM150 is\ncapable of sensing magnetic field variations in all three dimensions. The information obtained can be used for\nmeasuring raw movement parameters as well as for machine learning.\n2.4 Power Tree\nThe board can be powered via USB connector, V or V pins on headers.\nIN USB\nPower tree\nNOTE: Since V feeds V via a Schottky diode and a DC-DC regulator specified minimum input voltage is 4.5 V the\nUSB IN\nminimum supply voltage from USB has to be increased to a voltage in the range between 4.8 V to 4.96 V depending\non the current being drawn.\n7 / 16 Arduino® Nano 33 BLE Rev2 Modified: 21/10/2026"
+          },
+          {
+            "chunk_id": "nano-33-ble-rev2:p15:b0",
+            "document_id": "nano-33-ble-rev2",
+            "physical_page": 15,
+            "text": "Arduino® Nano 33 BLE Rev2\nFrench: Lors de l’ installation et de l’ exploitation de ce dispositif, la distance entre le radiateur et le corps est d ’au\nmoins 20 cm.\nImportant: The operating temperature of the EUT can’t exceed 85°C and shouldn’t be lower than -40°C.\nHereby, Arduino S.r.l. declares that this product complies with essential requirements and other relevant provisions\nof Directive 2014/53/EU. This product is allowed to be used in all EU member states.\nFrequency bands Maximum output power (ERP)\n863-870Mhz TBD\n8 Company Information\nCompany name Arduino S.r.l\nCompany Address Via Andrea Appiani 25 20900 MONZA Italy\n9 Reference Documentation\nReference Link\nArduino IDE (Desktop) https://www.arduino.cc/en/software\nArduino Cloud Editor https://create.arduino.cc/editor\nArduino Cloud Editor - Getting\nhttps://docs.arduino.cc/arduino-cloud/guides/editor/\nStarted\nArduino Project Hub https://create.arduino.cc/projecthub?by=part&part_id=11332&sort=trending\nLibrary Reference https://www.arduino.cc/reference/en/\nForum http://forum.arduino.cc/\nhttps://content.u-blox.com/sites/default/files/NINA-B3_DataSheet_UBX-\nNina B306\n17052099.pdf\n15 / 16 Arduino® Nano 33 BLE Rev2 Modified: 21/10/2026"
+          },
+          {
+            "chunk_id": "nano-33-ble-rev2:p5:b0",
+            "document_id": "nano-33-ble-rev2",
+            "physical_page": 5,
+            "text": "Arduino® Nano 33 BLE Rev2\n1 The Board\nAs all Nano form factor boards, Nano 33 BLE Rev2 does not have a battery charger but can be powered through\nUSB or headers.\nNOTE: Nano 33 BLE Rev2 only supports 3.3 V I/Os and is NOT 5V tolerant so please make sure you are not directly\nconnecting 5 V signals to this board or it will be damaged. Also, as opposed to other Arduino Nano boards that\nsupport 5 V operation, the 5V pin does NOT supply voltage but is rather connected, through a jumper, to the USB\npower input.\n1.1 Ratings\n1.1.1 Recommended Operating Conditions\nSymbol Description Min Max\nConservative thermal limits for the whole board: -40 °C ( 40 °F) 85 °C ( 185 °F)\n1.2 Power Consumption\nSymbol Description Min Typ Max Unit\nPBL Power consumption with busy loop TBC mW\nPLP Power consumption in low power mode TBC mW\nPMAX Maximum Power Consumption TBC mW\n5 / 16 Arduino® Nano 33 BLE Rev2 Modified: 21/10/2026"
+          },
+          {
+            "chunk_id": "nano-33-ble-rev2:p2:b0",
+            "document_id": "nano-33-ble-rev2",
+            "physical_page": 2,
+            "text": "Arduino® Nano 33 BLE Rev2\nTarget Areas\nMaker, enhancements, IoT application\nProduct Intended Use\nArduino Hardware Products are primarily intended for development and prototyping but may also support\nproduction solutions. Developers must design and verify security controls early, based on the intended deployment\nenvironment. Security is a shared responsibility between Arduino and the solution builder, who must assess the\nhardware’s available security features and add any necessary protections.\nVisit docs.arduino.cc/tutorials/security/intended-use-and-security-model/ for the complete Arduino Hardware\nProducts: Intended use and Security model.\n2 / 16 Arduino® Nano 33 BLE Rev2 Modified: 21/10/2026"
+          },
+          {
+            "chunk_id": "nano-33-ble-rev2:p6:b0",
+            "document_id": "nano-33-ble-rev2",
+            "physical_page": 6,
+            "text": "Arduino® Nano 33 BLE Rev2\n2 Functional Overview\n2.1 Board Topology\nTop:\nBoard topology top\nRef. Description Ref. Description\nU1 NINA-B306 Module Bluetooth® Low Energy 5.0 Module U6 MP2322GQH Step Down Converter\nU2 BMI270 Sensor IMU PB1 IT-1185AP1C-160G-GTR Push button\nU7 BMM150 Magnetometer IC DL1 Led L\nSJ5 VUSB Jumper\nBottom:\nBoard topology bot\n6 / 16 Arduino® Nano 33 BLE Rev2 Modified: 21/10/2026"
+          }
+        ],
+        "model": {
+          "repo_id": "mlx-community/Qwen3-4B-Instruct-2507-4bit",
+          "revision": "50d427756c6b1b2fe0c0a10f67fbda1fc8e82c1b",
+          "license": "apache-2.0",
+          "weight_bytes": 2263022417
+        },
+        "metrics": {
+          "input_tokens": 2901,
+          "output_tokens": 38,
+          "generation_tokens_per_second": 79.87444309319363,
+          "prompt_tokens_per_second": 816.4909594355807,
+          "first_token_seconds": 3.5540388750014245,
+          "generation_seconds": 4.038851458000863,
+          "model_load_seconds": 0.4075717080013419,
+          "mlx_peak_allocation_bytes": 3471108560,
+          "process_rss_bytes": 2605744128,
+          "finish_reason": "json_complete",
+          "request_number": 69,
+          "retrieval_seconds": 0.02390666700011934,
+          "total_seconds": 8.067709458999161,
+          "attempts": 2,
+          "total_generation_seconds": 8.018385957999271
+        },
+        "chunks_sha256": "d037f32db94560c721d90af00cf91ff9d08524866f6b1f46c16d6037459785d2",
+        "prompt_sha256": "8d8b0ddf3e9056d32e75500efffd5185e530cceb607b54f4cbae554e68e26906",
+        "prompt_version": "v3",
+        "intent_version": "technical-fields-v1",
+        "requested_fields": [
+          "flash_capacity"
+        ],
+        "planned_input_tokens": 2901,
+        "initial_input_tokens": 2814,
+        "omitted_chunk_ids": [],
+        "per_document_requested": 8,
+        "attempts": [
+          {
+            "number": 1,
+            "raw_output": "{\"findings\":[{\"document_id\":\"nano-33-ble-rev2\",\"field\":\"flash_capacity\",\"status\":\"stated\",\"value\":\"1 MB\",\"evidence_ids\":[\"e0001\"]}]}",
+            "planned_input_tokens": 2814,
+            "supplied_evidence_ids": [
+              "e0000",
+              "e0001",
+              "e0002",
+              "e0003",
+              "e0004",
+              "e0005",
+              "e0006",
+              "e0007",
+              "e0008",
+              "e0009",
+              "e0010",
+              "e0011",
+              "e0012",
+              "e0013",
+              "e0014",
+              "e0015",
+              "e0016",
+              "e0017",
+              "e0018"
+            ],
+            "metrics": {
+              "input_tokens": 2814,
+              "output_tokens": 43,
+              "generation_tokens_per_second": 79.21051068233551,
+              "prompt_tokens_per_second": 821.2868264342303,
+              "first_token_seconds": 3.427596708999772,
+              "generation_seconds": 3.979534499998408,
+              "model_load_seconds": 0.4075717080013419,
+              "mlx_peak_allocation_bytes": 3402918016,
+              "process_rss_bytes": 2605760512,
+              "finish_reason": "json_complete",
+              "request_number": 68
+            },
+            "findings": [],
+            "rejected_findings": [
+              {
+                "finding": {
+                  "document_id": "nano-33-ble-rev2",
+                  "field": "flash_capacity",
+                  "status": "stated",
+                  "value": "1 MB",
+                  "citations": [
+                    {
+                      "chunk_id": "nano-33-ble-rev2:p3:b0",
+                      "quote": "Arm® CryptoCell CC310 security subsystem QSPI/SPI/TWI/I2S/PDM/QDEC High speed 32 MHz SPI Quad SPI interface 32 MHz EasyDMA for all digital interfaces 12-bit 200 ksps ADC 128 bit AES/ECB/CCM/AAR co-processor BMI270 6-axis IMU (Accelerometer and Gyroscope) 16-bit 3-axis accelerometer with ±2g/±4g/±8g/±16g range 3-axis gyroscope with ±125dps/±250dps/±500dps/±1000dps/±2000dps range BMM150 3-axis IMU (Magnetometer) 3-axis digital geomagnetic sensor"
+                    }
+                  ]
+                },
+                "reasons": [
+                  "value_atoms_missing_from_citations"
+                ]
+              }
+            ],
+            "missing_documents": [
+              "nano-33-ble-rev2"
+            ],
+            "missing_fields": [
+              {
+                "document_id": "nano-33-ble-rev2",
+                "field": "flash_capacity"
+              }
+            ],
+            "status": "review_required",
+            "review_hints": []
+          },
+          {
+            "number": 2,
+            "raw_output": "{\"findings\":[{\"document_id\":\"nano-33-ble-rev2\",\"field\":\"flash_capacity\",\"status\":\"not_stated\",\"value\":null,\"evidence_ids\":[]}]}",
+            "planned_input_tokens": 2901,
+            "supplied_evidence_ids": [
+              "e0000",
+              "e0001",
+              "e0002",
+              "e0003",
+              "e0004",
+              "e0005",
+              "e0006",
+              "e0007",
+              "e0008",
+              "e0009",
+              "e0010",
+              "e0011",
+              "e0012",
+              "e0013",
+              "e0014",
+              "e0015",
+              "e0016",
+              "e0017",
+              "e0018"
+            ],
+            "metrics": {
+              "input_tokens": 2901,
+              "output_tokens": 38,
+              "generation_tokens_per_second": 79.87444309319363,
+              "prompt_tokens_per_second": 816.4909594355807,
+              "first_token_seconds": 3.5540388750014245,
+              "generation_seconds": 4.038851458000863,
+              "model_load_seconds": 0.4075717080013419,
+              "mlx_peak_allocation_bytes": 3471108560,
+              "process_rss_bytes": 2605744128,
+              "finish_reason": "json_complete",
+              "request_number": 69
+            },
+            "findings": [
+              {
+                "document_id": "nano-33-ble-rev2",
+                "field": "flash_capacity",
+                "status": "not_stated",
+                "value": null,
+                "citations": [],
+                "provenance_verified": false,
+                "semantic_support": "not_automatically_verified",
+                "absence_scope": "retrieved_context_only"
+              }
+            ],
+            "rejected_findings": [],
+            "missing_documents": [],
+            "missing_fields": [],
+            "status": "review_required",
+            "review_hints": [
+              {
+                "document_id": "nano-33-ble-rev2",
+                "field": "flash_capacity",
+                "recheck_evidence_ids": [
+                  "e0000"
+                ]
+              }
+            ]
+          }
+        ],
+        "selected_attempt": 2,
+        "evidence_spans": {
+          "e0000": {
+            "chunk_id": "nano-33-ble-rev2:p3:b0",
+            "quote": "Arduino® Nano 33 BLE Rev2 Features NINA B306 Module Processor 64 MHz Arm® Cortex®-M4F (with FPU) 1 MB Flash + 256 kB RAM Bluetooth® 5 multiprotocol radio 2 Mbps CSA #2 Advertising Extensions Long Range +8 dBm TX power -95 dBm sensitivity 4.8 mA in TX (0 dBm) 4.6 mA in RX (1 Mbps) Integrated balun with 50 Ω single-ended output IEEE 802.15.4 radio support Thread Zigbee® Peripherals Full-speed 12 Mbps USB NFC-A tag"
+          },
+          "e0001": {
+            "chunk_id": "nano-33-ble-rev2:p3:b0",
+            "quote": "Arm® CryptoCell CC310 security subsystem QSPI/SPI/TWI/I2S/PDM/QDEC High speed 32 MHz SPI Quad SPI interface 32 MHz EasyDMA for all digital interfaces 12-bit 200 ksps ADC 128 bit AES/ECB/CCM/AAR co-processor BMI270 6-axis IMU (Accelerometer and Gyroscope) 16-bit 3-axis accelerometer with ±2g/±4g/±8g/±16g range 3-axis gyroscope with ±125dps/±250dps/±500dps/±1000dps/±2000dps range BMM150 3-axis IMU (Magnetometer) 3-axis digital geomagnetic sensor"
+          },
+          "e0002": {
+            "chunk_id": "nano-33-ble-rev2:p3:b0",
+            "quote": "0.3μT resolution ±1300μT (x,y-axis), ±2500μT (z-axis) MP2322 DC-DC Regulates input voltage from up to 21V with a minimum of 65% efficiency @minimum load More than 85% efficiency @12V 3 / 16 Arduino® Nano 33 BLE Rev2 Modified: 21/10/2026"
+          },
+          "e0003": {
+            "chunk_id": "nano-33-ble-rev2:p1:b0",
+            "quote": "Arduino® Nano 33 BLE Rev2 User Manual SKU: ABX00071 English Description The Arduino® Nano 33 BLE Rev2* is a miniature-sized module containing a NINA B306 module, based on Nordic nRF52480 and containing an Arm® Cortex®-M4F. The BMI270 and BMM150 jointly provide a 9-axis IMU. The module can either be mounted as a DIP component (when mounting pin headers) or as a SMT component, directly soldering it via the castellated pads."
+          },
+          "e0004": {
+            "chunk_id": "nano-33-ble-rev2:p1:b0",
+            "quote": "*Nano 33 BLE Rev2 product has two SKUs: Without headers (ABX00071) With headers (ABX00072) 1 / 16 Arduino® Nano 33 BLE Rev2 Modified: 21/10/2026"
+          },
+          "e0005": {
+            "chunk_id": "nano-33-ble-rev2:p10:b0",
+            "quote": "Arduino® Nano 33 BLE Rev2 3.6 Board Recovery All Arduino boards have a built-in bootloader which allows flashing the board via USB. In case a sketch locks up the processor and the board is not reachable anymore via USB it is possible to enter bootloader mode by double- tapping the reset button right after powering up the board. 4 Connector Pinouts Pinout 10 / 16 Arduino® Nano 33 BLE Rev2 Modified: 21/10/2026"
+          },
+          "e0006": {
+            "chunk_id": "nano-33-ble-rev2:p7:b0",
+            "quote": "Arduino® Nano 33 BLE Rev2 Ref. Description Ref. Description SJ1 VUSB Jumper SJ2 D7 Jumper SJ3 3v3 Jumper SJ4 D8 Jumper 2.2 Processor The Main Processor is an Arm® Cortex®-M4F running at up to 64 MHz. Most of its pins are connected to the external headers however some are reserved for internal communication with the wireless module and the on- board internal I2C peripherals (IMU and Crypto)."
+          },
+          "e0007": {
+            "chunk_id": "nano-33-ble-rev2:p7:b0",
+            "quote": "NOTE: As opposed to other Arduino Nano boards, pins A4 and A5 have an internal pull-up and default to be used as an I2C Bus so usage as analog inputs is not recommended. 2.3 IMU Nano 33 BLE Rev2 provides IMU capabilities with 9-axis, through a combination of the BMI270 and BMM150 ICs. The BMI270 includes both a three-axis gyroscope as well as a three-axis accelerometer, while the BMM150 is"
+          },
+          "e0008": {
+            "chunk_id": "nano-33-ble-rev2:p7:b0",
+            "quote": "capable of sensing magnetic field variations in all three dimensions. The information obtained can be used for measuring raw movement parameters as well as for machine learning. 2.4 Power Tree The board can be powered via USB connector, V or V pins on headers. IN USB Power tree NOTE: Since V feeds V via a Schottky diode and a DC-DC regulator specified minimum input voltage is 4.5 V the USB IN"
+          },
+          "e0009": {
+            "chunk_id": "nano-33-ble-rev2:p7:b0",
+            "quote": "minimum supply voltage from USB has to be increased to a voltage in the range between 4.8 V to 4.96 V depending on the current being drawn. 7 / 16 Arduino® Nano 33 BLE Rev2 Modified: 21/10/2026"
+          },
+          "e0010": {
+            "chunk_id": "nano-33-ble-rev2:p15:b0",
+            "quote": "Arduino® Nano 33 BLE Rev2 French: Lors de l’ installation et de l’ exploitation de ce dispositif, la distance entre le radiateur et le corps est d ’au moins 20 cm. Important: The operating temperature of the EUT can’t exceed 85°C and shouldn’t be lower than -40°C. Hereby, Arduino S.r.l. declares that this product complies with essential requirements and other relevant provisions"
+          },
+          "e0011": {
+            "chunk_id": "nano-33-ble-rev2:p15:b0",
+            "quote": "of Directive 2014/53/EU. This product is allowed to be used in all EU member states. Frequency bands Maximum output power (ERP) 863-870Mhz TBD 8 Company Information Company name Arduino S.r.l Company Address Via Andrea Appiani 25 20900 MONZA Italy 9 Reference Documentation Reference Link Arduino IDE (Desktop) https://www.arduino.cc/en/software Arduino Cloud Editor https://create.arduino.cc/editor Arduino Cloud Editor - Getting"
+          },
+          "e0012": {
+            "chunk_id": "nano-33-ble-rev2:p15:b0",
+            "quote": "https://docs.arduino.cc/arduino-cloud/guides/editor/ Started Arduino Project Hub https://create.arduino.cc/projecthub?by=part&part_id=11332&sort=trending Library Reference https://www.arduino.cc/reference/en/ Forum http://forum.arduino.cc/ https://content.u-blox.com/sites/default/files/NINA-B3_DataSheet_UBX- Nina B306 17052099.pdf 15 / 16 Arduino® Nano 33 BLE Rev2 Modified: 21/10/2026"
+          },
+          "e0013": {
+            "chunk_id": "nano-33-ble-rev2:p5:b0",
+            "quote": "Arduino® Nano 33 BLE Rev2 1 The Board As all Nano form factor boards, Nano 33 BLE Rev2 does not have a battery charger but can be powered through USB or headers. NOTE: Nano 33 BLE Rev2 only supports 3.3 V I/Os and is NOT 5V tolerant so please make sure you are not directly connecting 5 V signals to this board or it will be damaged. Also, as opposed to other Arduino Nano boards that"
+          },
+          "e0014": {
+            "chunk_id": "nano-33-ble-rev2:p5:b0",
+            "quote": "support 5 V operation, the 5V pin does NOT supply voltage but is rather connected, through a jumper, to the USB power input. 1.1 Ratings 1.1.1 Recommended Operating Conditions Symbol Description Min Max Conservative thermal limits for the whole board: -40 °C ( 40 °F) 85 °C ( 185 °F) 1.2 Power Consumption Symbol Description Min Typ Max Unit PBL Power consumption with busy loop TBC mW PLP Power consumption in low power mode TBC mW"
+          },
+          "e0015": {
+            "chunk_id": "nano-33-ble-rev2:p5:b0",
+            "quote": "PMAX Maximum Power Consumption TBC mW 5 / 16 Arduino® Nano 33 BLE Rev2 Modified: 21/10/2026"
+          },
+          "e0016": {
+            "chunk_id": "nano-33-ble-rev2:p2:b0",
+            "quote": "Arduino® Nano 33 BLE Rev2 Target Areas Maker, enhancements, IoT application Product Intended Use Arduino Hardware Products are primarily intended for development and prototyping but may also support production solutions. Developers must design and verify security controls early, based on the intended deployment environment. Security is a shared responsibility between Arduino and the solution builder, who must assess the"
+          },
+          "e0017": {
+            "chunk_id": "nano-33-ble-rev2:p2:b0",
+            "quote": "hardware’s available security features and add any necessary protections. Visit docs.arduino.cc/tutorials/security/intended-use-and-security-model/ for the complete Arduino Hardware Products: Intended use and Security model. 2 / 16 Arduino® Nano 33 BLE Rev2 Modified: 21/10/2026"
+          },
+          "e0018": {
+            "chunk_id": "nano-33-ble-rev2:p6:b0",
+            "quote": "Arduino® Nano 33 BLE Rev2 2 Functional Overview 2.1 Board Topology Top: Board topology top Ref. Description Ref. Description U1 NINA-B306 Module Bluetooth® Low Energy 5.0 Module U6 MP2322GQH Step Down Converter U2 BMI270 Sensor IMU PB1 IT-1185AP1C-160G-GTR Push button U7 BMM150 Magnetometer IC DL1 Led L SJ5 VUSB Jumper Bottom: Board topology bot 6 / 16 Arduino® Nano 33 BLE Rev2 Modified: 21/10/2026"
+          }
+        },
+        "raw_output": "{\"findings\":[{\"document_id\":\"nano-33-ble-rev2\",\"field\":\"flash_capacity\",\"status\":\"not_stated\",\"value\":null,\"evidence_ids\":[]}]}",
+        "supplied_evidence_ids": [
+          "e0000",
+          "e0001",
+          "e0002",
+          "e0003",
+          "e0004",
+          "e0005",
+          "e0006",
+          "e0007",
+          "e0008",
+          "e0009",
+          "e0010",
+          "e0011",
+          "e0012",
+          "e0013",
+          "e0014",
+          "e0015",
+          "e0016",
+          "e0017",
+          "e0018"
+        ],
+        "findings": [
+          {
+            "document_id": "nano-33-ble-rev2",
+            "field": "flash_capacity",
+            "status": "not_stated",
+            "value": null,
+            "citations": [],
+            "provenance_verified": false,
+            "semantic_support": "not_automatically_verified",
+            "absence_scope": "retrieved_context_only"
+          }
+        ],
+        "rejected_findings": [],
+        "missing_documents": [],
+        "missing_fields": [],
+        "status": "review_required",
+        "review_hints": [
+          {
+            "document_id": "nano-33-ble-rev2",
+            "field": "flash_capacity",
+            "recheck_evidence_ids": [
+              "e0000"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "ble-flash-tr",
+      "result": {
+        "question": "NINA B306 işlemcisinin flash belleği ne kadar?",
+        "documents": [
+          "nano-33-ble-rev2"
+        ],
+        "method": "hybrid_expanded",
+        "evidence": [
+          {
+            "chunk_id": "nano-33-ble-rev2:p3:b0",
+            "document_id": "nano-33-ble-rev2",
+            "physical_page": 3,
+            "text": "Arduino® Nano 33 BLE Rev2\nFeatures\nNINA B306 Module\nProcessor\n64 MHz Arm® Cortex®-M4F (with FPU)\n1 MB Flash + 256 kB RAM\nBluetooth® 5 multiprotocol radio\n2 Mbps\nCSA #2\nAdvertising Extensions\nLong Range\n+8 dBm TX power\n-95 dBm sensitivity\n4.8 mA in TX (0 dBm)\n4.6 mA in RX (1 Mbps)\nIntegrated balun with 50 Ω single-ended output\nIEEE 802.15.4 radio support\nThread\nZigbee®\nPeripherals\nFull-speed 12 Mbps USB\nNFC-A tag\nArm® CryptoCell CC310 security subsystem\nQSPI/SPI/TWI/I2S/PDM/QDEC\nHigh speed 32 MHz SPI\nQuad SPI interface 32 MHz\nEasyDMA for all digital interfaces\n12-bit 200 ksps ADC\n128 bit AES/ECB/CCM/AAR co-processor\nBMI270 6-axis IMU (Accelerometer and Gyroscope)\n16-bit\n3-axis accelerometer with ±2g/±4g/±8g/±16g range\n3-axis gyroscope with ±125dps/±250dps/±500dps/±1000dps/±2000dps range\nBMM150 3-axis IMU (Magnetometer)\n3-axis digital geomagnetic sensor\n0.3μT resolution\n±1300μT (x,y-axis), ±2500μT (z-axis)\nMP2322 DC-DC\nRegulates input voltage from up to 21V with a minimum of 65% efficiency @minimum load\nMore than 85% efficiency @12V\n3 / 16 Arduino® Nano 33 BLE Rev2 Modified: 21/10/2026"
+          },
+          {
+            "chunk_id": "nano-33-ble-rev2:p1:b0",
+            "document_id": "nano-33-ble-rev2",
+            "physical_page": 1,
+            "text": "Arduino® Nano 33 BLE Rev2\nUser Manual\nSKU: ABX00071\nEnglish\nDescription\nThe Arduino® Nano 33 BLE Rev2* is a miniature-sized module containing a NINA B306 module, based on Nordic\nnRF52480 and containing an Arm® Cortex®-M4F. The BMI270 and BMM150 jointly provide a 9-axis IMU. The\nmodule can either be mounted as a DIP component (when mounting pin headers) or as a SMT component, directly\nsoldering it via the castellated pads.\n*Nano 33 BLE Rev2 product has two SKUs:\nWithout headers (ABX00071)\nWith headers (ABX00072)\n1 / 16 Arduino® Nano 33 BLE Rev2 Modified: 21/10/2026"
+          },
+          {
+            "chunk_id": "nano-33-ble-rev2:p7:b0",
+            "document_id": "nano-33-ble-rev2",
+            "physical_page": 7,
+            "text": "Arduino® Nano 33 BLE Rev2\nRef. Description Ref. Description\nSJ1 VUSB Jumper SJ2 D7 Jumper\nSJ3 3v3 Jumper SJ4 D8 Jumper\n2.2 Processor\nThe Main Processor is an Arm® Cortex®-M4F running at up to 64 MHz. Most of its pins are connected to the\nexternal headers however some are reserved for internal communication with the wireless module and the on-\nboard internal I2C peripherals (IMU and Crypto).\nNOTE: As opposed to other Arduino Nano boards, pins A4 and A5 have an internal pull-up and default to be used as\nan I2C Bus so usage as analog inputs is not recommended.\n2.3 IMU\nNano 33 BLE Rev2 provides IMU capabilities with 9-axis, through a combination of the BMI270 and BMM150 ICs.\nThe BMI270 includes both a three-axis gyroscope as well as a three-axis accelerometer, while the BMM150 is\ncapable of sensing magnetic field variations in all three dimensions. The information obtained can be used for\nmeasuring raw movement parameters as well as for machine learning.\n2.4 Power Tree\nThe board can be powered via USB connector, V or V pins on headers.\nIN USB\nPower tree\nNOTE: Since V feeds V via a Schottky diode and a DC-DC regulator specified minimum input voltage is 4.5 V the\nUSB IN\nminimum supply voltage from USB has to be increased to a voltage in the range between 4.8 V to 4.96 V depending\non the current being drawn.\n7 / 16 Arduino® Nano 33 BLE Rev2 Modified: 21/10/2026"
+          },
+          {
+            "chunk_id": "nano-33-ble-rev2:p15:b0",
+            "document_id": "nano-33-ble-rev2",
+            "physical_page": 15,
+            "text": "Arduino® Nano 33 BLE Rev2\nFrench: Lors de l’ installation et de l’ exploitation de ce dispositif, la distance entre le radiateur et le corps est d ’au\nmoins 20 cm.\nImportant: The operating temperature of the EUT can’t exceed 85°C and shouldn’t be lower than -40°C.\nHereby, Arduino S.r.l. declares that this product complies with essential requirements and other relevant provisions\nof Directive 2014/53/EU. This product is allowed to be used in all EU member states.\nFrequency bands Maximum output power (ERP)\n863-870Mhz TBD\n8 Company Information\nCompany name Arduino S.r.l\nCompany Address Via Andrea Appiani 25 20900 MONZA Italy\n9 Reference Documentation\nReference Link\nArduino IDE (Desktop) https://www.arduino.cc/en/software\nArduino Cloud Editor https://create.arduino.cc/editor\nArduino Cloud Editor - Getting\nhttps://docs.arduino.cc/arduino-cloud/guides/editor/\nStarted\nArduino Project Hub https://create.arduino.cc/projecthub?by=part&part_id=11332&sort=trending\nLibrary Reference https://www.arduino.cc/reference/en/\nForum http://forum.arduino.cc/\nhttps://content.u-blox.com/sites/default/files/NINA-B3_DataSheet_UBX-\nNina B306\n17052099.pdf\n15 / 16 Arduino® Nano 33 BLE Rev2 Modified: 21/10/2026"
+          },
+          {
+            "chunk_id": "nano-33-ble-rev2:p10:b0",
+            "document_id": "nano-33-ble-rev2",
+            "physical_page": 10,
+            "text": "Arduino® Nano 33 BLE Rev2\n3.6 Board Recovery\nAll Arduino boards have a built-in bootloader which allows flashing the board via USB. In case a sketch locks up the\nprocessor and the board is not reachable anymore via USB it is possible to enter bootloader mode by double-\ntapping the reset button right after powering up the board.\n4 Connector Pinouts\nPinout\n10 / 16 Arduino® Nano 33 BLE Rev2 Modified: 21/10/2026"
+          },
+          {
+            "chunk_id": "nano-33-ble-rev2:p6:b0",
+            "document_id": "nano-33-ble-rev2",
+            "physical_page": 6,
+            "text": "Arduino® Nano 33 BLE Rev2\n2 Functional Overview\n2.1 Board Topology\nTop:\nBoard topology top\nRef. Description Ref. Description\nU1 NINA-B306 Module Bluetooth® Low Energy 5.0 Module U6 MP2322GQH Step Down Converter\nU2 BMI270 Sensor IMU PB1 IT-1185AP1C-160G-GTR Push button\nU7 BMM150 Magnetometer IC DL1 Led L\nSJ5 VUSB Jumper\nBottom:\nBoard topology bot\n6 / 16 Arduino® Nano 33 BLE Rev2 Modified: 21/10/2026"
+          },
+          {
+            "chunk_id": "nano-33-ble-rev2:p2:b0",
+            "document_id": "nano-33-ble-rev2",
+            "physical_page": 2,
+            "text": "Arduino® Nano 33 BLE Rev2\nTarget Areas\nMaker, enhancements, IoT application\nProduct Intended Use\nArduino Hardware Products are primarily intended for development and prototyping but may also support\nproduction solutions. Developers must design and verify security controls early, based on the intended deployment\nenvironment. Security is a shared responsibility between Arduino and the solution builder, who must assess the\nhardware’s available security features and add any necessary protections.\nVisit docs.arduino.cc/tutorials/security/intended-use-and-security-model/ for the complete Arduino Hardware\nProducts: Intended use and Security model.\n2 / 16 Arduino® Nano 33 BLE Rev2 Modified: 21/10/2026"
+          },
+          {
+            "chunk_id": "nano-33-ble-rev2:p8:b0",
+            "document_id": "nano-33-ble-rev2",
+            "physical_page": 8,
+            "text": "Arduino® Nano 33 BLE Rev2\n2.5 Block Diagram\nBlock Diagram\n8 / 16 Arduino® Nano 33 BLE Rev2 Modified: 21/10/2026"
+          }
+        ],
+        "model": {
+          "repo_id": "mlx-community/Qwen3-4B-Instruct-2507-4bit",
+          "revision": "50d427756c6b1b2fe0c0a10f67fbda1fc8e82c1b",
+          "license": "apache-2.0",
+          "weight_bytes": 2263022417
+        },
+        "metrics": {
+          "input_tokens": 2678,
+          "output_tokens": 38,
+          "generation_tokens_per_second": 80.3499947660812,
+          "prompt_tokens_per_second": 822.7036405588752,
+          "first_token_seconds": 3.256138708002254,
+          "generation_seconds": 3.738382540999737,
+          "model_load_seconds": 0.4075717080013419,
+          "mlx_peak_allocation_bytes": 3434423916,
+          "process_rss_bytes": 2605760512,
+          "finish_reason": "json_complete",
+          "request_number": 71,
+          "retrieval_seconds": 0.024188167000829708,
+          "total_seconds": 7.481954625000071,
+          "attempts": 2,
+          "total_generation_seconds": 7.428060540998558
+        },
+        "chunks_sha256": "d037f32db94560c721d90af00cf91ff9d08524866f6b1f46c16d6037459785d2",
+        "prompt_sha256": "8d8b0ddf3e9056d32e75500efffd5185e530cceb607b54f4cbae554e68e26906",
+        "prompt_version": "v3",
+        "intent_version": "technical-fields-v1",
+        "requested_fields": [
+          "flash_capacity"
+        ],
+        "planned_input_tokens": 2678,
+        "initial_input_tokens": 2591,
+        "omitted_chunk_ids": [],
+        "per_document_requested": 8,
+        "attempts": [
+          {
+            "number": 1,
+            "raw_output": "{\"findings\":[{\"document_id\":\"nano-33-ble-rev2\",\"field\":\"flash_capacity\",\"status\":\"stated\",\"value\":\"1 MB\",\"evidence_ids\":[\"e0001\"]}]}",
+            "planned_input_tokens": 2591,
+            "supplied_evidence_ids": [
+              "e0000",
+              "e0001",
+              "e0002",
+              "e0003",
+              "e0004",
+              "e0005",
+              "e0006",
+              "e0007",
+              "e0008",
+              "e0009",
+              "e0010",
+              "e0011",
+              "e0012",
+              "e0013",
+              "e0014",
+              "e0015",
+              "e0016"
+            ],
+            "metrics": {
+              "input_tokens": 2591,
+              "output_tokens": 44,
+              "generation_tokens_per_second": 80.6183796159887,
+              "prompt_tokens_per_second": 826.7470483990517,
+              "first_token_seconds": 3.134986624998419,
+              "generation_seconds": 3.689677999998821,
+              "model_load_seconds": 0.4075717080013419,
+              "mlx_peak_allocation_bytes": 3374097576,
+              "process_rss_bytes": 2605744128,
+              "finish_reason": "json_complete",
+              "request_number": 70
+            },
+            "findings": [],
+            "rejected_findings": [
+              {
+                "finding": {
+                  "document_id": "nano-33-ble-rev2",
+                  "field": "flash_capacity",
+                  "status": "stated",
+                  "value": "1 MB",
+                  "citations": [
+                    {
+                      "chunk_id": "nano-33-ble-rev2:p3:b0",
+                      "quote": "Arm® CryptoCell CC310 security subsystem QSPI/SPI/TWI/I2S/PDM/QDEC High speed 32 MHz SPI Quad SPI interface 32 MHz EasyDMA for all digital interfaces 12-bit 200 ksps ADC 128 bit AES/ECB/CCM/AAR co-processor BMI270 6-axis IMU (Accelerometer and Gyroscope) 16-bit 3-axis accelerometer with ±2g/±4g/±8g/±16g range 3-axis gyroscope with ±125dps/±250dps/±500dps/±1000dps/±2000dps range BMM150 3-axis IMU (Magnetometer) 3-axis digital geomagnetic sensor"
+                    }
+                  ]
+                },
+                "reasons": [
+                  "value_atoms_missing_from_citations"
+                ]
+              }
+            ],
+            "missing_documents": [
+              "nano-33-ble-rev2"
+            ],
+            "missing_fields": [
+              {
+                "document_id": "nano-33-ble-rev2",
+                "field": "flash_capacity"
+              }
+            ],
+            "status": "review_required",
+            "review_hints": []
+          },
+          {
+            "number": 2,
+            "raw_output": "{\"findings\":[{\"document_id\":\"nano-33-ble-rev2\",\"field\":\"flash_capacity\",\"status\":\"not_stated\",\"value\":null,\"evidence_ids\":[]}]}",
+            "planned_input_tokens": 2678,
+            "supplied_evidence_ids": [
+              "e0000",
+              "e0001",
+              "e0002",
+              "e0003",
+              "e0004",
+              "e0005",
+              "e0006",
+              "e0007",
+              "e0008",
+              "e0009",
+              "e0010",
+              "e0011",
+              "e0012",
+              "e0013",
+              "e0014",
+              "e0015",
+              "e0016"
+            ],
+            "metrics": {
+              "input_tokens": 2678,
+              "output_tokens": 38,
+              "generation_tokens_per_second": 80.3499947660812,
+              "prompt_tokens_per_second": 822.7036405588752,
+              "first_token_seconds": 3.256138708002254,
+              "generation_seconds": 3.738382540999737,
+              "model_load_seconds": 0.4075717080013419,
+              "mlx_peak_allocation_bytes": 3434423916,
+              "process_rss_bytes": 2605760512,
+              "finish_reason": "json_complete",
+              "request_number": 71
+            },
+            "findings": [
+              {
+                "document_id": "nano-33-ble-rev2",
+                "field": "flash_capacity",
+                "status": "not_stated",
+                "value": null,
+                "citations": [],
+                "provenance_verified": false,
+                "semantic_support": "not_automatically_verified",
+                "absence_scope": "retrieved_context_only"
+              }
+            ],
+            "rejected_findings": [],
+            "missing_documents": [],
+            "missing_fields": [],
+            "status": "review_required",
+            "review_hints": [
+              {
+                "document_id": "nano-33-ble-rev2",
+                "field": "flash_capacity",
+                "recheck_evidence_ids": [
+                  "e0000"
+                ]
+              }
+            ]
+          }
+        ],
+        "selected_attempt": 2,
+        "evidence_spans": {
+          "e0000": {
+            "chunk_id": "nano-33-ble-rev2:p3:b0",
+            "quote": "Arduino® Nano 33 BLE Rev2 Features NINA B306 Module Processor 64 MHz Arm® Cortex®-M4F (with FPU) 1 MB Flash + 256 kB RAM Bluetooth® 5 multiprotocol radio 2 Mbps CSA #2 Advertising Extensions Long Range +8 dBm TX power -95 dBm sensitivity 4.8 mA in TX (0 dBm) 4.6 mA in RX (1 Mbps) Integrated balun with 50 Ω single-ended output IEEE 802.15.4 radio support Thread Zigbee® Peripherals Full-speed 12 Mbps USB NFC-A tag"
+          },
+          "e0001": {
+            "chunk_id": "nano-33-ble-rev2:p3:b0",
+            "quote": "Arm® CryptoCell CC310 security subsystem QSPI/SPI/TWI/I2S/PDM/QDEC High speed 32 MHz SPI Quad SPI interface 32 MHz EasyDMA for all digital interfaces 12-bit 200 ksps ADC 128 bit AES/ECB/CCM/AAR co-processor BMI270 6-axis IMU (Accelerometer and Gyroscope) 16-bit 3-axis accelerometer with ±2g/±4g/±8g/±16g range 3-axis gyroscope with ±125dps/±250dps/±500dps/±1000dps/±2000dps range BMM150 3-axis IMU (Magnetometer) 3-axis digital geomagnetic sensor"
+          },
+          "e0002": {
+            "chunk_id": "nano-33-ble-rev2:p3:b0",
+            "quote": "0.3μT resolution ±1300μT (x,y-axis), ±2500μT (z-axis) MP2322 DC-DC Regulates input voltage from up to 21V with a minimum of 65% efficiency @minimum load More than 85% efficiency @12V 3 / 16 Arduino® Nano 33 BLE Rev2 Modified: 21/10/2026"
+          },
+          "e0003": {
+            "chunk_id": "nano-33-ble-rev2:p1:b0",
+            "quote": "Arduino® Nano 33 BLE Rev2 User Manual SKU: ABX00071 English Description The Arduino® Nano 33 BLE Rev2* is a miniature-sized module containing a NINA B306 module, based on Nordic nRF52480 and containing an Arm® Cortex®-M4F. The BMI270 and BMM150 jointly provide a 9-axis IMU. The module can either be mounted as a DIP component (when mounting pin headers) or as a SMT component, directly soldering it via the castellated pads."
+          },
+          "e0004": {
+            "chunk_id": "nano-33-ble-rev2:p1:b0",
+            "quote": "*Nano 33 BLE Rev2 product has two SKUs: Without headers (ABX00071) With headers (ABX00072) 1 / 16 Arduino® Nano 33 BLE Rev2 Modified: 21/10/2026"
+          },
+          "e0005": {
+            "chunk_id": "nano-33-ble-rev2:p7:b0",
+            "quote": "Arduino® Nano 33 BLE Rev2 Ref. Description Ref. Description SJ1 VUSB Jumper SJ2 D7 Jumper SJ3 3v3 Jumper SJ4 D8 Jumper 2.2 Processor The Main Processor is an Arm® Cortex®-M4F running at up to 64 MHz. Most of its pins are connected to the external headers however some are reserved for internal communication with the wireless module and the on- board internal I2C peripherals (IMU and Crypto)."
+          },
+          "e0006": {
+            "chunk_id": "nano-33-ble-rev2:p7:b0",
+            "quote": "NOTE: As opposed to other Arduino Nano boards, pins A4 and A5 have an internal pull-up and default to be used as an I2C Bus so usage as analog inputs is not recommended. 2.3 IMU Nano 33 BLE Rev2 provides IMU capabilities with 9-axis, through a combination of the BMI270 and BMM150 ICs. The BMI270 includes both a three-axis gyroscope as well as a three-axis accelerometer, while the BMM150 is"
+          },
+          "e0007": {
+            "chunk_id": "nano-33-ble-rev2:p7:b0",
+            "quote": "capable of sensing magnetic field variations in all three dimensions. The information obtained can be used for measuring raw movement parameters as well as for machine learning. 2.4 Power Tree The board can be powered via USB connector, V or V pins on headers. IN USB Power tree NOTE: Since V feeds V via a Schottky diode and a DC-DC regulator specified minimum input voltage is 4.5 V the USB IN"
+          },
+          "e0008": {
+            "chunk_id": "nano-33-ble-rev2:p7:b0",
+            "quote": "minimum supply voltage from USB has to be increased to a voltage in the range between 4.8 V to 4.96 V depending on the current being drawn. 7 / 16 Arduino® Nano 33 BLE Rev2 Modified: 21/10/2026"
+          },
+          "e0009": {
+            "chunk_id": "nano-33-ble-rev2:p15:b0",
+            "quote": "Arduino® Nano 33 BLE Rev2 French: Lors de l’ installation et de l’ exploitation de ce dispositif, la distance entre le radiateur et le corps est d ’au moins 20 cm. Important: The operating temperature of the EUT can’t exceed 85°C and shouldn’t be lower than -40°C. Hereby, Arduino S.r.l. declares that this product complies with essential requirements and other relevant provisions"
+          },
+          "e0010": {
+            "chunk_id": "nano-33-ble-rev2:p15:b0",
+            "quote": "of Directive 2014/53/EU. This product is allowed to be used in all EU member states. Frequency bands Maximum output power (ERP) 863-870Mhz TBD 8 Company Information Company name Arduino S.r.l Company Address Via Andrea Appiani 25 20900 MONZA Italy 9 Reference Documentation Reference Link Arduino IDE (Desktop) https://www.arduino.cc/en/software Arduino Cloud Editor https://create.arduino.cc/editor Arduino Cloud Editor - Getting"
+          },
+          "e0011": {
+            "chunk_id": "nano-33-ble-rev2:p15:b0",
+            "quote": "https://docs.arduino.cc/arduino-cloud/guides/editor/ Started Arduino Project Hub https://create.arduino.cc/projecthub?by=part&part_id=11332&sort=trending Library Reference https://www.arduino.cc/reference/en/ Forum http://forum.arduino.cc/ https://content.u-blox.com/sites/default/files/NINA-B3_DataSheet_UBX- Nina B306 17052099.pdf 15 / 16 Arduino® Nano 33 BLE Rev2 Modified: 21/10/2026"
+          },
+          "e0012": {
+            "chunk_id": "nano-33-ble-rev2:p10:b0",
+            "quote": "Arduino® Nano 33 BLE Rev2 3.6 Board Recovery All Arduino boards have a built-in bootloader which allows flashing the board via USB. In case a sketch locks up the processor and the board is not reachable anymore via USB it is possible to enter bootloader mode by double- tapping the reset button right after powering up the board. 4 Connector Pinouts Pinout 10 / 16 Arduino® Nano 33 BLE Rev2 Modified: 21/10/2026"
+          },
+          "e0013": {
+            "chunk_id": "nano-33-ble-rev2:p6:b0",
+            "quote": "Arduino® Nano 33 BLE Rev2 2 Functional Overview 2.1 Board Topology Top: Board topology top Ref. Description Ref. Description U1 NINA-B306 Module Bluetooth® Low Energy 5.0 Module U6 MP2322GQH Step Down Converter U2 BMI270 Sensor IMU PB1 IT-1185AP1C-160G-GTR Push button U7 BMM150 Magnetometer IC DL1 Led L SJ5 VUSB Jumper Bottom: Board topology bot 6 / 16 Arduino® Nano 33 BLE Rev2 Modified: 21/10/2026"
+          },
+          "e0014": {
+            "chunk_id": "nano-33-ble-rev2:p2:b0",
+            "quote": "Arduino® Nano 33 BLE Rev2 Target Areas Maker, enhancements, IoT application Product Intended Use Arduino Hardware Products are primarily intended for development and prototyping but may also support production solutions. Developers must design and verify security controls early, based on the intended deployment environment. Security is a shared responsibility between Arduino and the solution builder, who must assess the"
+          },
+          "e0015": {
+            "chunk_id": "nano-33-ble-rev2:p2:b0",
+            "quote": "hardware’s available security features and add any necessary protections. Visit docs.arduino.cc/tutorials/security/intended-use-and-security-model/ for the complete Arduino Hardware Products: Intended use and Security model. 2 / 16 Arduino® Nano 33 BLE Rev2 Modified: 21/10/2026"
+          },
+          "e0016": {
+            "chunk_id": "nano-33-ble-rev2:p8:b0",
+            "quote": "Arduino® Nano 33 BLE Rev2 2.5 Block Diagram Block Diagram 8 / 16 Arduino® Nano 33 BLE Rev2 Modified: 21/10/2026"
+          }
+        },
+        "raw_output": "{\"findings\":[{\"document_id\":\"nano-33-ble-rev2\",\"field\":\"flash_capacity\",\"status\":\"not_stated\",\"value\":null,\"evidence_ids\":[]}]}",
+        "supplied_evidence_ids": [
+          "e0000",
+          "e0001",
+          "e0002",
+          "e0003",
+          "e0004",
+          "e0005",
+          "e0006",
+          "e0007",
+          "e0008",
+          "e0009",
+          "e0010",
+          "e0011",
+          "e0012",
+          "e0013",
+          "e0014",
+          "e0015",
+          "e0016"
+        ],
+        "findings": [
+          {
+            "document_id": "nano-33-ble-rev2",
+            "field": "flash_capacity",
+            "status": "not_stated",
+            "value": null,
+            "citations": [],
+            "provenance_verified": false,
+            "semantic_support": "not_automatically_verified",
+            "absence_scope": "retrieved_context_only"
+          }
+        ],
+        "rejected_findings": [],
+        "missing_documents": [],
+        "missing_fields": [],
+        "status": "review_required",
+        "review_hints": [
+          {
+            "document_id": "nano-33-ble-rev2",
+            "field": "flash_capacity",
+            "recheck_evidence_ids": [
+              "e0000"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

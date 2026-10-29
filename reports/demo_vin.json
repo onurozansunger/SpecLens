@@ -1,0 +1,110 @@
+{
+  "question": "UNO R4 Minima ve Nano ESP32 için önerilen VIN aralığını ayrı ayrı ver.",
+  "documents": [
+    "uno-r4-minima",
+    "nano-esp32"
+  ],
+  "method": "hybrid",
+  "evidence": [
+    {
+      "chunk_id": "uno-r4-minima:p10:b0",
+      "document_id": "uno-r4-minima",
+      "physical_page": 10,
+      "text": "Arduino® UNO R4 Minima\n6 USB Connector\nThe UNO R4 Minima has one USB-C® port, used to power and program your board as well as send & receive serial\ncommunication.\nNote: You should not power the board with more than 5 V via the USB-C® port.\n7 Digital Analog Converter (DAC)\nThe UNO R4 Minima has a DAC with up to 12-bit resolution attached to the A0 analog pin. A DAC is used to convert\na digital signal to an analog signal.\n8 Rated Current\nMin Typ Max Notes\nAverage current consumption while powered with USB-C and running the default firmware\n29.71 33.39 36.98\nshipped with the board (blink).\n9 Power Options\nPower can either be supplied via the VIN pin, the barrel jack, or via USB-C® connector. If power is supplied via VIN,\nthe ISL854102FRZ buck converter steps the voltage down to 5 V.\nThe VUSB, barrel jack connector and VIN pins are connected to the ISL854102FRZ buck converter, with Schottky\ndiodes in place for reverse polarity & overvoltage protection respectively.\nPower via USB supplies about ~4.7 V (due to Schottky drop) to the RA4M1 microcontroller.\n10 / 19 Arduino® UNO R4 Minima Modified: 21/10/2026"
+    },
+    {
+      "chunk_id": "uno-r4-minima:p2:b0",
+      "document_id": "uno-r4-minima",
+      "physical_page": 2,
+      "text": "Arduino® UNO R4 Minima\nFeatures\nR7FA4M1AB3CFM#AA0\n48 MHz Arm® Cortex®-M4 microprocessor with a floating point unit (FPU)\n5 V operating voltage\nReal-time Clock (RTC)\nMemory Protection Unit (MPU)\nDigital Analog Converter (DAC)\nMemory\n256 kB Flash Memory\n32 kB SRAM\n8 kB Data Memory (EEPROM)\nPins\n14x digital pins (GPIO), D0-D13\n6x analog input pins (ADC), A0-A5\n6x PWM pins: D3,D5,D6,D9,D10,D11\nPeripherals\nCapacitive Touch Sensing Unit (CTSU)\nUSB 2.0 Full-Speed Module (USBFS)\nup to 14-bit ADC\nup to 12-bit DAC\nOperational Amplifier (OPAMP)\nPower\nRecommended input voltage (VIN) is 6-24 V\n5 V operating voltage\nBarrel jack connected to VIN pin\nPower via USB-C® at 5 V\nSchottky diodes for overvoltage and reverse polarity protection\nCommunication\n1x UART (pin D0, D1)\n1x SPI (pin D10-D13, ICSP header)\n1x I2C (pin A4, A5, SDA, SCL)\n1x CAN (pin D4, D5, external transceiver is required)\n2 / 19 Arduino® UNO R4 Minima Modified: 21/10/2026"
+    },
+    {
+      "chunk_id": "uno-r4-minima:p12:b0",
+      "document_id": "uno-r4-minima",
+      "physical_page": 12,
+      "text": "Arduino® UNO R4 Minima\nMechanical Information\n10 Pinout\nPinout for UNO R4 Minima.\n12 / 19 Arduino® UNO R4 Minima Modified: 21/10/2026"
+    },
+    {
+      "chunk_id": "nano-esp32:p12:b0",
+      "document_id": "nano-esp32",
+      "physical_page": 12,
+      "text": "Arduino® Nano ESP32\n8.5 Two Wire Automotive Interface (TWAI®)\nThe CAN/TWAI® controller is used to communicate with systems using the CAN/TWAI® protocol, particularly\ncommon in the automotive industry. There are no specific pins assigned for the CAN/TWAI® controller, any free\nGPIO can be used.\nPlease note: TWAI® is also known as the CAN2.0B, or \"CAN classic\". The CAN controller is NOT compatible with\nCAN FD frames.\n9 External Flash Memory\nNano ESP32 features a 128 Mbit (16 MB) external flash, the GD25B128EWIGR (U3). This memory is connected to the\nESP32 via Quad Serial Peripheral Interface (QSPI).\nThe operating frequency for this IC is 133 MHz, and has a data transfer rate at up to 664 Mbit/s.\n10 USB Connector\nThe Nano ESP32 has one USB-C® port, used to power and program your board as well as sending & receiving serial\ncommunication.\nNote that you should not power the board with more than 5 V via the USB-C® port.\n11 Power Options\nPower can either be supplied via the VIN pin, or via USB-C® connector. Any voltage input either via USB or VIN is\nstepped down to 3.3 V using the MP2322GQH (U2) converter.\nThe operating voltage for this board is 3.3 V. Please note that there's no 5V pin available on this board, only the\nVBUS can provide 5 V when the board is powered via USB.\n12 / 22 Arduino® Nano ESP32 Modified: 21/10/2026"
+    },
+    {
+      "chunk_id": "nano-esp32:p2:b0",
+      "document_id": "nano-esp32",
+      "physical_page": 2,
+      "text": "Arduino® Nano ESP32\nFeatures\nXtensa® Dual-core 32-bit LX7 Microprocessor\nUp to 240 MHz\n384 kB ROM\n512 kB SRAM\n16 kB SRAM in RTC (low power mode)\nDMA Controller\nPower\nOperating voltage 3.3 V\nVBUS supplies 5 V via USB-C® connector\nVIN range is 6-21 V\nConnectivity\nWi-Fi®\nBluetooth® LE\nBuilt-in antenna\n2.4 GHz transmitter/receiver\nUp to 150 Mbps\nPins\n14x digital (21x including analog)\n8x analog (available in RTC mode)\nSPI(D11,D12,D13), I2C (A4/A5), UART(D0/D1)\nCommunication Ports\nSPI\nI2C\nI2S\nUART\nCAN (TWAI®)\nLow Power\n7 μA consumption in deep sleep mode*\n240 μA consumption in light sleep mode*\nRTC Memory\nUltra Low Power (ULP) Coprocessor\nPower Management Unit (PMU)\nADC in RTC mode\n*The power consumption ratings listed in low power modes are only for the ESP32-S3 SoC. Other components on\nthe board (such as LEDs), consumes power as well, which increases the overall power consumption of the board.\n2 / 22 Arduino® Nano ESP32 Modified: 21/10/2026"
+    },
+    {
+      "chunk_id": "nano-esp32:p14:b0",
+      "document_id": "nano-esp32",
+      "physical_page": 14,
+      "text": "Arduino® Nano ESP32\n11.4 VBUS\nThere is no 5V pin available on the Nano ESP32. 5 V can only be provided via the VBUS, which is supplied directly\nfrom the USB-C® power source.\nWhile powering the board via the VIN pin, the VBUS pin is not activated. This means you have no option of providing\n5 V from the board unless powered via USB or externally.\n11.5 Using the 3.3 V Pin\nThe 3.3 V pin is connected to the 3.3 V rail which is connected to the output of the MP2322GQH step down\nconverter. This pin is primarily used to power external components.\n11.6 Pin Current\nThe GPIOs on the Nano ESP32 can handle source currents up to 40 mA, and sink currents up to 28 mA. Never\nconnect devices that draw higher current directly to a GPIO.\nMechanical Information\n12 Pinout\n14 / 22 Arduino® Nano ESP32 Modified: 21/10/2026"
+    }
+  ],
+  "model": {
+    "repo_id": "mlx-community/Qwen3-4B-Instruct-2507-4bit",
+    "revision": "50d427756c6b1b2fe0c0a10f67fbda1fc8e82c1b",
+    "license": "apache-2.0",
+    "weight_bytes": 2263022417
+  },
+  "metrics": {
+    "input_tokens": 2210,
+    "output_tokens": 189,
+    "generation_tokens_per_second": 75.95818586906495,
+    "prompt_tokens_per_second": 758.7712650131085,
+    "first_token_seconds": 2.9162216250006168,
+    "generation_seconds": 5.413770458002546,
+    "model_load_seconds": 0.3713429589988664,
+    "mlx_peak_allocation_bytes": 3374096052,
+    "process_rss_bytes": 2608431104,
+    "finish_reason": "stop",
+    "request_number": 1,
+    "retrieval_seconds": 3.384708124998724,
+    "total_seconds": 8.824780916998861
+  },
+  "chunks_sha256": "d037f32db94560c721d90af00cf91ff9d08524866f6b1f46c16d6037459785d2",
+  "prompt_sha256": "acd1901e5ff3f7ed3f1a09ca8adcdb577fb127beb4d9decd2da1f99c86afb7dd",
+  "findings": [
+    {
+      "document_id": "uno-r4-minima",
+      "field": "VIN voltage range",
+      "status": "stated",
+      "value": "6-24 V",
+      "citations": [
+        {
+          "chunk_id": "uno-r4-minima:p2:b0",
+          "quote": "Recommended input voltage (VIN) is 6-24 V",
+          "document_id": "uno-r4-minima",
+          "page": 2,
+          "pdf_sha256": "49f5fda615856efe43b880ed6196376191896f686216c10fcbc05a5f15c19fe3"
+        }
+      ],
+      "provenance_verified": true,
+      "semantic_support": "not_automatically_verified",
+      "absence_scope": null
+    },
+    {
+      "document_id": "nano-esp32",
+      "field": "VIN voltage range",
+      "status": "stated",
+      "value": "6-21 V",
+      "citations": [
+        {
+          "chunk_id": "nano-esp32:p2:b0",
+          "quote": "VIN range is 6-21 V",
+          "document_id": "nano-esp32",
+          "page": 2,
+          "pdf_sha256": "ef9c75c0c97387f5429dee5a416bee4f9fad0f79b95da9e0dae18a5716b624ac"
+        }
+      ],
+      "provenance_verified": true,
+      "semantic_support": "not_automatically_verified",
+      "absence_scope": null
+    }
+  ],
+  "rejected_findings": [],
+  "missing_documents": [],
+  "status": "provenance_checked"
+}
