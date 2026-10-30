@@ -1,5 +1,7 @@
 # SpecLens
 
+[![CPU checks](https://github.com/onurozansunger/SpecLens/actions/workflows/tests.yml/badge.svg)](https://github.com/onurozansunger/SpecLens/actions/workflows/tests.yml)
+
 Local technical PDF extraction and comparison on Apple Silicon. Ask in English or Turkish, inspect the quoted source and open its original PDF page.
 
 ![SpecLens showing findings beside their source PDF](docs/assets/demo.jpg)
@@ -24,6 +26,8 @@ The demo indexes the 10 development PDFs: 195 pages and 257 chunks. The separate
 Requirements: Apple Silicon, native macOS, Python 3.12 and `uv`. The measured host is an M4 Pro / 48 GiB; smaller Macs have not been benchmarked. No paid API, hosted vector database or cloud GPU is required. Initial setup downloads packages, models and documents; inference then uses cached files.
 
 ```bash
+git clone https://github.com/onurozansunger/SpecLens.git
+cd SpecLens
 make bootstrap
 make check
 make run
@@ -86,7 +90,7 @@ make benchmark      # worker must be running; saves a new report, never overwrit
 
 The test was sealed before either held-out model run. Using its failures to tune a future version requires a new holdout. See [dataset details](data/evaluation/README.md), [human review worksheet](docs/ANNOTATION_REVIEW.md), and [contribution rules](CONTRIBUTING.md).
 
-The 61-test suite also passed in a clean CPU environment without PyTorch. GitHub Actions is configured for CPU checks; remote CI has not run. Local Metal inference was exercised with the real model. The synthetic LoRA experiment is a runtime check only; its adapter is **not served** and no fine-tuning quality gain is claimed.
+The 61-test suite also passed in a clean CPU environment without PyTorch. GitHub Actions runs CPU checks on pushes and pull requests; the badge above links to the latest result. Local Metal inference was exercised with the real model. The synthetic LoRA experiment is a runtime check only; its adapter is **not served** and no fine-tuning quality gain is claimed.
 
 ## Scope and project materials
 

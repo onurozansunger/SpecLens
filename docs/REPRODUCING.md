@@ -9,7 +9,8 @@ Source URLs and hashes are in `configs/corpus.json` and `configs/test_corpus.jso
 - Filename: `speclens-corpus-2026-10-29.zip`
 - Size: 18,248,062 bytes
 - SHA-256: `d62487d13ee4cdf43ecec86b4a6fa3ae006f91f4b8cf5b3b731a09b4aa599d3f`
-- Local location: `dist/` (excluded from Git; attach separately when publishing a release)
+- [Download the pinned source archive](https://github.com/onurozansunger/SpecLens/releases/download/v0.1.0/speclens-corpus-2026-10-29.zip)
+- Local location: `dist/` (excluded from Git; distributed as a separate release asset)
 
 The archive contains no model weights, environments or personal files. Verification checks an exact member allowlist, every PDF/Markdown hash and manifest paths. Restore refuses to overwrite different existing files. A clean temporary-directory restore and a repeated identical restore were tested.
 

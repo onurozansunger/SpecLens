@@ -1,6 +1,6 @@
 # Portfolio copy
 
-Prepared for Onur Ozan Sünger. The text below describes the current measured repository; replace repository/demo links with actual published URLs when available. Do not describe the test as human-annotated or the system as production-ready.
+Prepared for Onur Ozan Sünger. Repository: [onurozansunger/SpecLens](https://github.com/onurozansunger/SpecLens). The demo runs locally; setup instructions are in the repository. Do not describe the test as human-annotated or the system as production-ready.
 
 ## Project card
 
@@ -48,4 +48,4 @@ Keep the linked case study's qualification that labels are agent-authored and aw
 3. Ask for a retail price absent from the selected source. Show the scoped missing-information result.
 4. Open the held-out result table and one failure from `FAILURE_ANALYSIS.md`. Explain the frozen split and why later tuning requires another holdout.
 
-The local app is the demo. No public hosted endpoint or published repository is implied by this document.
+The local app is the demo; no public hosted endpoint is provided. The GitHub repository is public.
