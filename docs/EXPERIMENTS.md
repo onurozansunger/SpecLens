@@ -78,4 +78,4 @@ The historical four synthetic prompt probes passed 3/4 under v1. The updated v3 
 
 The 61 CPU tests passed locally and in a clean CPU environment without PyTorch. Lint, source/vector checks, sealed-test integrity and a corpus-archive restore round trip passed. The published [GitHub Actions workflow](https://github.com/onurozansunger/SpecLens/actions/workflows/tests.yml) runs the CPU checks; its latest result is recorded on GitHub. Local Metal behavior was exercised with real model calls; CPU CI does not certify it.
 
-See [REPRODUCING.md](REPRODUCING.md) for exact commands, source archive hash and environmental limits. The [review worksheet](ANNOTATION_REVIEW.md) records the outstanding human annotation step.
+See [REPRODUCING.md](REPRODUCING.md) for exact commands, source archive hash and environmental limits. Human annotation review is pending.

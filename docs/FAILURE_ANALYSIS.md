@@ -18,11 +18,4 @@ The final development run passed 28/30 task checks. Both remaining failures conc
 
 The v3 changes were developed on this set: excerpt-ID selection, field contracts, rejection of duplicate fields, complete-JSON stopping, one bounded repair and a narrow literal memory fallback. The fallback's contributions are recorded separately in each raw report.
 
-## Follow-up sequence
-
-1. Have a person inspect the 39 base tasks using the review worksheet, including passing outputs. Record reviewer/date and alternate evidence in a separate versioned review record.
-2. Promote this test's observed failures to development regressions for the next candidate. Handle numeric equivalence, `x54`-style counts and alternate evidence without broadening rules to accept unsupported numbers.
-3. Compare table-aware context against page-text chunks for scope conflicts and multi-document omissions. Test source selection separately from value extraction.
-4. Build a new family-separated holdout before claiming improvements from these changes. Expand vendors/layouts and include conflicts and unsupported questions beyond price absence.
-
-The frozen candidate remains reproducible. These findings are intentionally visible instead of being erased by tuning on the test.
+The frozen predictions and scores are retained. Any changes based on these failures require a new held-out evaluation.

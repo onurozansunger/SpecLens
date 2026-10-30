@@ -11,7 +11,7 @@ PDF/Markdown sources, quotations in evaluation labels and reports, and document 
 - Development sources, URLs, revisions and hashes: `configs/corpus.json`.
 - Held-out sources, URLs, revisions and hashes: `configs/test_corpus.json`.
 
-Changes made by SpecLens: PDF text extraction, whitespace/Unicode normalization, excerpt selection, question/reference annotation and screenshot rendering. Evaluation labels are agent-authored and await human review. Full source PDFs are excluded from Git. A locally prepared corpus archive can accompany a release so readers can reproduce the exact snapshots even if producer URLs change.
+Changes made by SpecLens: PDF text extraction, whitespace/Unicode normalization, excerpt selection, question/reference annotation and screenshot rendering. Evaluation labels are agent-authored and await human review. Full source PDFs are excluded from Git.
 
 PDF snapshots and pinned Markdown sources are separately hashed. Their revisions are not assumed to be identical. External documents linked by Arduino are not included or assumed to share this license. Arduino product names and marks identify the source products; this project is not affiliated with Arduino.
 

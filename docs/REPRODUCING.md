@@ -4,34 +4,37 @@ The saved reports were measured on an Apple M4 Pro with 48 GiB unified memory, n
 
 ## Source snapshots
 
-Source URLs and hashes are in `configs/corpus.json` and `configs/test_corpus.json`. Upstream PDF URLs can change. The prepared release asset preserves exactly the 14 PDFs and 14 Markdown sources, two source manifests and attribution:
-
-- Filename: `speclens-corpus-2026-10-29.zip`
-- Size: 18,248,062 bytes
-- SHA-256: `d62487d13ee4cdf43ecec86b4a6fa3ae006f91f4b8cf5b3b731a09b4aa599d3f`
-- [Download the pinned source archive](https://github.com/onurozansunger/SpecLens/releases/download/v0.1.0/speclens-corpus-2026-10-29.zip)
-- Local location: `dist/` (excluded from Git; distributed as a separate release asset)
-
-The archive contains no model weights, environments or personal files. Verification checks an exact member allowlist, every PDF/Markdown hash and manifest paths. Restore refuses to overwrite different existing files. A clean temporary-directory restore and a repeated identical restore were tested.
-
-From a new checkout, with `uv` installed:
+Source URLs and hashes are pinned in `configs/corpus.json` and `configs/test_corpus.json`. PDF and Markdown snapshots are checked separately. Upstream PDF URLs can change; a mismatch stops acquisition rather than changing the benchmark sources.
 
 ```bash
-make setup
-export PYTHONPATH="$PWD/src"
-uv run --locked python scripts/corpus_snapshot.py restore \
-  --file /path/to/speclens-corpus-2026-10-29.zip
-make data
-make models
+make bootstrap
 make test-data
 make check
 make check-release
 make run
 ```
 
-If the original source URLs still match, `make bootstrap` followed by `make test-data` can acquire everything directly. A hash mismatch requires the archived source or a deliberately new dataset version; do not replace expected hashes just to continue.
+No corpus archive is published. An installation can create a local archive of its verified source files with:
 
-The model and embedding revisions are pinned in `configs/models.json`. The first download needs internet access. Inference uses local cached models; no paid API credentials are required.
+```bash
+export PYTHONPATH="$PWD/src"
+uv run --locked python scripts/corpus_snapshot.py create
+```
+
+The archive contains 14 PDFs, 14 Markdown sources, two manifests and attribution. It is written to `dist/` and excluded from Git. The script checks an exact member allowlist, source hashes and manifest paths. To restore an existing archive before running `make data`:
+
+```bash
+make setup
+export PYTHONPATH="$PWD/src"
+uv run --locked python scripts/corpus_snapshot.py restore --file /path/to/corpus.zip
+make data
+make models
+make test-data
+```
+
+The locally verified snapshot has SHA-256 `d62487d13ee4cdf43ecec86b4a6fa3ae006f91f4b8cf5b3b731a09b4aa599d3f` and is 18,248,062 bytes. Archive hashes can differ with ZIP metadata; source-file hashes remain authoritative. If a pinned upstream source is unavailable and no matching archive is available, that snapshot cannot be reproduced. Do not replace expected hashes to bypass the check.
+
+Model and embedding revisions are pinned in `configs/models.json`. Initial setup requires internet access; inference uses the local cache.
 
 ## Run the sealed test
 

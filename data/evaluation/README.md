@@ -6,7 +6,7 @@
 | `development.jsonl` | Field-level development checks | 8 | 30 | 15 | 32 |
 | `test.jsonl` | Sealed family-held-out comparison | 4 | 48 | 24 | 56 |
 
-All labels are agent-authored; **zero tasks have human review recorded**. Source excerpts were checked against hashed PDF text. Six held-out table pages were also visually inspected by the coding agent. A human review worksheet is in `docs/ANNOTATION_REVIEW.md`.
+All labels are agent-authored; **zero tasks have human review recorded**. Source excerpts were checked against hashed PDF text. Six held-out table pages were also visually inspected by the coding agent.
 
 ## Split protocol
 
